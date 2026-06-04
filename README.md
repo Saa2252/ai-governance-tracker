@@ -101,10 +101,10 @@ ai-governance-tracker/
 
 **Sana Asif Ahmad** — AI governance researcher with hands-on implementation experience.
 
-- 🎓 **Columbia University SIPA Fellow** (2023-24) — Specialized in AI regulation and governance
-- 🇺🇳 **UN Development Coordination Office** — Translated EU AI Act and UNESCO AI Ethics frameworks into governance roadmaps for 7 country offices across 4 regions
-- 🔬 **University of Pennsylvania** — Currently researching AI governance frameworks for academic applications
-- 💻 **Background** — B.E. Computer Science (Osmania University), M.S. Urban Policy (TISS Mumbai)
+- **Columbia University SIPA Fellow** (2023-24) — Specialized in AI regulation and governance
+- **UN Development Coordination Office** — Translated EU AI Act and UNESCO AI Ethics frameworks into governance roadmaps for 7 country offices across 4 regions
+-  **University of Pennsylvania** — Currently researching AI governance frameworks for academic applications
+-  **Background** — B.E. Computer Science (Osmania University), M.S. Urban Policy (TISS Mumbai)
 
 This project operationalizes insights from translating global AI frameworks into country-level implementation.
 
