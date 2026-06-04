@@ -146,6 +146,29 @@ def main():
     # KEY METRICS ROW
     # ========================================================================
     
+    with st.expander("ℹ️ How to read this dashboard — why the EU AI Act is the baseline & how the 'gap' is measured"):
+        st.markdown(
+            """
+**Why the EU AI Act is the baseline.** It is the only *comprehensive, binding* AI
+law currently in force — UNESCO, OECD, AU and ASEAN instruments are non-binding
+principles. Its four risk tiers give clear, comparable checkpoints, and because it
+applies to anyone selling AI into the EU market (the "Brussels Effect"), countries
+worldwide actually respond to it. We use it as a **common ruler**, *not* a
+prescription — a key finding here is exactly where local priorities (agriculture,
+mobile money, climate) justify *diverging* from EU categories. Every country is
+also scored against UNESCO and OECD so no single framework dominates.
+
+**How the gap is measured.**
+- **Adoption Score (0–100):** how closely *written policy* aligns with the EU AI Act — rules on paper.
+- **Implementation Score (0–100):** how much is *actually operational* — enforcement body, sandbox, impact assessments, transparency, audit, and redress mechanisms (weighted).
+- **Adoption–Implementation Gap = Adoption − Implementation.** A large gap = ambitious policy that isn't yet enforceable ("policy ahead of practice"); a small gap = policy and capacity in step.
+
+*Factual fields (internet access, data-protection laws, OECD/GPAI membership) are
+sourced (World Bank, OECD). Alignment and implementation **scores are analyst
+estimates** — see METHODOLOGY.md.*
+            """
+        )
+
     st.markdown("### 📊 Key Metrics")
     
     col1, col2, col3, col4 = st.columns(4)

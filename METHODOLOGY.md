@@ -46,6 +46,54 @@ This tracker combines primary research from field implementation with secondary 
 - Public consultation documents
 - Regulatory impact assessments where available
 
+## Why the EU AI Act Is the Baseline
+
+The tracker measures every country against the **EU AI Act** as its primary
+yardstick. This is a deliberate analytical choice, not a claim that the EU model
+is "best." The reasons:
+
+1. **It is the only comprehensive, binding, horizontal AI law in force.** UNESCO,
+   OECD, AU, and ASEAN instruments are principles or guidelines (soft law); the
+   EU AI Act is enforceable hard law with penalties. A baseline needs to be
+   concrete and measurable — vague principles can't be scored consistently.
+2. **It is the de-facto global reference point ("Brussels Effect").** Because the
+   Act applies to any AI system placed on the EU market, exporters worldwide must
+   reckon with it, and many national bills (e.g. Brazil's PL 2338, Colombia's
+   draft) explicitly mirror its structure. Tracking alignment to it captures real
+   regulatory pressure that countries actually respond to.
+3. **Its risk-tier structure is operationalisable.** The four tiers
+   (unacceptable / high / limited / minimal) give clear, comparable checkpoints,
+   which is what lets us compare a Kenyan and a Mexican approach on the same axis.
+
+**Important caveat (also surfaced in the dashboard):** using the EU Act as the
+baseline does *not* imply Global South countries *should* simply copy it. A core
+finding of this tracker is precisely where local priorities (agriculture, mobile
+money, climate) justify *diverging* from EU categories. The baseline is a common
+ruler for comparison, not a prescription. We pair every adoption score with the
+UNESCO and OECD scores so no single framework dominates the picture.
+
+## Measuring the "Gap"
+
+The headline metric is the **Adoption–Implementation Gap**:
+
+```
+Gap = EU AI Act Adoption Score  −  Implementation Score
+```
+
+- **Adoption Score (0–100)** = how closely a country's *written policy* aligns
+  with the EU AI Act (see scale below). High = the rules exist on paper.
+- **Implementation Score (0–100)** = how much of that is *actually operational* —
+  enforcement body, sandbox, impact assessments, transparency, audit, redress
+  (weighted; see below). High = the rules are real.
+- **A large positive gap** means a country has written ambitious AI policy but has
+  not yet built the machinery to enforce it ("policy ahead of practice"). A small
+  or negative gap means policy and enforcement are roughly in step.
+
+Worked example: India scores ~45 on EU AI Act adoption but ~40 on implementation,
+a modest gap; a country that endorses frameworks rhetorically but builds no
+enforcement body would show a much wider gap. The gap is the single number that
+exposes "governance theatre" versus genuine capacity.
+
 ### Scoring Methodology
 
 #### Framework Adoption Score (0-100)

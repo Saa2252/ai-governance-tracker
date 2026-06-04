@@ -38,8 +38,8 @@
   ],
   "summary": {
     "in_scope_total": 24,
-    "fully_profiled": 8,
-    "roster_only_awaiting_profiling": 16
+    "fully_profiled": 16,
+    "roster_only_awaiting_profiling": 8
   },
   "roster": [
     {
@@ -67,7 +67,7 @@
       "income_level_worldbank": "lower_middle",
       "national_ai_strategy": "draft",
       "meets_criteria": true,
-      "fully_profiled": false
+      "fully_profiled": true
     },
     {
       "country_code": "LKA",
@@ -76,7 +76,7 @@
       "income_level_worldbank": "lower_middle",
       "national_ai_strategy": "in_development",
       "meets_criteria": true,
-      "fully_profiled": false
+      "fully_profiled": true
     },
     {
       "country_code": "IDN",
@@ -94,7 +94,7 @@
       "income_level_worldbank": "lower_middle",
       "national_ai_strategy": "published",
       "meets_criteria": true,
-      "fully_profiled": false
+      "fully_profiled": true
     },
     {
       "country_code": "PHL",
@@ -103,7 +103,7 @@
       "income_level_worldbank": "lower_middle",
       "national_ai_strategy": "published",
       "meets_criteria": true,
-      "fully_profiled": false
+      "fully_profiled": true
     },
     {
       "country_code": "THA",
@@ -112,7 +112,7 @@
       "income_level_worldbank": "upper_middle",
       "national_ai_strategy": "published",
       "meets_criteria": true,
-      "fully_profiled": false
+      "fully_profiled": true
     },
     {
       "country_code": "MYS",
@@ -121,7 +121,7 @@
       "income_level_worldbank": "upper_middle",
       "national_ai_strategy": "published",
       "meets_criteria": true,
-      "fully_profiled": false
+      "fully_profiled": true
     },
     {
       "country_code": "KHM",
@@ -238,7 +238,7 @@
       "income_level_worldbank": "upper_middle",
       "national_ai_strategy": "published",
       "meets_criteria": true,
-      "fully_profiled": false
+      "fully_profiled": true
     },
     {
       "country_code": "COL",
@@ -247,7 +247,7 @@
       "income_level_worldbank": "upper_middle",
       "national_ai_strategy": "published",
       "meets_criteria": true,
-      "fully_profiled": false
+      "fully_profiled": true
     },
     {
       "country_code": "PER",
