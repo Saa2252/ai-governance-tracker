@@ -1,0 +1,215 @@
+{
+  "frameworks": [
+    {
+      "id": "eu_ai_act",
+      "name": "EU AI Act",
+      "full_name": "Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence",
+      "jurisdiction": "European Union",
+      "type": "binding_regulation",
+      "effective_date": "2026-08-02",
+      "description": "World's first comprehensive AI law. Risk-based approach classifying AI systems into unacceptable, high-risk, limited, and minimal risk categories.",
+      "key_requirements": [
+        {
+          "article": "Article 6",
+          "requirement": "High-risk AI classification",
+          "description": "AI systems in Annex III areas (biometrics, critical infrastructure, education, employment, etc.) require conformity assessments"
+        },
+        {
+          "article": "Article 9",
+          "requirement": "Risk management system",
+          "description": "Continuous iterative process throughout AI system lifecycle"
+        },
+        {
+          "article": "Article 13",
+          "requirement": "Transparency",
+          "description": "High-risk AI systems must be designed to enable human oversight"
+        },
+        {
+          "article": "Article 14",
+          "requirement": "Human oversight",
+          "description": "Built to be effectively overseen by natural persons"
+        }
+      ],
+      "risk_categories": [
+        {
+          "level": "unacceptable",
+          "description": "Banned AI practices",
+          "examples": ["Social scoring by governments", "Real-time biometric ID in public spaces", "Emotion recognition in workplace/education"]
+        },
+        {
+          "level": "high_risk",
+          "description": "Strict requirements before market placement",
+          "examples": ["Critical infrastructure", "Education access", "Employment decisions", "Credit scoring", "Law enforcement"]
+        },
+        {
+          "level": "limited",
+          "description": "Transparency obligations",
+          "examples": ["Chatbots", "Emotion recognition", "Deepfakes"]
+        },
+        {
+          "level": "minimal",
+          "description": "No restrictions",
+          "examples": ["AI-enabled video games", "Spam filters"]
+        }
+      ],
+      "penalties": {
+        "max_fine_euros": 35000000,
+        "max_fine_percentage": 7,
+        "description": "Up to €35M or 7% of global annual turnover"
+      },
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+    },
+    {
+      "id": "unesco_ai_ethics",
+      "name": "UNESCO Recommendation on AI Ethics",
+      "full_name": "Recommendation on the Ethics of Artificial Intelligence",
+      "jurisdiction": "Global (193 member states)",
+      "type": "soft_law",
+      "effective_date": "2021-11-23",
+      "description": "First global normative instrument on AI ethics. Non-binding recommendation providing ethical framework for AI development and deployment.",
+      "key_requirements": [
+        {
+          "principle": "Human rights",
+          "description": "AI systems must respect, protect and promote human rights and fundamental freedoms"
+        },
+        {
+          "principle": "Transparency and explainability",
+          "description": "AI actors should commit to ensuring transparency and explainability of AI systems"
+        },
+        {
+          "principle": "Human oversight",
+          "description": "Member States should ensure that AI systems do not displace ultimate human responsibility"
+        },
+        {
+          "principle": "Sustainability",
+          "description": "AI should be assessed in terms of environmental and ecosystem impact"
+        }
+      ],
+      "policy_areas": [
+        "Science, technology and innovation policy",
+        "Data policy",
+        "Education and research",
+        "Communication and information",
+        "Economy and labour",
+        "Health and social well-being",
+        "Culture",
+        "Environment and ecosystems"
+      ],
+      "url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455"
+    },
+    {
+      "id": "oecd_ai_principles",
+      "name": "OECD AI Principles",
+      "full_name": "OECD Principles on Artificial Intelligence",
+      "jurisdiction": "OECD members + adhering countries",
+      "type": "soft_law",
+      "effective_date": "2019-05-22",
+      "description": "First intergovernmental standard on AI. Adopted by 46 countries and serves as basis for G20 AI Principles.",
+      "key_requirements": [
+        {
+          "principle": "Inclusive growth",
+          "description": "AI should benefit people and the planet by driving inclusive growth, sustainable development and well-being"
+        },
+        {
+          "principle": "Human-centred values",
+          "description": "AI systems should be designed to respect rule of law, human rights, democratic values"
+        },
+        {
+          "principle": "Transparency",
+          "description": "Transparency and responsible disclosure around AI systems"
+        },
+        {
+          "principle": "Robustness and safety",
+          "description": "AI systems should be robust, secure and safe throughout their lifecycle"
+        },
+        {
+          "principle": "Accountability",
+          "description": "Organisations and individuals developing AI should be accountable"
+        }
+      ],
+      "recommendations_for_governments": [
+        "Invest in AI research and development",
+        "Foster a digital ecosystem for AI",
+        "Shape an enabling policy environment",
+        "Build human capacity and preparing for labour market transformation",
+        "International cooperation for trustworthy AI"
+      ],
+      "url": "https://oecd.ai/en/ai-principles"
+    },
+    {
+      "id": "au_ai_strategy",
+      "name": "African Union AI Strategy",
+      "full_name": "African Union Continental AI Strategy",
+      "jurisdiction": "African Union (55 member states)",
+      "type": "policy_framework",
+      "effective_date": "2024-02-01",
+      "description": "Continental strategy for responsible AI development in Africa, emphasizing local context and development priorities.",
+      "key_requirements": [
+        {
+          "pillar": "Human capital",
+          "description": "Building AI skills and research capacity across the continent"
+        },
+        {
+          "pillar": "Infrastructure",
+          "description": "Developing computing and data infrastructure"
+        },
+        {
+          "pillar": "Governance",
+          "description": "Establishing regulatory frameworks adapted to African context"
+        },
+        {
+          "pillar": "Innovation",
+          "description": "Supporting AI innovation ecosystems and startups"
+        }
+      ],
+      "priority_sectors": [
+        "Agriculture and food security",
+        "Healthcare",
+        "Education",
+        "Financial services",
+        "Infrastructure and transportation"
+      ],
+      "url": "https://au.int/en/documents/20240217/african-union-continental-ai-strategy"
+    },
+    {
+      "id": "asean_ai_guide",
+      "name": "ASEAN Guide on AI Governance",
+      "full_name": "ASEAN Guide on AI Governance and Ethics",
+      "jurisdiction": "ASEAN (10 member states)",
+      "type": "guidelines",
+      "effective_date": "2024-02-01",
+      "description": "Non-binding guidelines for responsible AI development in Southeast Asia, balancing innovation with risk management.",
+      "key_requirements": [
+        {
+          "principle": "Transparency and explainability",
+          "description": "AI systems should be transparent and explainable"
+        },
+        {
+          "principle": "Fairness and equity",
+          "description": "AI should not discriminate or cause unfair bias"
+        },
+        {
+          "principle": "Security and safety",
+          "description": "AI systems should be secure and safe"
+        },
+        {
+          "principle": "Human-centricity",
+          "description": "AI should augment human capabilities"
+        },
+        {
+          "principle": "Privacy and data governance",
+          "description": "AI should respect data protection principles"
+        },
+        {
+          "principle": "Accountability and integrity",
+          "description": "Clear accountability for AI outcomes"
+        },
+        {
+          "principle": "Robustness and reliability",
+          "description": "AI systems should work as intended"
+        }
+      ],
+      "url": "https://asean.org/asean-guide-on-ai-governance-and-ethics/"
+    }
+  ]
+}

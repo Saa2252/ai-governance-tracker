@@ -1,0 +1,296 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-06-04",
+    "author": "Sana Asif Ahmad",
+    "description": "Comprehensive roster of Global South countries in scope for the tracker, with the verifiable inclusion logic. Distinguishes fully-profiled countries (in countries.json) from roster-only candidates awaiting full profiling."
+  },
+  "selection_criteria": {
+    "rule": "A country is IN SCOPE if it meets ALL THREE criteria below.",
+    "criteria": [
+      {
+        "id": "income",
+        "test": "World Bank income group is low, lower-middle, or upper-middle (i.e., NOT high-income).",
+        "verifiable_source": "World Bank country & lending groups (updated each July)."
+      },
+      {
+        "id": "region",
+        "test": "Located in a Global South region: Sub-Saharan Africa, North Africa & MENA, South Asia, Southeast Asia, Central Asia, Latin America & Caribbean, or Pacific Islands.",
+        "verifiable_source": "UN M49 standard regional classification."
+      },
+      {
+        "id": "governance_to_track",
+        "test": "Has a national AI strategy that is published, officially drafted, or in formal development — OR has formally endorsed a regional AI framework (AU Continental AI Strategy / ASEAN Guide on AI Governance).",
+        "verifiable_source": "OECD.AI Policy Observatory (oecd.ai/dashboards/national)."
+      }
+    ],
+    "note_on_proxies": "'G77 membership' was rejected as a proxy because it excludes Mexico (not a G77 member) yet Mexico is clearly in scope. Income + UN region is cleaner and reproducible.",
+    "profiling_priority": "Among in-scope countries, full profiling is prioritised by (1) regional coverage — at least one per region, (2) population weight, and (3) availability of primary-source data (UN DCO country offices). This is why the first 8 span South Asia, Southeast Asia, Sub-Saharan Africa, and Latin America."
+  },
+  "regions_covered": [
+    "Central Asia",
+    "Latin America & Caribbean",
+    "North Africa & MENA",
+    "Pacific Islands",
+    "South Asia",
+    "Southeast Asia",
+    "Sub-Saharan Africa"
+  ],
+  "summary": {
+    "in_scope_total": 24,
+    "fully_profiled": 8,
+    "roster_only_awaiting_profiling": 16
+  },
+  "roster": [
+    {
+      "country_code": "IND",
+      "country_name": "India",
+      "region": "South Asia",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": true
+    },
+    {
+      "country_code": "BGD",
+      "country_name": "Bangladesh",
+      "region": "South Asia",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": true
+    },
+    {
+      "country_code": "PAK",
+      "country_name": "Pakistan",
+      "region": "South Asia",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "draft",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "LKA",
+      "country_name": "Sri Lanka",
+      "region": "South Asia",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "in_development",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "IDN",
+      "country_name": "Indonesia",
+      "region": "Southeast Asia",
+      "income_level_worldbank": "upper_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": true
+    },
+    {
+      "country_code": "VNM",
+      "country_name": "Vietnam",
+      "region": "Southeast Asia",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "PHL",
+      "country_name": "Philippines",
+      "region": "Southeast Asia",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "THA",
+      "country_name": "Thailand",
+      "region": "Southeast Asia",
+      "income_level_worldbank": "upper_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "MYS",
+      "country_name": "Malaysia",
+      "region": "Southeast Asia",
+      "income_level_worldbank": "upper_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "KHM",
+      "country_name": "Cambodia",
+      "region": "Southeast Asia",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "draft",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "KEN",
+      "country_name": "Kenya",
+      "region": "Sub-Saharan Africa",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": true
+    },
+    {
+      "country_code": "NGA",
+      "country_name": "Nigeria",
+      "region": "Sub-Saharan Africa",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": true
+    },
+    {
+      "country_code": "ZAF",
+      "country_name": "South Africa",
+      "region": "Sub-Saharan Africa",
+      "income_level_worldbank": "upper_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": true
+    },
+    {
+      "country_code": "RWA",
+      "country_name": "Rwanda",
+      "region": "Sub-Saharan Africa",
+      "income_level_worldbank": "low",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "GHA",
+      "country_name": "Ghana",
+      "region": "Sub-Saharan Africa",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "in_development",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "MUS",
+      "country_name": "Mauritius",
+      "region": "Sub-Saharan Africa",
+      "income_level_worldbank": "upper_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "SEN",
+      "country_name": "Senegal",
+      "region": "Sub-Saharan Africa",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "in_development",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "EGY",
+      "country_name": "Egypt",
+      "region": "North Africa & MENA",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "MAR",
+      "country_name": "Morocco",
+      "region": "North Africa & MENA",
+      "income_level_worldbank": "lower_middle",
+      "national_ai_strategy": "in_development",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "BRA",
+      "country_name": "Brazil",
+      "region": "Latin America & Caribbean",
+      "income_level_worldbank": "upper_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": true
+    },
+    {
+      "country_code": "MEX",
+      "country_name": "Mexico",
+      "region": "Latin America & Caribbean",
+      "income_level_worldbank": "upper_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": true
+    },
+    {
+      "country_code": "ARG",
+      "country_name": "Argentina",
+      "region": "Latin America & Caribbean",
+      "income_level_worldbank": "upper_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "COL",
+      "country_name": "Colombia",
+      "region": "Latin America & Caribbean",
+      "income_level_worldbank": "upper_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": false
+    },
+    {
+      "country_code": "PER",
+      "country_name": "Peru",
+      "region": "Latin America & Caribbean",
+      "income_level_worldbank": "upper_middle",
+      "national_ai_strategy": "published",
+      "meets_criteria": true,
+      "fully_profiled": false
+    }
+  ],
+  "excluded_examples": [
+    {
+      "country_name": "Chile",
+      "region": "Latin America & Caribbean",
+      "income_level_worldbank": "high_income",
+      "national_ai_strategy": "published",
+      "meets_criteria": false,
+      "reason": "Fails income criterion: World Bank classifies Chile as high-income (and it is an OECD member). Notable AI actor but outside the 'developing economies' scope."
+    },
+    {
+      "country_name": "Uruguay",
+      "region": "Latin America & Caribbean",
+      "income_level_worldbank": "high_income",
+      "national_ai_strategy": "published",
+      "meets_criteria": false,
+      "reason": "Fails income criterion: high-income per World Bank."
+    },
+    {
+      "country_name": "Singapore",
+      "region": "Southeast Asia",
+      "income_level_worldbank": "high_income",
+      "national_ai_strategy": "published",
+      "meets_criteria": false,
+      "reason": "Fails income criterion: high-income. A regional AI leader but not a developing economy."
+    },
+    {
+      "country_name": "Saudi Arabia / UAE",
+      "region": "North Africa & MENA",
+      "income_level_worldbank": "high_income",
+      "national_ai_strategy": "published",
+      "meets_criteria": false,
+      "reason": "Fails income criterion: high-income Gulf states."
+    }
+  ]
+}

@@ -1,0 +1,896 @@
+{
+  "metadata": {
+    "version": "1.2",
+    "last_updated": "2026-06-04",
+    "author": "Sana Asif Ahmad",
+    "description": "AI governance adoption data for Global South countries",
+    "data_sources": [
+      "UN Development Coordination Office policy briefs",
+      "National AI strategy documents",
+      "Regulatory filings and draft legislation"
+    ],
+    "schema_note": "v1.2: internet figures replaced with sourced World Bank values; OECD/GPAI memberships verified; data_quality now flags verified vs. illustrative fields. See docs/data_dictionary.md."
+  },
+  "countries": [
+    {
+      "country_code": "IND",
+      "country_name": "India",
+      "region": "South Asia",
+      "income_level": "lower_middle",
+      "population_millions": 1428,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "National Strategy for Artificial Intelligence",
+        "year_published": 2018,
+        "year_updated": 2023,
+        "lead_agency": "NITI Aayog"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "partial",
+          "adoption_score": 45,
+          "notes": "Digital India Act draft incorporates risk-based approach but diverges on high-risk categories"
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "endorsed",
+          "adoption_score": 70,
+          "notes": "Formally endorsed UNESCO recommendation; implementing through MeitY guidelines"
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "aligned",
+          "adoption_score": 65,
+          "notes": "G20 AI Principles adopted; implementation varies by sector"
+        }
+      },
+      "implementation_status": {
+        "overall_score": 40,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": true,
+        "has_impact_assessments": true,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "facial recognition",
+          "social scoring",
+          "employment AI",
+          "credit scoring"
+        ],
+        "divergence_notes": "Agricultural AI considered critical infrastructure, not in EU high-risk list"
+      },
+      "key_developments": [
+        {
+          "date": "2023-08",
+          "event": "Digital India Act draft released"
+        },
+        {
+          "date": "2024-03",
+          "event": "AI advisory council established"
+        },
+        {
+          "date": "2025-01",
+          "event": "Regulatory sandbox for AI startups launched"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 70.0,
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Digital Personal Data Protection Act, 2023",
+        "ai_talent_availability": "high",
+        "internet_penetration_year": 2025,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS"
+      },
+      "priority_sectors": [
+        "agriculture",
+        "healthcare",
+        "financial services",
+        "education"
+      ],
+      "international_engagement": {
+        "oecd_status": "adherent",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-05-30",
+        "confidence_level": "medium",
+        "sources": [
+          "NITI Aayog National Strategy for AI",
+          "MeitY AI advisory guidelines",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      }
+    },
+    {
+      "country_code": "BRA",
+      "country_name": "Brazil",
+      "region": "Latin America",
+      "income_level": "upper_middle",
+      "population_millions": 216,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "Brazilian AI Strategy (EBIA)",
+        "year_published": 2021,
+        "year_updated": 2024,
+        "lead_agency": "Ministry of Science, Technology and Innovation"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "high",
+          "adoption_score": 75,
+          "notes": "AI Bill (PL 2338/2023) closely mirrors EU AI Act risk categories"
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "endorsed",
+          "adoption_score": 80,
+          "notes": "Strong alignment with human rights approach"
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "member",
+          "adoption_score": 85,
+          "notes": "OECD member; principles embedded in national strategy"
+        }
+      },
+      "implementation_status": {
+        "overall_score": 55,
+        "has_enforcement_body": true,
+        "has_regulatory_sandbox": true,
+        "has_impact_assessments": true,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": true,
+        "has_redress_mechanisms": true
+      },
+      "risk_classification": {
+        "uses_eu_categories": true,
+        "custom_high_risk": [
+          "biometric identification",
+          "critical infrastructure",
+          "education",
+          "employment"
+        ],
+        "divergence_notes": "Adds environmental impact as consideration for high-risk classification"
+      },
+      "key_developments": [
+        {
+          "date": "2024-12",
+          "event": "AI Bill passed Senate"
+        },
+        {
+          "date": "2025-03",
+          "event": "National AI Authority established"
+        },
+        {
+          "date": "2025-06",
+          "event": "First algorithmic impact assessments mandated"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 84.5,
+        "has_data_protection_law": true,
+        "data_protection_law_name": "LGPD – Lei Geral de Proteção de Dados (Law No. 13.709/2018)",
+        "ai_talent_availability": "high",
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS"
+      },
+      "priority_sectors": [
+        "public administration",
+        "healthcare",
+        "agriculture",
+        "financial services"
+      ],
+      "international_engagement": {
+        "oecd_status": "acceding",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": true
+      },
+      "data_quality": {
+        "last_verified": "2026-05-30",
+        "confidence_level": "medium",
+        "sources": [
+          "PL 2338/2023 AI Bill text",
+          "EBIA strategy document",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      }
+    },
+    {
+      "country_code": "KEN",
+      "country_name": "Kenya",
+      "region": "Sub-Saharan Africa",
+      "income_level": "lower_middle",
+      "population_millions": 55,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "Kenya National AI Strategy",
+        "year_published": 2025,
+        "year_updated": null,
+        "lead_agency": "Ministry of ICT"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "partial",
+          "adoption_score": 35,
+          "notes": "References EU approach but adapts for local context"
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "endorsed",
+          "adoption_score": 60,
+          "notes": "Endorsement with African Union AI Strategy alignment"
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "observer",
+          "adoption_score": 40,
+          "notes": "Non-member but references principles"
+        }
+      },
+      "implementation_status": {
+        "overall_score": 25,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": true,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "mobile money AI",
+          "agricultural AI",
+          "healthcare diagnostics",
+          "identity systems"
+        ],
+        "divergence_notes": "Mobile money and agricultural AI prioritized as high-risk given economic importance"
+      },
+      "key_developments": [
+        {
+          "date": "2024-06",
+          "event": "AU AI Strategy adopted"
+        },
+        {
+          "date": "2025-01",
+          "event": "National AI Strategy published"
+        },
+        {
+          "date": "2025-04",
+          "event": "Konza Technopolis AI sandbox launched"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 35.0,
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Data Protection Act, 2019",
+        "ai_talent_availability": "medium",
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS"
+      },
+      "priority_sectors": [
+        "agriculture",
+        "mobile money / fintech",
+        "healthcare",
+        "public services"
+      ],
+      "international_engagement": {
+        "oecd_status": "non_member",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-05-30",
+        "confidence_level": "low",
+        "sources": [
+          "Kenya National AI Strategy",
+          "AU Continental AI Strategy",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      }
+    },
+    {
+      "country_code": "IDN",
+      "country_name": "Indonesia",
+      "region": "Southeast Asia",
+      "income_level": "upper_middle",
+      "population_millions": 277,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "National AI Strategy 2020-2045",
+        "year_published": 2020,
+        "year_updated": 2024,
+        "lead_agency": "BRIN (National Research and Innovation Agency)"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "partial",
+          "adoption_score": 40,
+          "notes": "Selective adoption; focuses on sectors relevant to Indonesian economy"
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "endorsed",
+          "adoption_score": 55,
+          "notes": "Endorsed with ASEAN AI governance framework alignment"
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "partner",
+          "adoption_score": 50,
+          "notes": "Key Partner status; principles referenced in strategy"
+        }
+      },
+      "implementation_status": {
+        "overall_score": 35,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": true,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "financial services AI",
+          "government services",
+          "content moderation",
+          "healthcare"
+        ],
+        "divergence_notes": "Content moderation AI prioritized due to social media's role in society"
+      },
+      "key_developments": [
+        {
+          "date": "2024-02",
+          "event": "ASEAN AI Governance Guidelines adopted"
+        },
+        {
+          "date": "2024-09",
+          "event": "AI ethics guidelines for public sector released"
+        },
+        {
+          "date": "2025-05",
+          "event": "Draft AI regulation submitted to parliament"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 72.8,
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Personal Data Protection Law (Law No. 27 of 2022)",
+        "ai_talent_availability": "medium",
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS"
+      },
+      "priority_sectors": [
+        "public services",
+        "financial services",
+        "content moderation",
+        "healthcare"
+      ],
+      "international_engagement": {
+        "oecd_status": "acceding",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": false,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-05-30",
+        "confidence_level": "medium",
+        "sources": [
+          "National AI Strategy 2020-2045",
+          "ASEAN Guide on AI Governance",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      }
+    },
+    {
+      "country_code": "NGA",
+      "country_name": "Nigeria",
+      "region": "Sub-Saharan Africa",
+      "income_level": "lower_middle",
+      "population_millions": 223,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "National AI Strategy",
+        "year_published": 2024,
+        "year_updated": null,
+        "lead_agency": "National Information Technology Development Agency (NITDA)"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "low",
+          "adoption_score": 25,
+          "notes": "Limited direct adoption; focuses on local priorities"
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "endorsed",
+          "adoption_score": 50,
+          "notes": "Endorsement aligned with AU AI Strategy"
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "none",
+          "adoption_score": 20,
+          "notes": "No formal alignment; some principles referenced"
+        }
+      },
+      "implementation_status": {
+        "overall_score": 20,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "fintech AI",
+          "identity verification",
+          "electoral systems",
+          "oil and gas"
+        ],
+        "divergence_notes": "Oil and gas AI considered critical infrastructure; electoral AI top priority post-2023 elections"
+      },
+      "key_developments": [
+        {
+          "date": "2024-01",
+          "event": "National AI Strategy launched"
+        },
+        {
+          "date": "2024-08",
+          "event": "AI Centre of Excellence announced"
+        },
+        {
+          "date": "2025-02",
+          "event": "Draft AI governance framework released for consultation"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 41.2,
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Nigeria Data Protection Act, 2023",
+        "ai_talent_availability": "medium",
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS"
+      },
+      "priority_sectors": [
+        "fintech",
+        "agriculture",
+        "identity / electoral systems",
+        "oil and gas"
+      ],
+      "international_engagement": {
+        "oecd_status": "non_member",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": false,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-05-30",
+        "confidence_level": "low",
+        "sources": [
+          "NITDA National AI Strategy",
+          "Draft AI governance framework",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      }
+    },
+    {
+      "country_code": "MEX",
+      "country_name": "Mexico",
+      "region": "Latin America",
+      "income_level": "upper_middle",
+      "population_millions": 128,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "AI Agenda Mexico",
+        "year_published": 2018,
+        "year_updated": 2024,
+        "lead_agency": "Office of the President (Coordination of Digital National Strategy)"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "partial",
+          "adoption_score": 50,
+          "notes": "USMCA commitments influence approach; balancing EU and US models"
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "endorsed",
+          "adoption_score": 65,
+          "notes": "Active participant in UNESCO AI discussions"
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "member",
+          "adoption_score": 75,
+          "notes": "OECD member; principles embedded in strategy"
+        }
+      },
+      "implementation_status": {
+        "overall_score": 40,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": true,
+        "has_impact_assessments": true,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "border security AI",
+          "manufacturing automation",
+          "healthcare",
+          "financial services"
+        ],
+        "divergence_notes": "Border/migration AI highly prioritized given US-Mexico dynamics"
+      },
+      "key_developments": [
+        {
+          "date": "2024-04",
+          "event": "Updated AI strategy released"
+        },
+        {
+          "date": "2024-11",
+          "event": "AI ethics guidelines for federal government"
+        },
+        {
+          "date": "2025-03",
+          "event": "Senate AI regulation hearings begin"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 83.1,
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Federal Law on the Protection of Personal Data Held by Private Parties (2025 reform)",
+        "ai_talent_availability": "high",
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS"
+      },
+      "priority_sectors": [
+        "border / migration",
+        "manufacturing automation",
+        "healthcare",
+        "financial services"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-05-30",
+        "confidence_level": "medium",
+        "sources": [
+          "AI Agenda Mexico",
+          "Federal AI ethics guidelines",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      }
+    },
+    {
+      "country_code": "ZAF",
+      "country_name": "South Africa",
+      "region": "Sub-Saharan Africa",
+      "income_level": "upper_middle",
+      "population_millions": 60,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "AI for South Africa",
+        "year_published": 2024,
+        "year_updated": null,
+        "lead_agency": "Department of Communications and Digital Technologies"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "partial",
+          "adoption_score": 45,
+          "notes": "References EU approach; adapts for POPIA (data protection) alignment"
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "endorsed",
+          "adoption_score": 70,
+          "notes": "Strong endorsement; leading AU AI ethics discussions"
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "partner",
+          "adoption_score": 55,
+          "notes": "Key Partner; principles referenced in strategy"
+        }
+      },
+      "implementation_status": {
+        "overall_score": 35,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": true,
+        "has_impact_assessments": true,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "credit scoring",
+          "employment screening",
+          "healthcare",
+          "mining automation"
+        ],
+        "divergence_notes": "Mining sector AI classified as high-risk due to safety implications; credit scoring prioritized for inclusion"
+      },
+      "key_developments": [
+        {
+          "date": "2024-03",
+          "event": "Presidential Commission on AI established"
+        },
+        {
+          "date": "2024-10",
+          "event": "National AI Strategy published"
+        },
+        {
+          "date": "2025-02",
+          "event": "AI regulatory sandbox launched in Cape Town"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 78.4,
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Protection of Personal Information Act (POPIA), 2013 (in force 2021)",
+        "ai_talent_availability": "high",
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS"
+      },
+      "priority_sectors": [
+        "mining",
+        "financial inclusion / credit",
+        "healthcare",
+        "employment"
+      ],
+      "international_engagement": {
+        "oecd_status": "non_member",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": true
+      },
+      "data_quality": {
+        "last_verified": "2026-05-30",
+        "confidence_level": "medium",
+        "sources": [
+          "AI for South Africa strategy",
+          "Presidential Commission on AI report",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      }
+    },
+    {
+      "country_code": "BGD",
+      "country_name": "Bangladesh",
+      "region": "South Asia",
+      "income_level": "lower_middle",
+      "population_millions": 173,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "National AI Strategy of Bangladesh",
+        "year_published": 2024,
+        "year_updated": null,
+        "lead_agency": "ICT Division"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "low",
+          "adoption_score": 20,
+          "notes": "Focus on AI adoption over governance; limited regulatory framework"
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "endorsed",
+          "adoption_score": 45,
+          "notes": "Endorsement with focus on development applications"
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "none",
+          "adoption_score": 15,
+          "notes": "Limited engagement; some principles in strategy"
+        }
+      },
+      "implementation_status": {
+        "overall_score": 15,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "garment factory automation",
+          "remittance AI",
+          "flood prediction",
+          "agricultural AI"
+        ],
+        "divergence_notes": "Garment sector AI prioritized given economic importance; climate AI considered critical"
+      },
+      "key_developments": [
+        {
+          "date": "2024-06",
+          "event": "National AI Strategy published"
+        },
+        {
+          "date": "2024-12",
+          "event": "AI task force formed"
+        },
+        {
+          "date": "2025-04",
+          "event": "First AI governance workshop with UN support"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 53.4,
+        "has_data_protection_law": false,
+        "data_protection_law_name": "Personal Data Protection Act – draft, not yet enacted (as of 2026)",
+        "ai_talent_availability": "medium",
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS"
+      },
+      "priority_sectors": [
+        "garment / manufacturing",
+        "agriculture",
+        "climate / flood prediction",
+        "remittance / fintech"
+      ],
+      "international_engagement": {
+        "oecd_status": "non_member",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": false,
+        "civil_society_involved": false,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-05-30",
+        "confidence_level": "low",
+        "sources": [
+          "National AI Strategy of Bangladesh",
+          "ICT Division publications",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      }
+    }
+  ]
+}

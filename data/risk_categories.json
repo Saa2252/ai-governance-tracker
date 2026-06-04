@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-06-04",
+    "author": "Sana Asif Ahmad",
+    "description": "Reference for how AI 'risk' is classified — the EU AI Act baseline taxonomy, the sectors Global South countries commonly elevate to high-risk, and each tracked country's own high-risk list. Built to be consistent with data/countries.json and data/frameworks.json.",
+    "sources": [
+      "EU AI Act (Regulation (EU) 2024/1689), Annex III",
+      "National AI strategies and draft legislation of tracked countries"
+    ]
+  },
+  "reference_taxonomy": {
+    "source": "Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+    "approach": "Risk-based: every AI system is sorted into one of four tiers, each with different obligations.",
+    "tiers": [
+      {
+        "level": "unacceptable",
+        "description": "Banned AI practices",
+        "examples": [
+          "Social scoring by governments",
+          "Real-time biometric ID in public spaces",
+          "Emotion recognition in workplace/education"
+        ],
+        "obligation": "Banned outright."
+      },
+      {
+        "level": "high_risk",
+        "description": "Strict requirements before market placement",
+        "examples": [
+          "Critical infrastructure",
+          "Education access",
+          "Employment decisions",
+          "Credit scoring",
+          "Law enforcement"
+        ],
+        "obligation": "Conformity assessment, risk management, human oversight, transparency before market."
+      },
+      {
+        "level": "limited",
+        "description": "Transparency obligations",
+        "examples": [
+          "Chatbots",
+          "Emotion recognition",
+          "Deepfakes"
+        ],
+        "obligation": "Transparency/disclosure obligations only."
+      },
+      {
+        "level": "minimal",
+        "description": "No restrictions",
+        "examples": [
+          "AI-enabled video games",
+          "Spam filters"
+        ],
+        "obligation": "No mandatory obligations."
+      }
+    ]
+  },
+  "global_south_divergences": [
+    {
+      "theme": "Agricultural AI",
+      "global_south_treatment": "high_risk / critical",
+      "eu_treatment": "not specifically high-risk",
+      "rationale": "Agriculture underpins food security and rural livelihoods; failures carry outsized social cost.",
+      "countries": [
+        "Kenya",
+        "Bangladesh"
+      ]
+    },
+    {
+      "theme": "Mobile money & fintech AI",
+      "global_south_treatment": "high_risk",
+      "eu_treatment": "credit scoring is high-risk; broader mobile-money use is not singled out",
+      "rationale": "Mobile money is core financial infrastructure for the unbanked.",
+      "countries": [
+        "India",
+        "Kenya",
+        "Indonesia",
+        "Nigeria",
+        "Mexico",
+        "South Africa",
+        "Bangladesh"
+      ]
+    },
+    {
+      "theme": "Content moderation AI",
+      "global_south_treatment": "high_risk",
+      "eu_treatment": "limited risk (transparency only)",
+      "rationale": "Social platforms shape public discourse and election integrity.",
+      "countries": [
+        "Indonesia"
+      ]
+    },
+    {
+      "theme": "Extractive-industry AI (mining, oil & gas)",
+      "global_south_treatment": "high_risk",
+      "eu_treatment": "covered only generally under critical infrastructure / safety",
+      "rationale": "Worker-safety and economic dependence on extractive sectors.",
+      "countries": [
+        "Nigeria",
+        "South Africa"
+      ]
+    },
+    {
+      "theme": "Climate & disaster-prediction AI",
+      "global_south_treatment": "critical",
+      "eu_treatment": "not classified as high-risk",
+      "rationale": "Flood/climate forecasting is life-saving in exposed economies.",
+      "countries": [
+        "Bangladesh"
+      ]
+    },
+    {
+      "theme": "Border, migration & identity AI",
+      "global_south_treatment": "high_risk",
+      "eu_treatment": "migration/biometric ID is high-risk under Annex III",
+      "rationale": "Migration dynamics and national ID systems are politically central.",
+      "countries": [
+        "Kenya",
+        "Nigeria",
+        "Mexico"
+      ]
+    }
+  ],
+  "country_risk_profiles": [
+    {
+      "country_code": "IND",
+      "country_name": "India",
+      "uses_eu_categories": false,
+      "custom_high_risk": [
+        "facial recognition",
+        "social scoring",
+        "employment AI",
+        "credit scoring"
+      ],
+      "divergence_notes": "Agricultural AI considered critical infrastructure, not in EU high-risk list"
+    },
+    {
+      "country_code": "BRA",
+      "country_name": "Brazil",
+      "uses_eu_categories": true,
+      "custom_high_risk": [
+        "biometric identification",
+        "critical infrastructure",
+        "education",
+        "employment"
+      ],
+      "divergence_notes": "Adds environmental impact as consideration for high-risk classification"
+    },
+    {
+      "country_code": "KEN",
+      "country_name": "Kenya",
+      "uses_eu_categories": false,
+      "custom_high_risk": [
+        "mobile money AI",
+        "agricultural AI",
+        "healthcare diagnostics",
+        "identity systems"
+      ],
+      "divergence_notes": "Mobile money and agricultural AI prioritized as high-risk given economic importance"
+    },
+    {
+      "country_code": "IDN",
+      "country_name": "Indonesia",
+      "uses_eu_categories": false,
+      "custom_high_risk": [
+        "financial services AI",
+        "government services",
+        "content moderation",
+        "healthcare"
+      ],
+      "divergence_notes": "Content moderation AI prioritized due to social media's role in society"
+    },
+    {
+      "country_code": "NGA",
+      "country_name": "Nigeria",
+      "uses_eu_categories": false,
+      "custom_high_risk": [
+        "fintech AI",
+        "identity verification",
+        "electoral systems",
+        "oil and gas"
+      ],
+      "divergence_notes": "Oil and gas AI considered critical infrastructure; electoral AI top priority post-2023 elections"
+    },
+    {
+      "country_code": "MEX",
+      "country_name": "Mexico",
+      "uses_eu_categories": false,
+      "custom_high_risk": [
+        "border security AI",
+        "manufacturing automation",
+        "healthcare",
+        "financial services"
+      ],
+      "divergence_notes": "Border/migration AI highly prioritized given US-Mexico dynamics"
+    },
+    {
+      "country_code": "ZAF",
+      "country_name": "South Africa",
+      "uses_eu_categories": false,
+      "custom_high_risk": [
+        "credit scoring",
+        "employment screening",
+        "healthcare",
+        "mining automation"
+      ],
+      "divergence_notes": "Mining sector AI classified as high-risk due to safety implications; credit scoring prioritized for inclusion"
+    },
+    {
+      "country_code": "BGD",
+      "country_name": "Bangladesh",
+      "uses_eu_categories": false,
+      "custom_high_risk": [
+        "garment factory automation",
+        "remittance AI",
+        "flood prediction",
+        "agricultural AI"
+      ],
+      "divergence_notes": "Garment sector AI prioritized given economic importance; climate AI considered critical"
+    }
+  ]
+}
