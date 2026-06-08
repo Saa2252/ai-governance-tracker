@@ -802,14 +802,52 @@
         }
       },
       "implementation_status": {
-        "overall_score": 40,
+        "overall_score": 0,
         "has_enforcement_body": false,
-        "has_regulatory_sandbox": true,
-        "has_impact_assessments": true,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
-        "coding_status": "provisional"
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "CONAIA (National AI Commission) would be created by the proposed Federal Law Regulating AI, still under discussion in the Senate; not yet established.",
+            "source": "https://cms.law/en/int/expert-guides/ai-regulation-scanner/mexico"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI sandboxes are expected to be introduced by the pending AI law; no AI-specific sandbox operational.",
+            "source": "https://cms.law/en/int/expert-guides/ai-regulation-scanner/mexico"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Algorithmic Impact Assessments are mandated only by the proposed AI law (high-risk systems); law not yet enacted.",
+            "source": "https://cms.law/en/int/expert-guides/ai-regulation-scanner/mexico"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI transparency duties depend on the pending Federal Law Regulating AI; not in force.",
+            "source": "https://www.legal500.com/guides/chapter/mexico-artificial-intelligence/"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://cms.law/en/int/expert-guides/ai-regulation-scanner/mexico"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI-specific redress depends on the pending AI law; not in force.",
+            "source": "https://cms.law/en/int/expert-guides/ai-regulation-scanner/mexico"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
