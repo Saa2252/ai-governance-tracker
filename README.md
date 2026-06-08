@@ -23,7 +23,7 @@ This tracker fills that gap with **implementation data from the ground level**.
 
 ## What This Project Does
 
-📊 **Interactive Dashboard** — Compare AI governance adoption across 50+ developing economies
+📊 **Interactive Dashboard** — Compare AI governance adoption across **16 fully-profiled** developing economies (with a documented [24-country roster](data/country_roster.json) for expansion)
 
 🗺️ **Implementation Mapping** — Track which countries have adopted, adapted, or created alternatives to major frameworks
 
@@ -38,7 +38,7 @@ This tracker fills that gap with **implementation data from the ground level**.
 This tracker is built on primary research from:
 
 - **UN Development Coordination Office** — Policy implementation data from 7 country offices across 4 regions
-- **National AI strategies** — Official government documents from 50+ countries
+- **National AI strategies** — Official government documents (16 countries fully profiled; broader roster screened against the OECD.AI Policy Observatory)
 - **Regulatory filings** — Draft and enacted AI legislation
 - **Expert interviews** — Practitioners implementing AI governance on the ground
 
@@ -87,13 +87,28 @@ ai-governance-tracker/
 
 ---
 
-## Key Findings (Preview)
+## Key Findings
 
-| Finding | Insight |
-|---------|---------|
-| **Adoption vs. Implementation Gap** | 73% of countries reference EU AI Act in policy documents, but only 12% have operational enforcement mechanisms |
-| **Risk Category Divergence** | Agricultural AI classified as "high-risk" in 8 African nations vs. "limited risk" under EU framework |
-| **Regional Clusters** | South Asian countries show strongest alignment with UNESCO framework; Latin America trending toward EU model |
+*The **Implementation Score is fully deterministic** — the weighted sum of six
+in-force indicators — so every number is reconstructable (run
+[`analysis/findings.py`](analysis/findings.py)). Of 16 countries, **3 are fully
+evidence-coded** (Brazil, India, Kenya, each indicator cited); the other 13 are
+`provisional` estimates being coded on a rolling basis.*
+
+**From the evidence-coded countries (citation-ready):**
+
+| Finding | Evidence |
+|---------|----------|
+| **Governance is largely aspirational, not operational** | India and Kenya score **0/100** on *in-force* enforcement despite active 2025 national strategies — their AI governance is voluntary or still being stood up. Brazil scores **20/100** (only an ANPD sandbox is operational; PL 2338 is not yet law). |
+| **A huge adoption-vs-enforcement gap** | Brazil aligns closely with the EU AI Act on paper (**75/100 adoption**) but enforcement is barely in force (**20/100**) — a **55-point** gap, the signature pattern this index is built to expose. |
+| **Strict coding matters** | All three pilots scored *lower* once evidence-coded than as initial estimates — e.g. Brazil's "national AI authority" is not yet in force, so enforcement is 0, not 25. Provisional scores should be read as upper bounds. |
+
+**Structural (all 16 countries):** **15 of 16 (94%)** use *custom* high-risk
+categories rather than the EU's tiers — most often elevating healthcare,
+financial/mobile-money AI, facial recognition, and agriculture.
+
+> ⚠️ Cross-country *averages* are intentionally not headlined while 13 countries
+> remain `provisional`; see [`METHODOLOGY.md`](METHODOLOGY.md) for status.
 
 ---
 
@@ -101,10 +116,10 @@ ai-governance-tracker/
 
 **Sana Asif Ahmad** — AI governance researcher with hands-on implementation experience.
 
-- **Columbia University SIPA Fellow** (2023-24) — Specialized in AI regulation and governance
-- **UN Development Coordination Office** — Translated EU AI Act and UNESCO AI Ethics frameworks into governance roadmaps for 7 country offices across 4 regions
--  **University of Pennsylvania** — Currently researching AI governance frameworks for academic applications
--  **Background** — B.E. Computer Science (Osmania University), M.S. Urban Policy (TISS Mumbai)
+- 🎓 **Columbia University SIPA Fellow** (2023-24) — Specialized in AI regulation and governance
+- 🇺🇳 **UN Development Coordination Office** — Translated EU AI Act and UNESCO AI Ethics frameworks into governance roadmaps for 7 country offices across 4 regions
+- 🔬 **University of Pennsylvania** — Currently researching AI governance frameworks for academic applications
+- 💻 **Background** — B.E. Computer Science (Osmania University), M.S. Urban Policy (TISS Mumbai)
 
 This project operationalizes insights from translating global AI frameworks into country-level implementation.
 
@@ -149,7 +164,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ## Roadmap
 
-- [x] Initial country dataset (50+ countries)
+- [x] Initial country dataset (16 fully profiled; 24-country roster documented)
 - [x] Streamlit dashboard v1
 - [ ] API endpoint for data access
 - [ ] Integration with EU AI Act compliance tools

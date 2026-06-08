@@ -60,8 +60,9 @@ Each block has:
 | Field | Plain meaning |
 |---|---|
 | `adoption_status` | Short label for the relationship (see vocabulary note below). |
-| `adoption_score` | 0–100 score for how closely the country aligns. See `METHODOLOGY.md`. |
+| `adoption_score` | 0–100 score for how closely the country aligns. Scored via [`scoring_rubric.md`](scoring_rubric.md). |
 | `notes` | Free-text explanation of the score. |
+| `source` | *(v1.4)* Citation for the score: `primary_instrument` (the policy/law it rests on), `framework_reference_url` (the framework text), and `verify_via` (OECD.AI lookup). |
 
 > **Vocabulary note:** `adoption_status` currently mixes several word-sets
 > (`partial`, `endorsed`, `aligned`, `high`, `member`, `observer`, `partner`,
@@ -83,6 +84,12 @@ Mirrors the six scoring components in `METHODOLOGY.md`.
 | `has_transparency_requirements` | Disclosure obligations exist. |
 | `has_audit_mechanisms` | Third-party audit provisions exist. *(added in v1.1)* |
 | `has_redress_mechanisms` | Channels for people to seek remedy exist. *(added in v1.1)* |
+| `coding_status` | *(v2.0)* `evidence_coded` (every indicator researched + cited; defensible) or `provisional` (unverified estimate). |
+| `evidence` | *(v2.0, evidence-coded countries only)* Per-indicator record: `value`, `as_of` date, one-line `evidence`, and `source` URL. |
+
+> **`overall_score` is deterministic (v2.0):** it equals the weighted sum of the six
+> booleans (25/20/20/15/10/10) where each is `1` only if the mechanism is *operational
+> and in force*. `analysis/findings.py` asserts this for every country.
 
 ### `risk_classification` — how the country defines "risky" AI
 
@@ -169,6 +176,14 @@ A standalone reference for how "risky" AI is classified. Three sections:
 | `country_risk_profiles` | Each country's own high-risk list, kept in sync with `countries.json`. |
 
 ---
+
+## Other companion files
+
+| File | Purpose |
+|---|---|
+| [`scoring_rubric.md`](scoring_rubric.md) | The rubric behind every score, with high/mid/low worked examples (evidence → number). |
+| [`../analysis/findings.py`](../analysis/findings.py) | Reproduces all README headline statistics from `countries.json` (standard library only). |
+| `../data/comparators_developed.json` | **Optional overlay** (feature branch): high-income comparator countries (Germany, France, UK, US, Japan, South Korea, Canada, Australia). Same schema; *not* part of the core Global South dataset. |
 
 ## Field types at a glance
 

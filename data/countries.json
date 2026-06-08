@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.3",
-    "last_updated": "2026-06-04",
+    "version": "2.0",
+    "last_updated": "2026-06-08",
     "author": "Sana Asif Ahmad",
     "description": "AI governance adoption data for Global South countries",
     "data_sources": [
@@ -9,7 +9,7 @@
       "National AI strategy documents",
       "Regulatory filings and draft legislation"
     ],
-    "schema_note": "v1.3: added 8 country profiles (Pakistan, Sri Lanka, Vietnam, Philippines, Thailand, Malaysia, Argentina, Colombia) — now 16 total, weighted toward South/Southeast Asia and upper-middle-income economies. Factual fields verified (World Bank, OECD/GPAI); scores remain illustrative. See docs/data_dictionary.md and METHODOLOGY.md."
+    "schema_note": "v2.0 (index methodology): implementation overall_score is now a DETERMINISTIC weighted sum of six in-force indicators (audit-verifiable). adoption_status standardized to rubric bands (none/low/partial/high). Brazil, India, Kenya are fully EVIDENCE-CODED with per-indicator citations; the other 13 are PROVISIONAL (coding_status field) pending the same treatment. See METHODOLOGY.md."
   },
   "countries": [
     {
@@ -27,29 +27,83 @@
       },
       "framework_alignment": {
         "eu_ai_act": {
-          "adoption_status": "partial",
+          "adoption_status": "low",
           "adoption_score": 45,
-          "notes": "Digital India Act draft incorporates risk-based approach but diverges on high-risk categories"
+          "notes": "Digital India Act draft incorporates risk-based approach but diverges on high-risk categories",
+          "source": {
+            "primary_instrument": "Digital India Act (draft, 2023); National Strategy for AI (NITI Aayog, 2018)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 70,
-          "notes": "Formally endorsed UNESCO recommendation; implementing through MeitY guidelines"
+          "notes": "Formally endorsed UNESCO recommendation; implementing through MeitY guidelines",
+          "source": {
+            "primary_instrument": "Digital India Act (draft, 2023); National Strategy for AI (NITI Aayog, 2018)",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "aligned",
+          "adoption_status": "partial",
           "adoption_score": 65,
-          "notes": "G20 AI Principles adopted; implementation varies by sector"
+          "notes": "G20 AI Principles adopted; implementation varies by sector",
+          "source": {
+            "primary_instrument": "Digital India Act (draft, 2023); National Strategy for AI (NITI Aayog, 2018)",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 40,
+        "overall_score": 0,
         "has_enforcement_body": false,
-        "has_regulatory_sandbox": true,
-        "has_impact_assessments": true,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "No statutory AI regulator; AI Governance Group is advisory; sectoral regulators only.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-india"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "No operational national AI-specific regulatory sandbox (sectoral fintech sandboxes only).",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-india"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "Nov-2025 India AI Governance Guidelines are voluntary; no mandatory AI impact assessment.",
+            "source": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc2025115685601.pdf"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "Transparency obligations proposed in draft bill / guidelines; not binding AI law.",
+            "source": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc2025115685601.pdf"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "Bias audits proposed in the 2025 AI (Ethics & Accountability) Bill, not enacted.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-india"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "Grievance mechanisms proposed; no AI-specific statutory redress in force.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-india"
+          }
+        },
+        "coding_status": "evidence_coded"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -137,29 +191,83 @@
       },
       "framework_alignment": {
         "eu_ai_act": {
-          "adoption_status": "high",
+          "adoption_status": "partial",
           "adoption_score": 75,
-          "notes": "AI Bill (PL 2338/2023) closely mirrors EU AI Act risk categories"
+          "notes": "AI Bill (PL 2338/2023) closely mirrors EU AI Act risk categories",
+          "source": {
+            "primary_instrument": "AI Bill PL 2338/2023; Brazilian AI Strategy (EBIA, 2021)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "high",
           "adoption_score": 80,
-          "notes": "Strong alignment with human rights approach"
+          "notes": "Strong alignment with human rights approach",
+          "source": {
+            "primary_instrument": "AI Bill PL 2338/2023; Brazilian AI Strategy (EBIA, 2021)",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "member",
+          "adoption_status": "high",
           "adoption_score": 85,
-          "notes": "OECD member; principles embedded in national strategy"
+          "notes": "OECD member; principles embedded in national strategy",
+          "source": {
+            "primary_instrument": "AI Bill PL 2338/2023; Brazilian AI Strategy (EBIA, 2021)",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 55,
-        "has_enforcement_body": true,
+        "overall_score": 20,
+        "has_enforcement_body": false,
         "has_regulatory_sandbox": true,
-        "has_impact_assessments": true,
-        "has_transparency_requirements": true,
-        "has_audit_mechanisms": true,
-        "has_redress_mechanisms": true
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "PL 2338/2023 not yet enacted (in Chamber of Deputies, 2025); SIA / ANPD-coordinator model not in force.",
+            "source": "https://www.loc.gov/item/global-legal-monitor/2025-05-23/brazil-senate-advances-discussions-on-bill-to-regulate-ai-use/"
+          },
+          "has_regulatory_sandbox": {
+            "value": true,
+            "as_of": "2026-05",
+            "evidence": "ANPD ran a pilot regulatory sandbox on AI and data protection.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-brazil"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "Algorithmic impact assessment is mandated by PL 2338 but the bill is not in force.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-brazil"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "AI-specific transparency duties depend on PL 2338, not yet law.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-brazil"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-brazil"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "AI-specific redress depends on PL 2338, not yet law.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-brazil"
+          }
+        },
+        "coding_status": "evidence_coded"
       },
       "risk_classification": {
         "uses_eu_categories": true,
@@ -247,29 +355,83 @@
       },
       "framework_alignment": {
         "eu_ai_act": {
-          "adoption_status": "partial",
+          "adoption_status": "low",
           "adoption_score": 35,
-          "notes": "References EU approach but adapts for local context"
+          "notes": "References EU approach but adapts for local context",
+          "source": {
+            "primary_instrument": "Kenya National AI Strategy (2025); Data Protection Act 2019",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 60,
-          "notes": "Endorsement with African Union AI Strategy alignment"
+          "notes": "Endorsement with African Union AI Strategy alignment",
+          "source": {
+            "primary_instrument": "Kenya National AI Strategy (2025); Data Protection Act 2019",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "observer",
+          "adoption_status": "low",
           "adoption_score": 40,
-          "notes": "Non-member but references principles"
+          "notes": "Non-member but references principles",
+          "source": {
+            "primary_instrument": "Kenya National AI Strategy (2025); Data Protection Act 2019",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 25,
+        "overall_score": 0,
         "has_enforcement_body": false,
-        "has_regulatory_sandbox": true,
+        "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "Implementation Secretariat being established; no AI regulator in force.",
+            "source": "https://oecd.ai/en/dashboards/policy-initiatives/kenya-artificial-intelligence-strategy-2025-2030"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "Data sandboxes 'expected to be created'; not yet operational.",
+            "source": "https://cipesa.org/2026/05/can-kenya-close-the-gap-between-innovation-and-human-rights/"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://cipesa.org/2026/05/can-kenya-close-the-gap-between-innovation-and-human-rights/"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "No binding AI transparency requirement; AI Bill 2026 still under debate.",
+            "source": "https://cipesa.org/2026/05/can-kenya-close-the-gap-between-innovation-and-human-rights/"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "Regulators reported to 'lack capabilities to audit and monitor' AI.",
+            "source": "https://cipesa.org/2026/05/can-kenya-close-the-gap-between-innovation-and-human-rights/"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-05",
+            "evidence": "No AI-specific redress channel in force.",
+            "source": "https://cipesa.org/2026/05/can-kenya-close-the-gap-between-innovation-and-human-rights/"
+          }
+        },
+        "coding_status": "evidence_coded"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -357,19 +519,34 @@
       },
       "framework_alignment": {
         "eu_ai_act": {
-          "adoption_status": "partial",
+          "adoption_status": "low",
           "adoption_score": 40,
-          "notes": "Selective adoption; focuses on sectors relevant to Indonesian economy"
+          "notes": "Selective adoption; focuses on sectors relevant to Indonesian economy",
+          "source": {
+            "primary_instrument": "National AI Strategy 2020–2045; ASEAN Guide on AI Governance",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 55,
-          "notes": "Endorsed with ASEAN AI governance framework alignment"
+          "notes": "Endorsed with ASEAN AI governance framework alignment",
+          "source": {
+            "primary_instrument": "National AI Strategy 2020–2045; ASEAN Guide on AI Governance",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "partner",
+          "adoption_status": "partial",
           "adoption_score": 50,
-          "notes": "Key Partner status; principles referenced in strategy"
+          "notes": "Key Partner status; principles referenced in strategy",
+          "source": {
+            "primary_instrument": "National AI Strategy 2020–2045; ASEAN Guide on AI Governance",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
@@ -379,7 +556,8 @@
         "has_impact_assessments": false,
         "has_transparency_requirements": true,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -469,27 +647,43 @@
         "eu_ai_act": {
           "adoption_status": "low",
           "adoption_score": 25,
-          "notes": "Limited direct adoption; focuses on local priorities"
+          "notes": "Limited direct adoption; focuses on local priorities",
+          "source": {
+            "primary_instrument": "National AI Strategy (NITDA, 2024)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 50,
-          "notes": "Endorsement aligned with AU AI Strategy"
+          "notes": "Endorsement aligned with AU AI Strategy",
+          "source": {
+            "primary_instrument": "National AI Strategy (NITDA, 2024)",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "none",
+          "adoption_status": "low",
           "adoption_score": 20,
-          "notes": "No formal alignment; some principles referenced"
+          "notes": "No formal alignment; some principles referenced",
+          "source": {
+            "primary_instrument": "National AI Strategy (NITDA, 2024)",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 20,
+        "overall_score": 0,
         "has_enforcement_body": false,
         "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -579,17 +773,32 @@
         "eu_ai_act": {
           "adoption_status": "partial",
           "adoption_score": 50,
-          "notes": "USMCA commitments influence approach; balancing EU and US models"
+          "notes": "USMCA commitments influence approach; balancing EU and US models",
+          "source": {
+            "primary_instrument": "AI Agenda Mexico; OECD membership instruments",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 65,
-          "notes": "Active participant in UNESCO AI discussions"
+          "notes": "Active participant in UNESCO AI discussions",
+          "source": {
+            "primary_instrument": "AI Agenda Mexico; OECD membership instruments",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "member",
+          "adoption_status": "partial",
           "adoption_score": 75,
-          "notes": "OECD member; principles embedded in strategy"
+          "notes": "OECD member; principles embedded in strategy",
+          "source": {
+            "primary_instrument": "AI Agenda Mexico; OECD membership instruments",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
@@ -599,7 +808,8 @@
         "has_impact_assessments": true,
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -687,29 +897,45 @@
       },
       "framework_alignment": {
         "eu_ai_act": {
-          "adoption_status": "partial",
+          "adoption_status": "low",
           "adoption_score": 45,
-          "notes": "References EU approach; adapts for POPIA (data protection) alignment"
+          "notes": "References EU approach; adapts for POPIA (data protection) alignment",
+          "source": {
+            "primary_instrument": "AI for South Africa strategy (2024); POPIA 2013",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 70,
-          "notes": "Strong endorsement; leading AU AI ethics discussions"
+          "notes": "Strong endorsement; leading AU AI ethics discussions",
+          "source": {
+            "primary_instrument": "AI for South Africa strategy (2024); POPIA 2013",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "partner",
+          "adoption_status": "partial",
           "adoption_score": 55,
-          "notes": "Key Partner; principles referenced in strategy"
+          "notes": "Key Partner; principles referenced in strategy",
+          "source": {
+            "primary_instrument": "AI for South Africa strategy (2024); POPIA 2013",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 35,
+        "overall_score": 40,
         "has_enforcement_body": false,
         "has_regulatory_sandbox": true,
         "has_impact_assessments": true,
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -799,27 +1025,43 @@
         "eu_ai_act": {
           "adoption_status": "low",
           "adoption_score": 20,
-          "notes": "Focus on AI adoption over governance; limited regulatory framework"
+          "notes": "Focus on AI adoption over governance; limited regulatory framework",
+          "source": {
+            "primary_instrument": "National AI Strategy of Bangladesh (2024)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "low",
           "adoption_score": 45,
-          "notes": "Endorsement with focus on development applications"
+          "notes": "Endorsement with focus on development applications",
+          "source": {
+            "primary_instrument": "National AI Strategy of Bangladesh (2024)",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
           "adoption_status": "none",
           "adoption_score": 15,
-          "notes": "Limited engagement; some principles in strategy"
+          "notes": "Limited engagement; some principles in strategy",
+          "source": {
+            "primary_instrument": "National AI Strategy of Bangladesh (2024)",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 15,
+        "overall_score": 0,
         "has_enforcement_body": false,
         "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -909,27 +1151,43 @@
         "eu_ai_act": {
           "adoption_status": "low",
           "adoption_score": 25,
-          "notes": "Draft AI policy references risk-based ideas but no binding EU-style law"
+          "notes": "Draft AI policy references risk-based ideas but no binding EU-style law",
+          "source": {
+            "primary_instrument": "Draft National AI Policy (MoITT, 2023)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "low",
           "adoption_score": 40,
-          "notes": "UNESCO member; ethics principles cited in draft policy"
+          "notes": "UNESCO member; ethics principles cited in draft policy",
+          "source": {
+            "primary_instrument": "Draft National AI Policy (MoITT, 2023)",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "none",
+          "adoption_status": "low",
           "adoption_score": 20,
-          "notes": "Not an OECD member; limited formal alignment"
+          "notes": "Not an OECD member; limited formal alignment",
+          "source": {
+            "primary_instrument": "Draft National AI Policy (MoITT, 2023)",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 18,
+        "overall_score": 0,
         "has_enforcement_body": false,
         "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1016,29 +1274,45 @@
       },
       "framework_alignment": {
         "eu_ai_act": {
-          "adoption_status": "partial",
+          "adoption_status": "low",
           "adoption_score": 30,
-          "notes": "Strategy references responsible-AI principles; no binding statute yet"
+          "notes": "Strategy references responsible-AI principles; no binding statute yet",
+          "source": {
+            "primary_instrument": "National AI Strategy (ICTA, 2024); PDP Act No. 9 of 2022",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "low",
           "adoption_score": 45,
-          "notes": "UNESCO ethics framework reflected in strategy"
+          "notes": "UNESCO ethics framework reflected in strategy",
+          "source": {
+            "primary_instrument": "National AI Strategy (ICTA, 2024); PDP Act No. 9 of 2022",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "none",
+          "adoption_status": "low",
           "adoption_score": 25,
-          "notes": "Non-member; principles referenced informally"
+          "notes": "Non-member; principles referenced informally",
+          "source": {
+            "primary_instrument": "National AI Strategy (ICTA, 2024); PDP Act No. 9 of 2022",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 20,
+        "overall_score": 15,
         "has_enforcement_body": false,
         "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
         "has_transparency_requirements": true,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1125,19 +1399,34 @@
       },
       "framework_alignment": {
         "eu_ai_act": {
-          "adoption_status": "partial",
+          "adoption_status": "low",
           "adoption_score": 40,
-          "notes": "Sectoral, innovation-first approach; selective risk concepts"
+          "notes": "Sectoral, innovation-first approach; selective risk concepts",
+          "source": {
+            "primary_instrument": "National Strategy on AI to 2030 (2021); PDP Decree 13/2023",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 55,
-          "notes": "Aligned via UNESCO and ASEAN AI governance guide"
+          "notes": "Aligned via UNESCO and ASEAN AI governance guide",
+          "source": {
+            "primary_instrument": "National Strategy on AI to 2030 (2021); PDP Decree 13/2023",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "partner",
+          "adoption_status": "low",
           "adoption_score": 45,
-          "notes": "OECD Southeast Asia programme partner; principles referenced"
+          "notes": "OECD Southeast Asia programme partner; principles referenced",
+          "source": {
+            "primary_instrument": "National Strategy on AI to 2030 (2021); PDP Decree 13/2023",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
@@ -1147,7 +1436,8 @@
         "has_impact_assessments": false,
         "has_transparency_requirements": true,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1235,29 +1525,45 @@
       },
       "framework_alignment": {
         "eu_ai_act": {
-          "adoption_status": "partial",
+          "adoption_status": "low",
           "adoption_score": 38,
-          "notes": "Roadmap focuses on adoption; emerging risk guidance"
+          "notes": "Roadmap focuses on adoption; emerging risk guidance",
+          "source": {
+            "primary_instrument": "National AI Strategy Roadmap 2.0 (2024); Data Privacy Act 2012",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 55,
-          "notes": "UNESCO ethics endorsed; ASEAN guide alignment"
+          "notes": "UNESCO ethics endorsed; ASEAN guide alignment",
+          "source": {
+            "primary_instrument": "National AI Strategy Roadmap 2.0 (2024); Data Privacy Act 2012",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "partner",
+          "adoption_status": "low",
           "adoption_score": 45,
-          "notes": "OECD Southeast Asia partner; principles cited"
+          "notes": "OECD Southeast Asia partner; principles cited",
+          "source": {
+            "primary_instrument": "National AI Strategy Roadmap 2.0 (2024); Data Privacy Act 2012",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 30,
+        "overall_score": 25,
         "has_enforcement_body": false,
         "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
         "has_transparency_requirements": true,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": true
+        "has_redress_mechanisms": true,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1347,27 +1653,43 @@
         "eu_ai_act": {
           "adoption_status": "partial",
           "adoption_score": 55,
-          "notes": "Action plan plus draft Royal Decree on AI; risk-based elements"
+          "notes": "Action plan plus draft Royal Decree on AI; risk-based elements",
+          "source": {
+            "primary_instrument": "National AI Strategy & Action Plan 2022–2027; draft AI Royal Decree",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 60,
-          "notes": "UNESCO ethics endorsed; ASEAN guide alignment"
+          "notes": "UNESCO ethics endorsed; ASEAN guide alignment",
+          "source": {
+            "primary_instrument": "National AI Strategy & Action Plan 2022–2027; draft AI Royal Decree",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "acceding",
+          "adoption_status": "partial",
           "adoption_score": 60,
-          "notes": "OECD accession process opened 2024; principles embedded"
+          "notes": "OECD accession process opened 2024; principles embedded",
+          "source": {
+            "primary_instrument": "National AI Strategy & Action Plan 2022–2027; draft AI Royal Decree",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 45,
+        "overall_score": 80,
         "has_enforcement_body": true,
         "has_regulatory_sandbox": true,
         "has_impact_assessments": true,
         "has_transparency_requirements": true,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1457,27 +1779,43 @@
         "eu_ai_act": {
           "adoption_status": "partial",
           "adoption_score": 50,
-          "notes": "Roadmap plus National Guidelines on AI Governance & Ethics (2024)"
+          "notes": "Roadmap plus National Guidelines on AI Governance & Ethics (2024)",
+          "source": {
+            "primary_instrument": "National AI Roadmap 2021–2025; National Guidelines on AI Governance & Ethics (2024)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 58,
-          "notes": "UNESCO ethics endorsed; ASEAN guide co-developed"
+          "notes": "UNESCO ethics endorsed; ASEAN guide co-developed",
+          "source": {
+            "primary_instrument": "National AI Roadmap 2021–2025; National Guidelines on AI Governance & Ethics (2024)",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "partner",
+          "adoption_status": "partial",
           "adoption_score": 55,
-          "notes": "OECD partner; GPAI membership pending"
+          "notes": "OECD partner; GPAI membership pending",
+          "source": {
+            "primary_instrument": "National AI Roadmap 2021–2025; National Guidelines on AI Governance & Ethics (2024)",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 45,
+        "overall_score": 60,
         "has_enforcement_body": true,
         "has_regulatory_sandbox": true,
         "has_impact_assessments": false,
         "has_transparency_requirements": true,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": false
+        "has_redress_mechanisms": false,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1567,27 +1905,43 @@
         "eu_ai_act": {
           "adoption_status": "partial",
           "adoption_score": 50,
-          "notes": "Recommendations for trustworthy AI; no binding statute yet"
+          "notes": "Recommendations for trustworthy AI; no binding statute yet",
+          "source": {
+            "primary_instrument": "National AI Plan; Recommendations for trustworthy AI (2023)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 65,
-          "notes": "Strong UNESCO human-rights alignment"
+          "notes": "Strong UNESCO human-rights alignment",
+          "source": {
+            "primary_instrument": "National AI Plan; Recommendations for trustworthy AI (2023)",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "acceding",
+          "adoption_status": "partial",
           "adoption_score": 70,
-          "notes": "OECD accession process underway; principles embedded"
+          "notes": "OECD accession process underway; principles embedded",
+          "source": {
+            "primary_instrument": "National AI Plan; Recommendations for trustworthy AI (2023)",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 40,
+        "overall_score": 65,
         "has_enforcement_body": false,
         "has_regulatory_sandbox": true,
         "has_impact_assessments": true,
         "has_transparency_requirements": true,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": true
+        "has_redress_mechanisms": true,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1677,27 +2031,43 @@
         "eu_ai_act": {
           "adoption_status": "partial",
           "adoption_score": 55,
-          "notes": "CONPES policy plus ethical framework; risk concepts developing"
+          "notes": "CONPES policy plus ethical framework; risk concepts developing",
+          "source": {
+            "primary_instrument": "CONPES 3975 (2019); OECD membership instruments",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "endorsed",
+          "adoption_status": "partial",
           "adoption_score": 65,
-          "notes": "UNESCO ethics endorsed; active in regional AI forums"
+          "notes": "UNESCO ethics endorsed; active in regional AI forums",
+          "source": {
+            "primary_instrument": "CONPES 3975 (2019); OECD membership instruments",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         },
         "oecd_ai_principles": {
-          "adoption_status": "member",
+          "adoption_status": "high",
           "adoption_score": 80,
-          "notes": "OECD member (2020); principles embedded in policy"
+          "notes": "OECD member (2020); principles embedded in policy",
+          "source": {
+            "primary_instrument": "CONPES 3975 (2019); OECD membership instruments",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
         }
       },
       "implementation_status": {
-        "overall_score": 45,
+        "overall_score": 65,
         "has_enforcement_body": false,
         "has_regulatory_sandbox": true,
         "has_impact_assessments": true,
         "has_transparency_requirements": true,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": true
+        "has_redress_mechanisms": true,
+        "coding_status": "provisional"
       },
       "risk_classification": {
         "uses_eu_categories": false,

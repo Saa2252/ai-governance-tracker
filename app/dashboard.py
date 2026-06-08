@@ -77,6 +77,23 @@ def load_data():
     
     return countries_data, frameworks_data
 
+# Implementation indicator weights (must match METHODOLOGY.md). The score is
+# DERIVED from these booleans so it can never drift out of sync with the data.
+IMPL_WEIGHTS = {
+    "has_enforcement_body": 25,
+    "has_regulatory_sandbox": 20,
+    "has_impact_assessments": 20,
+    "has_transparency_requirements": 15,
+    "has_audit_mechanisms": 10,
+    "has_redress_mechanisms": 10,
+}
+
+
+def implementation_score(impl):
+    """Deterministic weighted sum of the six in-force indicators."""
+    return sum(w for k, w in IMPL_WEIGHTS.items() if impl.get(k))
+
+
 def process_countries_df(countries_data):
     """Convert countries JSON to DataFrame for analysis"""
     records = []
@@ -93,7 +110,7 @@ def process_countries_df(countries_data):
             "eu_ai_act_status": country["framework_alignment"]["eu_ai_act"]["adoption_status"],
             "unesco_score": country["framework_alignment"]["unesco_ai_ethics"]["adoption_score"],
             "oecd_score": country["framework_alignment"]["oecd_ai_principles"]["adoption_score"],
-            "implementation_score": country["implementation_status"]["overall_score"],
+            "implementation_score": implementation_score(country["implementation_status"]),
             "has_enforcement": country["implementation_status"]["has_enforcement_body"],
             "has_sandbox": country["implementation_status"]["has_regulatory_sandbox"],
             "has_impact_assessment": country["implementation_status"]["has_impact_assessments"],

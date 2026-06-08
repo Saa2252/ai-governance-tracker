@@ -120,11 +120,53 @@ Measures actual operationalization of governance:
 | Audit mechanisms | 10 | Third-party audit provisions |
 | Redress mechanisms | 10 | Channels for remedy |
 
+#### Deterministic aggregation (v2.0)
+
+The Implementation Score is **not** a subjective judgement — it is the exact
+weighted sum of the six indicators above:
+
+```
+Implementation Score = 25·enforcement + 20·sandbox + 20·impact_assessment
+                     + 15·transparency + 10·audit + 10·redress
+```
+
+where each indicator is **1 only if the mechanism is operational and in force**,
+and **0 if it is merely proposed, drafted, or voluntary**. This makes every score
+reconstructable from first principles and machine-verifiable
+(`analysis/findings.py` asserts `score == weighted_sum` for all countries). The
+strict "in force" threshold is deliberate: it is what separates *governance on
+paper* from *governance in practice*.
+
+#### Evidence coding & verification status
+
+Each indicator carries an `evidence` record (the value, an `as_of` date, a
+one-line justification, and a source URL). A country is one of:
+
+| `coding_status` | Meaning |
+|-----------------|---------|
+| `evidence_coded` | Every indicator individually researched and cited. **Defensible / citation-ready.** |
+| `provisional` | Indicators are initial expert estimates **not yet** evidence-coded. Treat as an *unverified upper bound* — pilots show estimates typically fall once strictly coded. |
+
+**Current status (v2.0):** 3 of 16 countries are fully evidence-coded
+(Brazil, India, Kenya). The pilot revised all three *downward* versus the initial
+estimates — e.g. Brazil's "national AI authority" is not yet in force (PL 2338 is
+still in the Chamber of Deputies), so enforcement scores 0, not 25. The remaining
+13 are being promoted from `provisional` to `evidence_coded` on a rolling basis
+using the same protocol.
+
+#### How to contest a score
+
+Every indicator names the instrument it rests on. To challenge one, cite a
+*specific, in-force* legal or regulatory instrument (with article/section) that
+meets the threshold, and open an issue. The rubric is designed to be falsifiable.
+
 ### Limitations
 
-1. Language barriers in accessing some national strategies
-2. Implementation lag: policy doesn't equal enforcement
-3. Rapid change: data may lag recent developments
+1. **Coverage:** 16 countries fully profiled; 3 fully evidence-coded (v2.0). Cross-country aggregate implementation figures should be read with the `coding_status` of each country in mind — provisional scores are unverified upper bounds.
+2. **Adoption scores remain expert coding.** Unlike the Implementation Score (deterministic), Framework Adoption is an expert assessment against the rubric bands. It is rubric-anchored and source-cited, but not mechanical; inter-coder reliability testing is future work.
+3. **Data vintage:** indicator `as_of` dates and `last_verified` fields record currency. AI policy moves fast; treat any score older than its `as_of` with caution.
+4. **Language barriers** in accessing some national strategies.
+5. **Implementation lag:** policy does not equal enforcement — which is precisely what the adoption-implementation gap is designed to measure.
 
 ---
 
