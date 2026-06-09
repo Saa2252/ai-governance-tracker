@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "version": "2.0",
+    "version": "2.2",
     "last_updated": "2026-06-08",
     "author": "Sana Asif Ahmad",
     "description": "AI governance adoption data for Global South countries",
@@ -9,7 +9,7 @@
       "National AI strategy documents",
       "Regulatory filings and draft legislation"
     ],
-    "schema_note": "v2.0 (index methodology): implementation overall_score is now a DETERMINISTIC weighted sum of six in-force indicators (audit-verifiable). adoption_status standardized to rubric bands (none/low/partial/high). Brazil, India, Kenya are fully EVIDENCE-CODED with per-indicator citations; the other 13 are PROVISIONAL (coding_status field) pending the same treatment. See METHODOLOGY.md."
+    "schema_note": "v2.1: UNESCO and OECD adoption scores are now FACT-DERIVED with an evidence record per country — OECD from membership/adherence/GPAI status; UNESCO from Recommendation adoption + Readiness Assessment Methodology (RAM) status. EU AI Act remains expert-coded against the rubric."
   },
   "countries": [
     {
@@ -38,22 +38,35 @@
         },
         "unesco_ai_ethics": {
           "adoption_status": "partial",
-          "adoption_score": 70,
-          "notes": "Formally endorsed UNESCO recommendation; implementing through MeitY guidelines",
+          "adoption_score": 55,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). UNESCO RAM consultation underway (not yet completed).",
           "source": {
             "primary_instrument": "Digital India Act (draft, 2023); National Strategy for AI (NITI Aayog, 2018)",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "in_progress",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "partial",
-          "adoption_score": 65,
-          "notes": "G20 AI Principles adopted; implementation varies by sector",
+          "adoption_score": 55,
+          "notes": "Not a formal OECD AI Principles adherent; GPAI member and endorser of the G20 AI Principles (derived from the OECD Principles).",
           "source": {
             "primary_instrument": "Digital India Act (draft, 2023); National Strategy for AI (NITI Aayog, 2018)",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -144,7 +157,7 @@
         "education"
       ],
       "international_engagement": {
-        "oecd_status": "adherent",
+        "oecd_status": "non_member",
         "gpai_member": true,
         "signatory_coe_ai_convention": false
       },
@@ -201,23 +214,36 @@
           }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "high",
-          "adoption_score": 80,
-          "notes": "Strong alignment with human rights approach",
+          "adoption_status": "partial",
+          "adoption_score": 55,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). UNESCO RAM consultation underway.",
           "source": {
             "primary_instrument": "AI Bill PL 2338/2023; Brazilian AI Strategy (EBIA, 2021)",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "in_progress",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
-          "adoption_status": "high",
-          "adoption_score": 85,
-          "notes": "OECD member; principles embedded in national strategy",
+          "adoption_status": "partial",
+          "adoption_score": 75,
+          "notes": "Formal adherent to the OECD AI Principles (non-member); GPAI member.",
           "source": {
             "primary_instrument": "AI Bill PL 2338/2023; Brazilian AI Strategy (EBIA, 2021)",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": true,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -366,22 +392,35 @@
         },
         "unesco_ai_ethics": {
           "adoption_status": "partial",
-          "adoption_score": 60,
-          "notes": "Endorsement with African Union AI Strategy alignment",
+          "adoption_score": 70,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). Completed the UNESCO Readiness Assessment Methodology (RAM).",
           "source": {
             "primary_instrument": "Kenya National AI Strategy (2025); Data Protection Act 2019",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "completed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "low",
           "adoption_score": 40,
-          "notes": "Non-member but references principles",
+          "notes": "Not an OECD member or AI Principles adherent; limited formal engagement.",
           "source": {
             "primary_instrument": "Kenya National AI Strategy (2025); Data Protection Act 2019",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -530,22 +569,35 @@
         },
         "unesco_ai_ethics": {
           "adoption_status": "partial",
-          "adoption_score": 55,
-          "notes": "Endorsed with ASEAN AI governance framework alignment",
+          "adoption_score": 70,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). Completed the UNESCO Readiness Assessment Methodology (RAM).",
           "source": {
             "primary_instrument": "National AI Strategy 2020–2045; ASEAN Guide on AI Governance",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "completed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "partial",
-          "adoption_score": 50,
-          "notes": "Key Partner status; principles referenced in strategy",
+          "adoption_score": 55,
+          "notes": "OECD accession process underway; references the OECD AI Principles.",
           "source": {
             "primary_instrument": "National AI Strategy 2020–2045; ASEAN Guide on AI Governance",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -655,23 +707,36 @@
           }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "partial",
-          "adoption_score": 50,
-          "notes": "Endorsement aligned with AU AI Strategy",
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). RAM status not confirmed via the UNESCO Global AI Ethics Observatory.",
           "source": {
             "primary_instrument": "National AI Strategy (NITDA, 2024)",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "low",
-          "adoption_score": 20,
-          "notes": "No formal alignment; some principles referenced",
+          "adoption_score": 25,
+          "notes": "Not an OECD member or AI Principles adherent; limited formal engagement.",
           "source": {
             "primary_instrument": "National AI Strategy (NITDA, 2024)",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -782,22 +847,35 @@
         },
         "unesco_ai_ethics": {
           "adoption_status": "partial",
-          "adoption_score": 65,
-          "notes": "Active participant in UNESCO AI discussions",
+          "adoption_score": 70,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). Completed the UNESCO Readiness Assessment Methodology (RAM).",
           "source": {
             "primary_instrument": "AI Agenda Mexico; OECD membership instruments",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "completed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/en/articles/unesco-presents-artificial-intelligence-readiness-assessment-mexico"
           }
         },
         "oecd_ai_principles": {
-          "adoption_status": "partial",
-          "adoption_score": 75,
-          "notes": "OECD member; principles embedded in strategy",
+          "adoption_status": "high",
+          "adoption_score": 85,
+          "notes": "OECD member and adherent to the OECD AI Principles; GPAI member.",
           "source": {
             "primary_instrument": "AI Agenda Mexico; OECD membership instruments",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -945,23 +1023,36 @@
           }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "partial",
-          "adoption_score": 70,
-          "notes": "Strong endorsement; leading AU AI ethics discussions",
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). RAM status not confirmed via the UNESCO Global AI Ethics Observatory.",
           "source": {
             "primary_instrument": "AI for South Africa strategy (2024); POPIA 2013",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
-          "adoption_status": "partial",
-          "adoption_score": 55,
-          "notes": "Key Partner; principles referenced in strategy",
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "OECD partner / engaged; references the OECD AI Principles, not a formal adherent.",
           "source": {
             "primary_instrument": "AI for South Africa strategy (2024); POPIA 2013",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -1073,21 +1164,34 @@
         "unesco_ai_ethics": {
           "adoption_status": "low",
           "adoption_score": 45,
-          "notes": "Endorsement with focus on development applications",
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). RAM status not confirmed via the UNESCO Global AI Ethics Observatory.",
           "source": {
             "primary_instrument": "National AI Strategy of Bangladesh (2024)",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
-          "adoption_status": "none",
-          "adoption_score": 15,
-          "notes": "Limited engagement; some principles in strategy",
+          "adoption_status": "low",
+          "adoption_score": 20,
+          "notes": "Not an OECD member or AI Principles adherent; limited formal engagement.",
           "source": {
             "primary_instrument": "National AI Strategy of Bangladesh (2024)",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -1198,22 +1302,35 @@
         },
         "unesco_ai_ethics": {
           "adoption_status": "low",
-          "adoption_score": 40,
-          "notes": "UNESCO member; ethics principles cited in draft policy",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). RAM status not confirmed via the UNESCO Global AI Ethics Observatory.",
           "source": {
             "primary_instrument": "Draft National AI Policy (MoITT, 2023)",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "low",
           "adoption_score": 20,
-          "notes": "Not an OECD member; limited formal alignment",
+          "notes": "Not an OECD member or AI Principles adherent; limited formal engagement.",
           "source": {
             "primary_instrument": "Draft National AI Policy (MoITT, 2023)",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -1324,21 +1441,34 @@
         "unesco_ai_ethics": {
           "adoption_status": "low",
           "adoption_score": 45,
-          "notes": "UNESCO ethics framework reflected in strategy",
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). RAM status not confirmed via the UNESCO Global AI Ethics Observatory.",
           "source": {
             "primary_instrument": "National AI Strategy (ICTA, 2024); PDP Act No. 9 of 2022",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "low",
           "adoption_score": 25,
-          "notes": "Non-member; principles referenced informally",
+          "notes": "Not an OECD member or AI Principles adherent; limited formal engagement.",
           "source": {
             "primary_instrument": "National AI Strategy (ICTA, 2024); PDP Act No. 9 of 2022",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -1447,23 +1577,36 @@
           }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "partial",
-          "adoption_score": 55,
-          "notes": "Aligned via UNESCO and ASEAN AI governance guide",
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). RAM status not confirmed via the UNESCO Global AI Ethics Observatory.",
           "source": {
             "primary_instrument": "National Strategy on AI to 2030 (2021); PDP Decree 13/2023",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "low",
           "adoption_score": 45,
-          "notes": "OECD Southeast Asia programme partner; principles referenced",
+          "notes": "OECD partner / engaged; references the OECD AI Principles, not a formal adherent.",
           "source": {
             "primary_instrument": "National Strategy on AI to 2030 (2021); PDP Decree 13/2023",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -1574,22 +1717,35 @@
         },
         "unesco_ai_ethics": {
           "adoption_status": "partial",
-          "adoption_score": 55,
-          "notes": "UNESCO ethics endorsed; ASEAN guide alignment",
+          "adoption_score": 70,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). Completed the UNESCO Readiness Assessment Methodology (RAM).",
           "source": {
             "primary_instrument": "National AI Strategy Roadmap 2.0 (2024); Data Privacy Act 2012",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "completed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "low",
           "adoption_score": 45,
-          "notes": "OECD Southeast Asia partner; principles cited",
+          "notes": "OECD partner / engaged; references the OECD AI Principles, not a formal adherent.",
           "source": {
             "primary_instrument": "National AI Strategy Roadmap 2.0 (2024); Data Privacy Act 2012",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -1700,22 +1856,35 @@
         },
         "unesco_ai_ethics": {
           "adoption_status": "partial",
-          "adoption_score": 60,
-          "notes": "UNESCO ethics endorsed; ASEAN guide alignment",
+          "adoption_score": 70,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). Completed the UNESCO Readiness Assessment Methodology (RAM).",
           "source": {
             "primary_instrument": "National AI Strategy & Action Plan 2022–2027; draft AI Royal Decree",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "completed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "partial",
-          "adoption_score": 60,
-          "notes": "OECD accession process opened 2024; principles embedded",
+          "adoption_score": 55,
+          "notes": "OECD accession process underway; references the OECD AI Principles.",
           "source": {
             "primary_instrument": "National AI Strategy & Action Plan 2022–2027; draft AI Royal Decree",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -1825,23 +1994,36 @@
           }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "partial",
-          "adoption_score": 58,
-          "notes": "UNESCO ethics endorsed; ASEAN guide co-developed",
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). RAM status not confirmed via the UNESCO Global AI Ethics Observatory.",
           "source": {
             "primary_instrument": "National AI Roadmap 2021–2025; National Guidelines on AI Governance & Ethics (2024)",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
-          "adoption_status": "partial",
-          "adoption_score": 55,
-          "notes": "OECD partner; GPAI membership pending",
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "OECD partner / engaged; references the OECD AI Principles, not a formal adherent.",
           "source": {
             "primary_instrument": "National AI Roadmap 2021–2025; National Guidelines on AI Governance & Ethics (2024)",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -1951,23 +2133,36 @@
           }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "partial",
-          "adoption_score": 65,
-          "notes": "Strong UNESCO human-rights alignment",
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). RAM status not confirmed via the UNESCO Global AI Ethics Observatory.",
           "source": {
             "primary_instrument": "National AI Plan; Recommendations for trustworthy AI (2023)",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "partial",
-          "adoption_score": 70,
-          "notes": "OECD accession process underway; principles embedded",
+          "adoption_score": 75,
+          "notes": "Formal adherent to the OECD AI Principles (non-member).",
           "source": {
             "primary_instrument": "National AI Plan; Recommendations for trustworthy AI (2023)",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": true,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
@@ -2077,23 +2272,36 @@
           }
         },
         "unesco_ai_ethics": {
-          "adoption_status": "partial",
-          "adoption_score": 65,
-          "notes": "UNESCO ethics endorsed; active in regional AI forums",
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI (UNESCO member). RAM status not confirmed via the UNESCO Global AI Ethics Observatory.",
           "source": {
             "primary_instrument": "CONPES 3975 (2019); OECD membership instruments",
             "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
           }
         },
         "oecd_ai_principles": {
           "adoption_status": "high",
-          "adoption_score": 80,
-          "notes": "OECD member (2020); principles embedded in policy",
+          "adoption_score": 85,
+          "notes": "OECD member and adherent to the OECD AI Principles.",
           "source": {
             "primary_instrument": "CONPES 3975 (2019); OECD membership instruments",
             "framework_reference_url": "https://oecd.ai/en/ai-principles",
             "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
           }
         }
       },
