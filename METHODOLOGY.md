@@ -107,6 +107,38 @@ Measures how closely a country's policies align with a given framework:
 | 20-49 | Low | Limited alignment; framework referenced only |
 | 0-19 | None | No meaningful alignment |
 
+The **EU AI Act** adoption score is expert-coded against this rubric (and
+source-cited). The **UNESCO** and **OECD** scores are *fact-derived* (see below).
+
+#### Fact-derived UNESCO & OECD scores (v2.1)
+
+Unlike the EU score, the UNESCO and OECD scores are computed from **verifiable
+membership/participation data**, each with an `evidence` record:
+
+**OECD AI Principles** — anchored to the official adherents list, OECD membership,
+and GPAI membership:
+
+| Status (verifiable) | Score |
+|---------------------|------:|
+| OECD member (and adherent) | 85 |
+| Formal non-member adherent (e.g. Brazil, Argentina) | 75 |
+| GPAI member / OECD accession underway | 55 |
+| OECD partner, references principles | 45 |
+| References only / minimal | 20–40 |
+
+**UNESCO Ethics** — anchored to adoption of the 2021 Recommendation (universal
+among UNESCO members) plus **Readiness Assessment Methodology (RAM)** status:
+
+| Status (verifiable) | Score |
+|---------------------|------:|
+| Adopted Recommendation + **completed RAM** | 70 |
+| Adopted + RAM consultation underway | 55 |
+| Adopted Recommendation only (RAM not confirmed) | 45 |
+
+Sources: OECD.AI AI Principles page; UNESCO Global AI Ethics & Governance
+Observatory (RAM). RAM status marked `not_confirmed` is honestly flagged pending
+per-country verification on the UNESCO observatory.
+
 #### Implementation Score (0-100)
 
 Measures actual operationalization of governance:

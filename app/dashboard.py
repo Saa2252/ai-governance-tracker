@@ -486,40 +486,89 @@ estimates** — see METHODOLOGY.md.*
     
     if selected_country:
         country_data = next(
-            c for c in countries_data["countries"] 
+            c for c in countries_data["countries"]
             if c["country_name"] == selected_country
         )
-        
+        impl = country_data["implementation_status"]
+        coding = impl.get("coding_status", "provisional")
+        badge = "✅ evidence-coded" if coding == "evidence_coded" else "🟡 provisional (estimate)"
+
         col1, col2 = st.columns(2)
-        
+
         with col1:
-            st.markdown(f"#### {selected_country}")
+            st.markdown(f"#### {selected_country} &nbsp;·&nbsp; *{badge}*")
             st.markdown(f"**Region:** {country_data['region']}")
             st.markdown(f"**Income Level:** {country_data['income_level'].replace('_', ' ').title()}")
             st.markdown(f"**Population:** {country_data['population_millions']}M")
-            
+
             if country_data["ai_strategy"]["has_national_strategy"]:
                 st.markdown(f"**National AI Strategy:** {country_data['ai_strategy']['strategy_name']} ({country_data['ai_strategy']['year_published']})")
                 st.markdown(f"**Lead Agency:** {country_data['ai_strategy']['lead_agency']}")
-        
+
         with col2:
             st.markdown("#### Framework Alignment")
-            
+
             frameworks = country_data["framework_alignment"]
             for fw_name, fw_data in frameworks.items():
                 score = fw_data["adoption_score"]
                 status = fw_data["adoption_status"]
-                
+
                 status_class = "high" if score >= 60 else "partial" if score >= 30 else "low"
-                
+
                 st.markdown(f"""
                 <span class="framework-badge {status_class}">
                     {fw_name.replace('_', ' ').upper()}: {score}% ({status})
                 </span>
                 """, unsafe_allow_html=True)
-                
+
                 st.caption(fw_data["notes"])
-        
+
+                # Evidence basis for the fact-derived frameworks
+                ev = fw_data.get("evidence")
+                if ev and fw_name == "unesco_ai_ethics":
+                    st.caption(f"📋 UNESCO RAM: **{ev.get('ram_status', '—')}** · adopted 2021 Recommendation: "
+                               f"{'yes' if ev.get('adopted_2021_recommendation') else 'no'}")
+                elif ev and fw_name == "oecd_ai_principles":
+                    flags = [("OECD member" if ev.get("oecd_member") else "not OECD member"),
+                             ("AI-Principles adherent" if ev.get("ai_principles_adherent") else "not an adherent"),
+                             ("GPAI member" if ev.get("gpai_member") else "not GPAI")]
+                    st.caption("🏛️ " + " · ".join(flags))
+
+        # Implementation breakdown — is governance actually IN FORCE?
+        st.markdown("#### ⚙️ Implementation — is it in force?")
+        impl_score = implementation_score(impl)
+        eu_score = country_data["framework_alignment"]["eu_ai_act"]["adoption_score"]
+        st.markdown(f"**Implementation score: {impl_score}/100** &nbsp;·&nbsp; *{badge}*")
+
+        indicators = [
+            ("has_enforcement_body", "Enforcement body"),
+            ("has_regulatory_sandbox", "Regulatory sandbox"),
+            ("has_impact_assessments", "Impact assessments"),
+            ("has_transparency_requirements", "Transparency rules"),
+            ("has_audit_mechanisms", "Audit mechanisms"),
+            ("has_redress_mechanisms", "Redress mechanisms"),
+        ]
+        ic1, ic2 = st.columns(2)
+        for i, (key, label) in enumerate(indicators):
+            mark = "✅" if impl.get(key) else "⬜"
+            (ic1 if i % 2 == 0 else ic2).markdown(f"{mark} {label}")
+
+        evidence = impl.get("evidence")
+        if evidence:
+            with st.expander("📑 Evidence & sources (per indicator)"):
+                for key, label in indicators:
+                    e = evidence.get(key)
+                    if e:
+                        st.markdown(
+                            f"**{label}:** {'✅ in force' if e['value'] else '❌ not in force'} — "
+                            f"{e['evidence']}  \n[source]({e['source']}) · _as of {e.get('as_of', '—')}_"
+                        )
+        else:
+            st.caption("Implementation indicators are provisional estimates — not yet evidence-coded. See docs/coding_worksheet.md.")
+
+        st.info(f"**Adoption–Implementation gap:** EU AI Act adoption {eu_score} − implementation {impl_score} "
+                f"= **{eu_score - impl_score} points**")
+
         # Key developments timeline
         st.markdown("#### Recent Developments")
         for dev in country_data.get("key_developments", [])[-3:]:

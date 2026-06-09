@@ -63,6 +63,7 @@ Each block has:
 | `adoption_score` | 0–100 score for how closely the country aligns. Scored via [`scoring_rubric.md`](scoring_rubric.md). |
 | `notes` | Free-text explanation of the score. |
 | `source` | *(v1.4)* Citation for the score: `primary_instrument` (the policy/law it rests on), `framework_reference_url` (the framework text), and `verify_via` (OECD.AI lookup). |
+| `evidence` | *(v2.1)* Fact basis for the score. **OECD:** `oecd_member`, `ai_principles_adherent`, `gpai_member`. **UNESCO:** `adopted_2021_recommendation`, `ram_status` (`completed`/`in_progress`/`not_confirmed`). Each with `as_of` + `source`. |
 
 > **Vocabulary note:** `adoption_status` currently mixes several word-sets
 > (`partial`, `endorsed`, `aligned`, `high`, `member`, `observer`, `partner`,
