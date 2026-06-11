@@ -179,12 +179,13 @@ one-line justification, and a source URL). A country is one of:
 | `evidence_coded` | Every indicator individually researched and cited. **Defensible / citation-ready.** |
 | `provisional` | Indicators are initial expert estimates **not yet** evidence-coded. Treat as an *unverified upper bound* — pilots show estimates typically fall once strictly coded. |
 
-**Current status (v2.0):** 3 of 16 countries are fully evidence-coded
-(Brazil, India, Kenya). The pilot revised all three *downward* versus the initial
-estimates — e.g. Brazil's "national AI authority" is not yet in force (PL 2338 is
-still in the Chamber of Deputies), so enforcement scores 0, not 25. The remaining
-13 are being promoted from `provisional` to `evidence_coded` on a rolling basis
-using the same protocol.
+**Current status (v3.0): all 16 countries are fully evidence-coded** — no
+provisional implementation scores remain. Strict coding revised most scores toward
+zero versus the initial estimates: e.g. Brazil's "national AI authority" is not yet
+in force (PL 2338 is still in the Chamber of Deputies), so enforcement scores 0,
+not 25. Result: **0 of 16 have an operational AI enforcement body**, and only
+Brazil (ANPD sandbox) and Vietnam (in-force content-labelling, 1 March 2026)
+register any in-force mechanism.
 
 #### How to contest a score
 
@@ -194,7 +195,7 @@ meets the threshold, and open an issue. The rubric is designed to be falsifiable
 
 ### Limitations
 
-1. **Coverage:** 16 countries fully profiled; 3 fully evidence-coded (v2.0). Cross-country aggregate implementation figures should be read with the `coding_status` of each country in mind — provisional scores are unverified upper bounds.
+1. **Coverage:** 16 countries fully profiled and **all evidence-coded** (v3.0). Expansion to the 24-country roster is future work.
 2. **Adoption scores remain expert coding.** Unlike the Implementation Score (deterministic), Framework Adoption is an expert assessment against the rubric bands. It is rubric-anchored and source-cited, but not mechanical; inter-coder reliability testing is future work.
 3. **Data vintage:** indicator `as_of` dates and `last_verified` fields record currency. AI policy moves fast; treat any score older than its `as_of` with caution.
 4. **Language barriers** in accessing some national strategies.

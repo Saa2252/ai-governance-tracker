@@ -89,26 +89,20 @@ ai-governance-tracker/
 
 ## Key Findings
 
-*The **Implementation Score is fully deterministic** — the weighted sum of six
-in-force indicators — so every number is reconstructable (run
-[`analysis/findings.py`](analysis/findings.py)). Of 16 countries, **3 are fully
-evidence-coded** (Brazil, India, Kenya, each indicator cited); the other 13 are
-`provisional` estimates being coded on a rolling basis.*
+*All **16 countries are fully evidence-coded** — every implementation indicator
+carries a citation, and the Implementation Score is the deterministic weighted sum
+of six *in-force* mechanisms (reproduce with [`analysis/findings.py`](analysis/findings.py)).*
 
-**From the evidence-coded countries (citation-ready):**
+| Finding | Evidence (all 16, evidence-coded) |
+|---------|-----------------------------------|
+| **AI governance is overwhelmingly aspirational** | **Average in-force implementation is just 2/100**, against an average EU AI Act *adoption* of 42/100 — a **~40-point** adoption–enforcement gap. |
+| **No operational enforcement anywhere** | **0 of 16** countries have an operational AI enforcement body. Only **2 of 16** have *any* in-force mechanism: **Brazil** (an ANPD regulatory sandbox) and **Vietnam** (mandatory AI content-labelling, in force since 1 March 2026). |
+| **Bills, not laws** | Comprehensive AI bills exist (Brazil's PL 2338, Mexico's Federal AI Law, Nigeria's NITDA framework, Thailand's Royal Decree) but remain **pending** — so adoption scores are moderate while implementation is near zero. |
+| **Divergence from EU risk categories** | **15 of 16 (94%)** use *custom* high-risk classifications rather than the EU's tiers — most often elevating healthcare, financial/mobile-money AI, facial recognition, and agriculture. |
 
-| Finding | Evidence |
-|---------|----------|
-| **Governance is largely aspirational, not operational** | India and Kenya score **0/100** on *in-force* enforcement despite active 2025 national strategies — their AI governance is voluntary or still being stood up. Brazil scores **20/100** (only an ANPD sandbox is operational; PL 2338 is not yet law). |
-| **A huge adoption-vs-enforcement gap** | Brazil aligns closely with the EU AI Act on paper (**75/100 adoption**) but enforcement is barely in force (**20/100**) — a **55-point** gap, the signature pattern this index is built to expose. |
-| **Strict coding matters** | All three pilots scored *lower* once evidence-coded than as initial estimates — e.g. Brazil's "national AI authority" is not yet in force, so enforcement is 0, not 25. Provisional scores should be read as upper bounds. |
-
-**Structural (all 16 countries):** **15 of 16 (94%)** use *custom* high-risk
-categories rather than the EU's tiers — most often elevating healthcare,
-financial/mobile-money AI, facial recognition, and agriculture.
-
-> ⚠️ Cross-country *averages* are intentionally not headlined while 13 countries
-> remain `provisional`; see [`METHODOLOGY.md`](METHODOLOGY.md) for status.
+Every score is traceable: implementation indicators cite the instrument behind
+them; UNESCO/OECD scores are fact-derived (RAM status, adherence). See
+[`docs/scoring_rubric.md`](docs/scoring_rubric.md) and [`METHODOLOGY.md`](METHODOLOGY.md).
 
 ---
 

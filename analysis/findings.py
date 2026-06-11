@@ -50,8 +50,7 @@ def main():
     print(f"Evidence-coded (citation-ready): {len(coded)}/{n} -> {coded}")
     print(f"Provisional (unverified upper bound): {n - len(coded)}/{n}\n")
 
-    print("--- Descriptive aggregates (NOTE: include 13 provisional countries; "
-          "read with coding_status in mind) ---\n")
+    print("--- Descriptive aggregates (all 16 countries evidence-coded) ---\n")
     avg_eu = st.mean(eu(c) for c in countries)
     avg_impl = st.mean(impl(c) for c in countries)
     print("Policy runs ahead of practice")

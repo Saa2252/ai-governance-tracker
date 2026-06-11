@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "version": "2.2",
+    "version": "3.0",
     "last_updated": "2026-06-08",
     "author": "Sana Asif Ahmad",
     "description": "AI governance adoption data for Global South countries",
@@ -9,7 +9,7 @@
       "National AI strategy documents",
       "Regulatory filings and draft legislation"
     ],
-    "schema_note": "v2.1: UNESCO and OECD adoption scores are now FACT-DERIVED with an evidence record per country — OECD from membership/adherence/GPAI status; UNESCO from Recommendation adoption + Readiness Assessment Methodology (RAM) status. EU AI Act remains expert-coded against the rubric."
+    "schema_note": "v3.0: ALL 16 countries are now evidence-coded — no provisional implementation scores remain. Each of the six in-force indicators carries a citation. Finding: 0/16 have an operational AI enforcement body; only Brazil (ANPD sandbox) and Vietnam (in-force content-labelling) have any in-force mechanism. See METHODOLOGY.md and docs/scoring_rubric.md."
   },
   "countries": [
     {
@@ -602,14 +602,52 @@
         }
       },
       "implementation_status": {
-        "overall_score": 35,
+        "overall_score": 0,
         "has_enforcement_body": false,
-        "has_regulatory_sandbox": true,
+        "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
-        "has_transparency_requirements": true,
+        "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
-        "coding_status": "provisional"
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI law in force; draft Presidential Regulation on AI still under discussion (delayed to early 2026).",
+            "source": "https://oneasia.legal/en/6659"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://oneasia.legal/en/6659"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://oneasia.legal/en/6659"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://oneasia.legal/en/6659"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://oneasia.legal/en/6659"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://oneasia.legal/en/6659"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -748,7 +786,45 @@
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
-        "coding_status": "provisional"
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "NITDA risk-based enforcement framework expected to pass ~March 2026; not confirmed in force.",
+            "source": "https://digital.nemko.com/regulations/ai-regulation-in-nigeria"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://digital.nemko.com/regulations/ai-regulation-in-nigeria"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://digital.nemko.com/regulations/ai-regulation-in-nigeria"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://digital.nemko.com/regulations/ai-regulation-in-nigeria"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://digital.nemko.com/regulations/ai-regulation-in-nigeria"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://digital.nemko.com/regulations/ai-regulation-in-nigeria"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1057,14 +1133,52 @@
         }
       },
       "implementation_status": {
-        "overall_score": 40,
+        "overall_score": 0,
         "has_enforcement_body": false,
-        "has_regulatory_sandbox": true,
-        "has_impact_assessments": true,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
-        "coding_status": "provisional"
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI regulation proposed; National AI plan still being drafted.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-african-union"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-african-union"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-african-union"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-african-union"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-african-union"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-african-union"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1203,7 +1317,45 @@
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
-        "coding_status": "provisional"
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National AI Strategy (2024) is non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1342,7 +1494,45 @@
         "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
-        "coding_status": "provisional"
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Draft National AI Policy (2023); no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1473,14 +1663,52 @@
         }
       },
       "implementation_status": {
-        "overall_score": 15,
+        "overall_score": 0,
         "has_enforcement_body": false,
         "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
-        "has_transparency_requirements": true,
+        "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
-        "coding_status": "provisional"
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National AI Strategy (2024); no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1611,14 +1839,52 @@
         }
       },
       "implementation_status": {
-        "overall_score": 35,
+        "overall_score": 15,
         "has_enforcement_body": false,
-        "has_regulatory_sandbox": true,
+        "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
         "has_transparency_requirements": true,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
-        "coding_status": "provisional"
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Law on AI in force since 1 March 2026, but regulatory authorities not yet appointed/operational.",
+            "source": "https://law.asia/asia-ai-governance-framework/"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://law.asia/asia-ai-governance-framework/"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://law.asia/asia-ai-governance-framework/"
+          },
+          "has_transparency_requirements": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "Mandatory content labelling for (generative) AI under the Law on AI, in force since 1 March 2026.",
+            "source": "https://law.asia/asia-ai-governance-framework/"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://law.asia/asia-ai-governance-framework/"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://law.asia/asia-ai-governance-framework/"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1750,14 +2016,52 @@
         }
       },
       "implementation_status": {
-        "overall_score": 25,
+        "overall_score": 0,
         "has_enforcement_body": false,
         "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
-        "has_transparency_requirements": true,
+        "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": true,
-        "coding_status": "provisional"
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Voluntary AI roadmap; Data Privacy Act is not AI-specific; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -1889,14 +2193,52 @@
         }
       },
       "implementation_status": {
-        "overall_score": 80,
-        "has_enforcement_body": true,
-        "has_regulatory_sandbox": true,
-        "has_impact_assessments": true,
-        "has_transparency_requirements": true,
+        "overall_score": 0,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
-        "coding_status": "provisional"
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Draft Royal Decree on AI under review; not in force.",
+            "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -2028,14 +2370,52 @@
         }
       },
       "implementation_status": {
-        "overall_score": 60,
-        "has_enforcement_body": true,
-        "has_regulatory_sandbox": true,
+        "overall_score": 0,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
-        "has_transparency_requirements": true,
+        "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
-        "coding_status": "provisional"
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Voluntary National Guidelines on AI Governance & Ethics (2024); National AI Office is coordinating, not an enforcement regulator.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -2167,14 +2547,52 @@
         }
       },
       "implementation_status": {
-        "overall_score": 65,
+        "overall_score": 0,
         "has_enforcement_body": false,
-        "has_regulatory_sandbox": true,
-        "has_impact_assessments": true,
-        "has_transparency_requirements": true,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": true,
-        "coding_status": "provisional"
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Recommendations for trustworthy AI are non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
@@ -2306,14 +2724,52 @@
         }
       },
       "implementation_status": {
-        "overall_score": 65,
+        "overall_score": 0,
         "has_enforcement_body": false,
-        "has_regulatory_sandbox": true,
-        "has_impact_assessments": true,
-        "has_transparency_requirements": true,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
         "has_audit_mechanisms": false,
-        "has_redress_mechanisms": true,
-        "coding_status": "provisional"
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "CONPES policy and a draft bill; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No operational AI-specific regulatory sandbox.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No mandatory AI impact assessment in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding AI transparency requirement in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No in-force third-party AI audit requirement.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No AI-specific statutory redress channel in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
       },
       "risk_classification": {
         "uses_eu_categories": false,
