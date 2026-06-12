@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: Global South AI Governance Tracker
+message: "If you use this dataset or index, please cite it as below."
+type: dataset
+authors:
+  - family-names: Ahmad
+    given-names: Sana Asif
+    email: saa2252@columbia.edu
+repository-code: "https://github.com/Saa2252/ai-governance-tracker"
+url: "https://ai-governance-tracker.streamlit.app"
+abstract: >-
+  An evidence-coded index of AI governance across 16 Global South countries.
+  It distinguishes framework adoption (policy on paper, benchmarked against the
+  EU AI Act, UNESCO Recommendation on AI Ethics, and OECD AI Principles) from
+  in-force implementation (six operational enforcement mechanisms). Every
+  implementation indicator is individually cited; UNESCO and OECD scores are
+  fact-derived from RAM status and adherence records.
+keywords:
+  - AI governance
+  - Global South
+  - EU AI Act
+  - UNESCO AI Ethics
+  - OECD AI Principles
+  - AI policy
+  - composite index
+license: MIT
+version: "3.0"
+date-released: "2026-06-10"

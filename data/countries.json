@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "3.0",
-    "last_updated": "2026-06-08",
+    "version": "3.1",
+    "last_updated": "2026-06-12",
     "author": "Sana Asif Ahmad",
     "description": "AI governance adoption data for Global South countries",
     "data_sources": [
@@ -9,7 +9,7 @@
       "National AI strategy documents",
       "Regulatory filings and draft legislation"
     ],
-    "schema_note": "v3.0: ALL 16 countries are now evidence-coded — no provisional implementation scores remain. Each of the six in-force indicators carries a citation. Finding: 0/16 have an operational AI enforcement body; only Brazil (ANPD sandbox) and Vietnam (in-force content-labelling) have any in-force mechanism. See METHODOLOGY.md and docs/scoring_rubric.md."
+    "schema_note": "v3.1: add a Governance Maturity score (0-100) per country from a staged 0-3 scale across the six mechanisms (absent->committed->drafted->in force). Complements the binary in-force Implementation Score: maturity discriminates the trajectory while implementation reports operational reality."
   },
   "countries": [
     {
@@ -17,7 +17,7 @@
       "country_name": "India",
       "region": "South Asia",
       "income_level": "lower_middle",
-      "population_millions": 1428,
+      "population_millions": 1451,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "National Strategy for Artificial Intelligence",
@@ -187,6 +187,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 60,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 2,
+          "transparency": 2,
+          "audit": 2,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Voluntary governance guidelines + AI (Ethics & Accountability) Bill introduced; sectoral oversight."
       }
     },
     {
@@ -194,7 +208,7 @@
       "country_name": "Brazil",
       "region": "Latin America & Caribbean",
       "income_level": "upper_middle",
-      "population_millions": 216,
+      "population_millions": 212,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "Brazilian AI Strategy (EBIA)",
@@ -364,6 +378,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 70,
+        "level": "Advancing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 3,
+          "impact_assessments": 2,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Senate-passed AI bill (PL 2338) in the Chamber of Deputies; ANPD sandbox operational."
       }
     },
     {
@@ -371,7 +399,7 @@
       "country_name": "Kenya",
       "region": "Sub-Saharan Africa",
       "income_level": "lower_middle",
-      "population_millions": 55,
+      "population_millions": 56,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "Kenya National AI Strategy",
@@ -541,6 +569,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 48,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "National AI Strategy with implementation secretariat and planned data sandboxes; AI Bill 2026 debated."
       }
     },
     {
@@ -548,7 +590,7 @@
       "country_name": "Indonesia",
       "region": "Southeast Asia",
       "income_level": "upper_middle",
-      "population_millions": 277,
+      "population_millions": 283,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "National AI Strategy 2020-2045",
@@ -718,6 +760,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 47,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 1,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "National AI strategy + draft Presidential Regulation on AI under discussion; AI ethics guidance."
       }
     },
     {
@@ -725,7 +781,7 @@
       "country_name": "Nigeria",
       "region": "Sub-Saharan Africa",
       "income_level": "lower_middle",
-      "population_millions": 223,
+      "population_millions": 233,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "National AI Strategy",
@@ -895,6 +951,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 48,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 2,
+          "transparency": 1,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "NITDA risk-based bill (licensing + annual impact assessments) expected ~2026."
       }
     },
     {
@@ -902,7 +972,7 @@
       "country_name": "Mexico",
       "region": "Latin America & Caribbean",
       "income_level": "upper_middle",
-      "population_millions": 128,
+      "population_millions": 131,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "AI Agenda Mexico",
@@ -1072,6 +1142,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 53,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 2,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Federal AI Law (creating CONAIA + algorithmic impact assessments) pending in the Senate."
       }
     },
     {
@@ -1079,7 +1163,7 @@
       "country_name": "South Africa",
       "region": "Sub-Saharan Africa",
       "income_level": "upper_middle",
-      "population_millions": 60,
+      "population_millions": 64,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "AI for South Africa",
@@ -1249,6 +1333,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 33,
+        "level": "Emerging",
+        "stages": {
+          "enforcement_body": 1,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "National AI strategy adopted; no AI regulation yet proposed."
       }
     },
     {
@@ -1256,7 +1354,7 @@
       "country_name": "Bangladesh",
       "region": "South Asia",
       "income_level": "lower_middle",
-      "population_millions": 173,
+      "population_millions": 174,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "National AI Strategy of Bangladesh",
@@ -1426,6 +1524,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 20,
+        "level": "Nascent",
+        "stages": {
+          "enforcement_body": 1,
+          "regulatory_sandbox": 0,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 0,
+          "redress": 0
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "National AI Strategy; very early stage; limited mechanisms named."
       }
     },
     {
@@ -1433,7 +1545,7 @@
       "country_name": "Pakistan",
       "region": "South Asia",
       "income_level": "lower_middle",
-      "population_millions": 240,
+      "population_millions": 251,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "National Artificial Intelligence Policy (draft)",
@@ -1602,6 +1714,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 27,
+        "level": "Emerging",
+        "stages": {
+          "enforcement_body": 1,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 0,
+          "redress": 0
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Draft National AI Policy; early-stage commitments only."
       }
     },
     {
@@ -1778,6 +1904,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 27,
+        "level": "Emerging",
+        "stages": {
+          "enforcement_body": 1,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 0,
+          "redress": 0
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "National AI Strategy; early-stage commitments only."
       }
     },
     {
@@ -1785,7 +1925,7 @@
       "country_name": "Vietnam",
       "region": "Southeast Asia",
       "income_level": "lower_middle",
-      "population_millions": 98,
+      "population_millions": 101,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "National Strategy on R&D and Application of AI to 2030",
@@ -1955,6 +2095,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 62,
+        "level": "Advancing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 2,
+          "transparency": 3,
+          "audit": 1,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Comprehensive Law on AI in force since 1 Mar 2026 (content-labelling, bans); regulators being appointed."
       }
     },
     {
@@ -1962,7 +2116,7 @@
       "country_name": "Philippines",
       "region": "Southeast Asia",
       "income_level": "lower_middle",
-      "population_millions": 117,
+      "population_millions": 116,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "National AI Strategy Roadmap (NAISR 2.0)",
@@ -2132,6 +2286,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 33,
+        "level": "Emerging",
+        "stages": {
+          "enforcement_body": 1,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "National AI roadmap; no binding AI bill yet."
       }
     },
     {
@@ -2309,6 +2477,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 53,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 2,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Draft Royal Decree on AI (risk-based, high-risk registration) under review."
       }
     },
     {
@@ -2316,7 +2498,7 @@
       "country_name": "Malaysia",
       "region": "Southeast Asia",
       "income_level": "upper_middle",
-      "population_millions": 34,
+      "population_millions": 36,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "Malaysia National AI Roadmap 2021–2025 (AI-Rmap)",
@@ -2486,6 +2668,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 53,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 1,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "National AI Office established; voluntary governance guidelines; AI sandbox programme."
       }
     },
     {
@@ -2663,6 +2859,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 43,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 1,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 2,
+          "transparency": 1,
+          "audit": 1,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Non-binding recommendations for trustworthy AI; active court scrutiny of facial recognition."
       }
     },
     {
@@ -2670,7 +2880,7 @@
       "country_name": "Colombia",
       "region": "Latin America & Caribbean",
       "income_level": "upper_middle",
-      "population_millions": 52,
+      "population_millions": 53,
       "ai_strategy": {
         "has_national_strategy": true,
         "strategy_name": "CONPES 3975 – National Policy for Digital Transformation and AI",
@@ -2796,7 +3006,7 @@
         }
       ],
       "digital_context": {
-        "internet_penetration_pct": 79.4,
+        "internet_penetration_pct": 79.3,
         "internet_penetration_year": 2024,
         "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
         "has_data_protection_law": true,
@@ -2840,6 +3050,20 @@
           "overall_score",
           "framework_alignment.*.adoption_status"
         ]
+      },
+      "maturity": {
+        "score": 57,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 2,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "CONPES policy + an AI bill before Congress; ethical framework issued."
       }
     }
   ]

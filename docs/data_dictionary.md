@@ -92,6 +92,19 @@ Mirrors the six scoring components in `METHODOLOGY.md`.
 > booleans (25/20/20/15/10/10) where each is `1` only if the mechanism is *operational
 > and in force*. `analysis/findings.py` asserts this for every country.
 
+### `maturity` — how far along the governance journey *(new in v3.1)*
+
+| Field | Plain meaning |
+|---|---|
+| `score` | 0–100 Governance Maturity Score (weighted sum of the six staged mechanisms). |
+| `level` | `Nascent` / `Emerging` / `Developing` / `Advancing` / `Established`. |
+| `stages` | Per-mechanism stage **0–3**: `0` absent · `1` committed (strategy) · `2` proposed/drafted · `3` operational/in force. |
+| `scale` | Plain-text legend for the 0–3 stages. |
+| `basis` | One-line justification, derived from the same cited evidence as `implementation_status`. |
+
+> Maturity complements (does not replace) `implementation_status`. A mechanism at
+> stage 3 equals `true` on the binary in-force indicator, so **maturity ≥ implementation** always.
+
 ### `risk_classification` — how the country defines "risky" AI
 
 | Field | Plain meaning |

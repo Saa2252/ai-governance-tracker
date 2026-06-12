@@ -193,6 +193,31 @@ Every indicator names the instrument it rests on. To challenge one, cite a
 *specific, in-force* legal or regulatory instrument (with article/section) that
 meets the threshold, and open an issue. The rubric is designed to be falsifiable.
 
+### Governance Maturity Score (0–100)
+
+The Implementation Score is deliberately binary ("in force or not"), which makes
+it an honest reality check but a *flat* ranking — almost no country has anything
+fully in force, so most score 0. The **Maturity Score** restores discrimination by
+scoring how far each mechanism has travelled, on a four-stage scale:
+
+| Stage | Meaning |
+|------:|---------|
+| 0 | Absent — no mention |
+| 1 | Committed — named in a national strategy/policy |
+| 2 | Proposed — drafted bill in legislature, guidelines issued, or body announced (not operating) |
+| 3 | **Operational / in force** |
+
+Each mechanism contributes `weight × stage/3` (same weights as implementation:
+25/20/20/15/10/10), summed to 0–100, and bucketed into **Nascent / Emerging /
+Developing / Advancing / Established**. Stages are derived from the *same cited
+evidence* as the implementation indicators. A mechanism only reaches stage 3 when
+it would also score `true` on the binary Implementation Score — so
+**Maturity ≥ Implementation** always, and the two are consistent by construction.
+
+**Read them together:** Implementation answers *"is it real yet?"* (mostly no);
+Maturity answers *"how far along is it?"* (a real spectrum — Brazil 70 *Advancing*
+to Bangladesh 20 *Nascent*).
+
 ### Limitations
 
 1. **Coverage:** 16 countries fully profiled and **all evidence-coded** (v3.0). Expansion to the 24-country roster is future work.

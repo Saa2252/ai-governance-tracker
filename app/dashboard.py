@@ -111,6 +111,8 @@ def process_countries_df(countries_data):
             "unesco_score": country["framework_alignment"]["unesco_ai_ethics"]["adoption_score"],
             "oecd_score": country["framework_alignment"]["oecd_ai_principles"]["adoption_score"],
             "implementation_score": implementation_score(country["implementation_status"]),
+            "maturity_score": country.get("maturity", {}).get("score", 0),
+            "maturity_level": country.get("maturity", {}).get("level", "—"),
             "has_enforcement": country["implementation_status"]["has_enforcement_body"],
             "has_sandbox": country["implementation_status"]["has_regulatory_sandbox"],
             "has_impact_assessment": country["implementation_status"]["has_impact_assessments"],
@@ -367,12 +369,19 @@ estimates** — see METHODOLOGY.md.*
         ))
         
         fig_gap.add_trace(go.Bar(
-            name="Implementation Score",
+            name="Governance Maturity",
+            x=gap_df["country_name"],
+            y=gap_df["maturity_score"],
+            marker_color="#2196F3"
+        ))
+
+        fig_gap.add_trace(go.Bar(
+            name="Implementation (in force)",
             x=gap_df["country_name"],
             y=gap_df["implementation_score"],
             marker_color="#FF9800"
         ))
-        
+
         fig_gap.update_layout(
             barmode="group",
             xaxis_tickangle=-45,
@@ -566,8 +575,25 @@ estimates** — see METHODOLOGY.md.*
         else:
             st.caption("Implementation indicators are provisional estimates — not yet evidence-coded. See docs/coding_worksheet.md.")
 
+        # Governance Maturity — how far along the journey (vs. binary "in force")
+        mat = country_data.get("maturity")
+        if mat:
+            st.markdown(f"#### 🌱 Governance Maturity: {mat['score']}/100 &nbsp;·&nbsp; *{mat['level']}*")
+            st.caption(mat.get("basis", ""))
+            stage_word = {0: "absent", 1: "committed", 2: "drafted/proposed", 3: "in force"}
+            mech_labels = {
+                "enforcement_body": "Enforcement body", "regulatory_sandbox": "Regulatory sandbox",
+                "impact_assessments": "Impact assessments", "transparency": "Transparency rules",
+                "audit": "Audit mechanisms", "redress": "Redress mechanisms",
+            }
+            mc1, mc2 = st.columns(2)
+            for i, (k, label) in enumerate(mech_labels.items()):
+                stg = mat["stages"].get(k, 0)
+                bar = "🟩" * stg + "⬜" * (3 - stg)
+                (mc1 if i % 2 == 0 else mc2).markdown(f"{bar} {label} — *{stage_word[stg]}*")
+
         st.info(f"**Adoption–Implementation gap:** EU AI Act adoption {eu_score} − implementation {impl_score} "
-                f"= **{eu_score - impl_score} points**")
+                f"= **{eu_score - impl_score} points** &nbsp;·&nbsp; Maturity {mat['score'] if mat else '—'}/100")
 
         # Key developments timeline
         st.markdown("#### Recent Developments")

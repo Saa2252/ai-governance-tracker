@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "description": "Independent third-party AI indices used to position and externally validate this tracker. Only verified, published figures are recorded; blanks are pending extraction from the source reports (the originals are image-based PDFs).",
+    "last_updated": "2026-06-10",
+    "note": "These indices measure DIFFERENT constructs than this tracker (see README 'How this differs'). They are reference points, not inputs to our scores."
+  },
+  "indices": [
+    {
+      "id": "oxford_gairi",
+      "name": "Government AI Readiness Index",
+      "publisher": "Oxford Insights",
+      "measures": "Government readiness to adopt and use AI, across three pillars: Government, Technology Sector, and Data & Infrastructure (40 indicators).",
+      "countries_ranked": 188,
+      "url": "https://oxfordinsights.com/ai-readiness/"
+    },
+    {
+      "id": "girai",
+      "name": "Global Index on Responsible AI (GIRAI)",
+      "publisher": "Global Center on AI Governance",
+      "measures": "Responsible-AI commitments and frameworks across human-rights-based benchmarks.",
+      "countries_ranked": 138,
+      "url": "https://www.global-index.ai/"
+    }
+  ],
+  "country_benchmarks": [
+    {"country_code": "IND", "country_name": "India",        "oxford_gairi_rank": 46,   "oxford_year": 2024, "girai_rank": null},
+    {"country_code": "BRA", "country_name": "Brazil",       "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": 18, "girai_note": "Top in South & Central America (GIRAI 2024)"},
+    {"country_code": "KEN", "country_name": "Kenya",        "oxford_gairi_rank": 65,   "oxford_year": 2025, "girai_rank": null},
+    {"country_code": "IDN", "country_name": "Indonesia",    "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null},
+    {"country_code": "NGA", "country_name": "Nigeria",      "oxford_gairi_rank": 72,   "oxford_year": 2025, "girai_rank": null},
+    {"country_code": "MEX", "country_name": "Mexico",       "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null},
+    {"country_code": "ZAF", "country_name": "South Africa", "oxford_gairi_rank": 67,   "oxford_year": 2025, "girai_rank": 42, "girai_note": "Top-ranked African country (GIRAI 2024)"},
+    {"country_code": "BGD", "country_name": "Bangladesh",   "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null},
+    {"country_code": "PAK", "country_name": "Pakistan",     "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null},
+    {"country_code": "LKA", "country_name": "Sri Lanka",    "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null},
+    {"country_code": "VNM", "country_name": "Vietnam",      "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null},
+    {"country_code": "PHL", "country_name": "Philippines",  "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null},
+    {"country_code": "THA", "country_name": "Thailand",     "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null},
+    {"country_code": "MYS", "country_name": "Malaysia",     "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null},
+    {"country_code": "ARG", "country_name": "Argentina",    "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null},
+    {"country_code": "COL", "country_name": "Colombia",     "oxford_gairi_rank": null, "oxford_year": null, "girai_rank": null}
+  ]
+}

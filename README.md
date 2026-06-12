@@ -98,11 +98,38 @@ of six *in-force* mechanisms (reproduce with [`analysis/findings.py`](analysis/f
 | **AI governance is overwhelmingly aspirational** | **Average in-force implementation is just 2/100**, against an average EU AI Act *adoption* of 42/100 — a **~40-point** adoption–enforcement gap. |
 | **No operational enforcement anywhere** | **0 of 16** countries have an operational AI enforcement body. Only **2 of 16** have *any* in-force mechanism: **Brazil** (an ANPD regulatory sandbox) and **Vietnam** (mandatory AI content-labelling, in force since 1 March 2026). |
 | **Bills, not laws** | Comprehensive AI bills exist (Brazil's PL 2338, Mexico's Federal AI Law, Nigeria's NITDA framework, Thailand's Royal Decree) but remain **pending** — so adoption scores are moderate while implementation is near zero. |
+| **A real maturity spectrum** | The **Governance Maturity** score (how far each mechanism has travelled: strategy → bill → in force) ranks countries from **Brazil 70 / Vietnam 62 (*Advancing*)** down to **Bangladesh 20 (*Nascent*)** — the trajectory the binary in-force score deliberately flattens. |
 | **Divergence from EU risk categories** | **15 of 16 (94%)** use *custom* high-risk classifications rather than the EU's tiers — most often elevating healthcare, financial/mobile-money AI, facial recognition, and agriculture. |
 
 Every score is traceable: implementation indicators cite the instrument behind
 them; UNESCO/OECD scores are fact-derived (RAM status, adherence). See
 [`docs/scoring_rubric.md`](docs/scoring_rubric.md) and [`METHODOLOGY.md`](METHODOLOGY.md).
+
+---
+
+## How this differs from existing indices
+
+This tracker is **not** another AI-readiness ranking. It measures a distinct
+construct, and the contrast with the two most-cited indices is the point
+(reference data in [`data/benchmarks.json`](data/benchmarks.json)):
+
+| Index | What it measures | This tracker's difference |
+|-------|------------------|----------------------------|
+| **Oxford Insights — Government AI Readiness Index** (188 countries) | Government *capacity/readiness to use* AI (government, tech sector, data & infrastructure) | We measure **governance/regulation**, not readiness. The contrast is revealing: India ranks **46th** globally for AI *readiness* yet scores **0/100** on our *in-force* implementation — capacity ≠ enforceable rules. |
+| **Global Index on Responsible AI — GIRAI** (138 countries) | Responsible-AI *commitments* across human-rights benchmarks | GIRAI's headline 2024 finding — *"AI governance fails to deliver… critical implementation gaps"* — **independently corroborates this tracker's central thesis** (adoption ≫ implementation). Brazil ranks GIRAI **18th** yet its AI law (PL 2338) is not enacted; South Africa is GIRAI's **top-ranked African country** yet has no AI regulation proposed. |
+
+**What is novel here:** (1) isolating **in-force implementation** — the six
+operational mechanisms — separately from policy on paper; (2) the explicit
+**adoption–implementation gap** as a headline metric; (3) a **Global-South lens**
+that surfaces *divergence* from EU risk categories (agriculture, mobile money,
+climate) rather than treating EU conformity as the goal. Each finding is
+evidence-coded and reproducible — see [`METHODOLOGY.md`](METHODOLOGY.md).
+
+## Citation
+
+This repository ships a [`CITATION.cff`](CITATION.cff), so GitHub shows a **"Cite
+this repository"** button. A versioned **Zenodo DOI** is planned (see Roadmap) to
+make the dataset formally citable.
 
 ---
 
@@ -143,8 +170,10 @@ If you use this data in research:
   author = {Ahmad, Sana Asif},
   title = {Global South AI Governance Tracker},
   year = {2026},
+  version = {3.0},
   publisher = {GitHub},
-  url = {https://github.com/Saa2252/ai-governance-tracker}
+  url = {https://github.com/Saa2252/ai-governance-tracker},
+  note = {DOI to be assigned via Zenodo}
 }
 ```
 
@@ -160,9 +189,13 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 - [x] Initial country dataset (16 fully profiled; 24-country roster documented)
 - [x] Streamlit dashboard v1
-- [ ] API endpoint for data access
+- [x] All 16 countries evidence-coded (every indicator cited)
+- [x] Automated World Bank data refresh (scheduled GitHub Action — see [docs/data_pipeline.md](docs/data_pipeline.md))
+- [ ] Zenodo DOI + tagged release (formal citability)
+- [ ] External-validation correlation vs. Oxford Insights & GIRAI (fuller scores)
+- [ ] Auto-pull OECD adherence + UNESCO RAM status
+- [ ] Policy-tracker watchlist (flag changes for re-verification)
 - [ ] Integration with EU AI Act compliance tools
-- [ ] Real-time policy update monitoring
 
 ---
 
