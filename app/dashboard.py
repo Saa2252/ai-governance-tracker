@@ -74,8 +74,15 @@ def load_data():
     
     with open(data_dir / "frameworks.json", "r") as f:
         frameworks_data = json.load(f)
-    
-    return countries_data, frameworks_data
+
+    # Optional developed-economy comparators (present only on the comparators branch)
+    comparators_data = None
+    comp_path = data_dir / "comparators_developed.json"
+    if comp_path.exists():
+        with open(comp_path, "r") as f:
+            comparators_data = json.load(f)
+
+    return countries_data, frameworks_data, comparators_data
 
 # Implementation indicator weights (must match METHODOLOGY.md). The score is
 # DERIVED from these booleans so it can never drift out of sync with the data.
@@ -130,11 +137,25 @@ def process_countries_df(countries_data):
 def main():
     # Load data
     try:
-        countries_data, frameworks_data = load_data()
-        df = process_countries_df(countries_data)
+        countries_data, frameworks_data, comparators_data = load_data()
     except FileNotFoundError:
         st.error("Data files not found. Please ensure countries.json and frameworks.json are in the data/ directory.")
         st.stop()
+
+    # Optional overlay: developed-economy comparators (shown only if the file exists)
+    include_dev = False
+    if comparators_data:
+        include_dev = st.sidebar.checkbox(
+            "🌍 Include developed comparators",
+            value=False,
+            help="Overlay 8 high-income economies (Germany, France, UK, US, Japan, "
+                 "South Korea, Canada, Australia) to see the full global gradient. "
+                 "Off = Global South only.",
+        )
+    all_countries = list(countries_data["countries"])
+    if include_dev and comparators_data:
+        all_countries = all_countries + comparators_data["countries"]
+    df = process_countries_df({"countries": all_countries})
     
     # Header
     st.markdown('<p class="main-header">🌍 Global South AI Governance Tracker</p>', unsafe_allow_html=True)
@@ -495,7 +516,7 @@ estimates** — see METHODOLOGY.md.*
     
     if selected_country:
         country_data = next(
-            c for c in countries_data["countries"]
+            c for c in all_countries
             if c["country_name"] == selected_country
         )
         impl = country_data["implementation_status"]

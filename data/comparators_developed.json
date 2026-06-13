@@ -1,0 +1,1544 @@
+{
+  "metadata": {
+    "version": "1.0-branch",
+    "last_updated": "2026-06-04",
+    "author": "Sana Asif Ahmad",
+    "description": "DEVELOPED-ECONOMY COMPARATORS — an optional overlay to benchmark the Global South dataset against high-income jurisdictions. NOT part of the core Global South tracker; lives on a feature branch. Same schema as countries.json.",
+    "scope_note": "These are high-income comparators (OECD members). Including them changes the framing from 'Global South tracker' to 'global comparison', which is why they are isolated here.",
+    "data_sources": [
+      "EU AI Act and national AI laws/strategies",
+      "World Bank",
+      "OECD / GPAI membership records"
+    ],
+    "schema_note": "Upgraded to the v3.1 schema: evidence-coded in-force implementation, fact-derived UNESCO/OECD, and Governance Maturity. Mirrors data/countries.json so the two can be compared on one global gradient."
+  },
+  "countries": [
+    {
+      "country_code": "DEU",
+      "country_name": "Germany",
+      "region": "Western Europe",
+      "income_level": "high_income",
+      "population_millions": 84,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "EU AI Act (directly applicable) + national AI Strategy",
+        "year_published": 2018,
+        "year_updated": 2024,
+        "lead_agency": "Federal Ministry for Economic Affairs / BNetzA"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "high",
+          "adoption_score": 98,
+          "notes": "EU AI Act is directly applicable law",
+          "source": {
+            "primary_instrument": "EU AI Act (Reg. 2024/1689); German AI Strategy",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI; RAM not typically undertaken by high-income states.",
+          "source": {
+            "primary_instrument": "EU AI Act (Reg. 2024/1689); German AI Strategy",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "high",
+          "adoption_score": 85,
+          "notes": "OECD member and adherent to the OECD AI Principles; GPAI founding member.",
+          "source": {
+            "primary_instrument": "EU AI Act (Reg. 2024/1689); German AI Strategy",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 40,
+        "has_enforcement_body": true,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited-practice enforcement and GPAI transparency apply and a market-surveillance authority is designated. High-risk obligations (conformity/impact/audit/redress) apply from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited-practice enforcement and GPAI transparency apply and a market-surveillance authority is designated. High-risk obligations (conformity/impact/audit/redress) apply from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited-practice enforcement and GPAI transparency apply and a market-surveillance authority is designated. High-risk obligations (conformity/impact/audit/redress) apply from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          },
+          "has_transparency_requirements": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited-practice enforcement and GPAI transparency apply and a market-surveillance authority is designated. High-risk obligations (conformity/impact/audit/redress) apply from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited-practice enforcement and GPAI transparency apply and a market-surveillance authority is designated. High-risk obligations (conformity/impact/audit/redress) apply from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited-practice enforcement and GPAI transparency apply and a market-surveillance authority is designated. High-risk obligations (conformity/impact/audit/redress) apply from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          }
+        }
+      },
+      "risk_classification": {
+        "uses_eu_categories": true,
+        "custom_high_risk": [
+          "biometric identification",
+          "critical infrastructure",
+          "employment",
+          "credit scoring"
+        ],
+        "divergence_notes": "Applies EU Annex III high-risk list directly"
+      },
+      "key_developments": [
+        {
+          "date": "2024-08",
+          "event": "EU AI Act enters into force"
+        },
+        {
+          "date": "2025-08",
+          "event": "High-risk obligations phase in"
+        },
+        {
+          "date": "2025-11",
+          "event": "BNetzA designated market-surveillance authority"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 93.5,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "GDPR (Reg. 2016/679) + Federal Data Protection Act (BDSG)",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "manufacturing",
+        "automotive",
+        "healthcare",
+        "public administration"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": true
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": true
+      },
+      "data_quality": {
+        "last_verified": "2026-06-04",
+        "confidence_level": "medium",
+        "sources": [
+          "EU AI Act",
+          "German AI Strategy",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      },
+      "maturity": {
+        "score": 80,
+        "level": "Advancing",
+        "stages": {
+          "enforcement_body": 3,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 2,
+          "transparency": 3,
+          "audit": 2,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "EU AI Act in force and phasing in (prohibited practices + GPAI now; high-risk from Aug 2026)."
+      }
+    },
+    {
+      "country_code": "FRA",
+      "country_name": "France",
+      "region": "Western Europe",
+      "income_level": "high_income",
+      "population_millions": 68,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "EU AI Act + National AI Strategy (France 2030)",
+        "year_published": 2018,
+        "year_updated": 2025,
+        "lead_agency": "DGE / CNIL"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "high",
+          "adoption_score": 98,
+          "notes": "EU AI Act directly applicable",
+          "source": {
+            "primary_instrument": "EU AI Act; France 2030 AI strategy",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI; RAM not typically undertaken by high-income states.",
+          "source": {
+            "primary_instrument": "EU AI Act; France 2030 AI strategy",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "high",
+          "adoption_score": 85,
+          "notes": "OECD member and adherent to the OECD AI Principles; GPAI founding member.",
+          "source": {
+            "primary_instrument": "EU AI Act; France 2030 AI strategy",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 40,
+        "has_enforcement_body": true,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited practices + GPAI transparency apply; CNIL active. High-risk obligations from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited practices + GPAI transparency apply; CNIL active. High-risk obligations from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited practices + GPAI transparency apply; CNIL active. High-risk obligations from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          },
+          "has_transparency_requirements": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited practices + GPAI transparency apply; CNIL active. High-risk obligations from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited practices + GPAI transparency apply; CNIL active. High-risk obligations from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "EU AI Act in force; prohibited practices + GPAI transparency apply; CNIL active. High-risk obligations from Aug 2026.",
+            "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+          }
+        }
+      },
+      "risk_classification": {
+        "uses_eu_categories": true,
+        "custom_high_risk": [
+          "biometric identification",
+          "critical infrastructure",
+          "law enforcement",
+          "employment"
+        ],
+        "divergence_notes": "Applies EU risk tiers; CNIL active on biometrics"
+      },
+      "key_developments": [
+        {
+          "date": "2024-08",
+          "event": "EU AI Act in force"
+        },
+        {
+          "date": "2025-02",
+          "event": "Hosted AI Action Summit in Paris"
+        },
+        {
+          "date": "2025-08",
+          "event": "High-risk rules phase in"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 88.7,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "GDPR + Loi Informatique et Libertés (CNIL)",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "public services",
+        "healthcare",
+        "defence",
+        "creative industries"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": true
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": true
+      },
+      "data_quality": {
+        "last_verified": "2026-06-04",
+        "confidence_level": "medium",
+        "sources": [
+          "EU AI Act",
+          "France 2030",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      },
+      "maturity": {
+        "score": 80,
+        "level": "Advancing",
+        "stages": {
+          "enforcement_body": 3,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 2,
+          "transparency": 3,
+          "audit": 2,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "EU AI Act in force and phasing in; CNIL active on biometrics."
+      }
+    },
+    {
+      "country_code": "GBR",
+      "country_name": "United Kingdom",
+      "region": "Western Europe",
+      "income_level": "high_income",
+      "population_millions": 67,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "A pro-innovation approach to AI regulation",
+        "year_published": 2023,
+        "year_updated": 2024,
+        "lead_agency": "DSIT / AI Safety Institute"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "partial",
+          "adoption_score": 55,
+          "notes": "Principles-based, sector-regulator model; diverges from EU's horizontal law",
+          "source": {
+            "primary_instrument": "UK AI White Paper (2023); AI Safety Institute",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI; RAM not typically undertaken by high-income states.",
+          "source": {
+            "primary_instrument": "UK AI White Paper (2023); AI Safety Institute",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "high",
+          "adoption_score": 85,
+          "notes": "OECD member and adherent to the OECD AI Principles; GPAI founding member.",
+          "source": {
+            "primary_instrument": "UK AI White Paper (2023); AI Safety Institute",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 0,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Principles-based approach; the AI Safety Institute is non-regulatory; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Principles-based approach; the AI Safety Institute is non-regulatory; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Principles-based approach; the AI Safety Institute is non-regulatory; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Principles-based approach; the AI Safety Institute is non-regulatory; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Principles-based approach; the AI Safety Institute is non-regulatory; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Principles-based approach; the AI Safety Institute is non-regulatory; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "frontier / foundation models",
+          "biometric surveillance",
+          "financial services",
+          "healthcare"
+        ],
+        "divergence_notes": "Focus on frontier-model safety via AI Safety Institute rather than EU-style tiers"
+      },
+      "key_developments": [
+        {
+          "date": "2023-11",
+          "event": "Hosted Bletchley AI Safety Summit"
+        },
+        {
+          "date": "2024-05",
+          "event": "AI Safety Institute expanded"
+        },
+        {
+          "date": "2025-03",
+          "event": "Consultation on targeted AI legislation"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 95.5,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "UK GDPR + Data Protection Act 2018",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "financial services",
+        "frontier AI safety",
+        "healthcare (NHS)",
+        "public services"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": true
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-06-04",
+        "confidence_level": "medium",
+        "sources": [
+          "UK AI White Paper",
+          "AISI publications",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      },
+      "maturity": {
+        "score": 53,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 1,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Pro-innovation principles + AI Safety Institute; no binding AI law."
+      }
+    },
+    {
+      "country_code": "USA",
+      "country_name": "United States",
+      "region": "North America",
+      "income_level": "high_income",
+      "population_millions": 335,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "Federal AI policy (Executive Orders + NIST AI RMF)",
+        "year_published": 2023,
+        "year_updated": 2025,
+        "lead_agency": "White House OSTP / NIST"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "low",
+          "adoption_score": 35,
+          "notes": "Sectoral + voluntary; no comprehensive federal AI law; state laws emerging",
+          "source": {
+            "primary_instrument": "NIST AI Risk Management Framework; federal Executive Orders",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI; RAM not typically undertaken by high-income states.",
+          "source": {
+            "primary_instrument": "NIST AI Risk Management Framework; federal Executive Orders",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "high",
+          "adoption_score": 85,
+          "notes": "OECD member and adherent to the OECD AI Principles; GPAI founding member.",
+          "source": {
+            "primary_instrument": "NIST AI Risk Management Framework; federal Executive Orders",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 0,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding federal AI law; NIST AI RMF is voluntary; enforcement is sectoral/state-level (e.g. Colorado AI Act).",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-states"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding federal AI law; NIST AI RMF is voluntary; enforcement is sectoral/state-level (e.g. Colorado AI Act).",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-states"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding federal AI law; NIST AI RMF is voluntary; enforcement is sectoral/state-level (e.g. Colorado AI Act).",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-states"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding federal AI law; NIST AI RMF is voluntary; enforcement is sectoral/state-level (e.g. Colorado AI Act).",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-states"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding federal AI law; NIST AI RMF is voluntary; enforcement is sectoral/state-level (e.g. Colorado AI Act).",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-states"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "No binding federal AI law; NIST AI RMF is voluntary; enforcement is sectoral/state-level (e.g. Colorado AI Act).",
+            "source": "https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker-united-states"
+          }
+        }
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "frontier models",
+          "critical infrastructure",
+          "biometrics",
+          "automated decision systems"
+        ],
+        "divergence_notes": "Sectoral/agency-led; significant variation across states (e.g. Colorado AI Act)"
+      },
+      "key_developments": [
+        {
+          "date": "2023-10",
+          "event": "Executive Order on Safe, Secure AI"
+        },
+        {
+          "date": "2024-04",
+          "event": "NIST AI RMF generative-AI profile"
+        },
+        {
+          "date": "2025-01",
+          "event": "Federal AI policy direction revised"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 94.7,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "No single federal law; sectoral (HIPAA, CCPA/CPRA in California)",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "frontier AI",
+        "defence",
+        "healthcare",
+        "financial services"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": true
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-06-04",
+        "confidence_level": "medium",
+        "sources": [
+          "NIST AI RMF",
+          "federal Executive Orders",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      },
+      "maturity": {
+        "score": 67,
+        "level": "Advancing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 2,
+          "transparency": 2,
+          "audit": 2,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "No federal AI law; NIST framework + executive actions + emerging state laws (fragmented)."
+      }
+    },
+    {
+      "country_code": "JPN",
+      "country_name": "Japan",
+      "region": "East Asia",
+      "income_level": "high_income",
+      "population_millions": 125,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "AI Strategy + AI Promotion Act (2025)",
+        "year_published": 2019,
+        "year_updated": 2025,
+        "lead_agency": "Cabinet Office / METI"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "partial",
+          "adoption_score": 50,
+          "notes": "Light-touch, innovation-first; principles over binding tiers",
+          "source": {
+            "primary_instrument": "AI Promotion Act (2025); Social Principles of Human-Centric AI",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI; RAM not typically undertaken by high-income states.",
+          "source": {
+            "primary_instrument": "AI Promotion Act (2025); Social Principles of Human-Centric AI",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "high",
+          "adoption_score": 85,
+          "notes": "OECD member and adherent to the OECD AI Principles; GPAI founding member.",
+          "source": {
+            "primary_instrument": "AI Promotion Act (2025); Social Principles of Human-Centric AI",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 0,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI Promotion Act (2025) is promotional/soft-law; no hard enforcement mechanism in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI Promotion Act (2025) is promotional/soft-law; no hard enforcement mechanism in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI Promotion Act (2025) is promotional/soft-law; no hard enforcement mechanism in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI Promotion Act (2025) is promotional/soft-law; no hard enforcement mechanism in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI Promotion Act (2025) is promotional/soft-law; no hard enforcement mechanism in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI Promotion Act (2025) is promotional/soft-law; no hard enforcement mechanism in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "critical infrastructure",
+          "autonomous mobility",
+          "healthcare",
+          "manufacturing robotics"
+        ],
+        "divergence_notes": "Emphasis on innovation and the G7 Hiroshima code of conduct"
+      },
+      "key_developments": [
+        {
+          "date": "2023-05",
+          "event": "Launched G7 Hiroshima AI Process"
+        },
+        {
+          "date": "2024-12",
+          "event": "AI Promotion Bill drafted"
+        },
+        {
+          "date": "2025-05",
+          "event": "AI Promotion Act enacted"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 85.5,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Act on the Protection of Personal Information (APPI)",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "manufacturing / robotics",
+        "autonomous mobility",
+        "healthcare",
+        "public services"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-06-04",
+        "confidence_level": "medium",
+        "sources": [
+          "AI Promotion Act 2025",
+          "Social Principles of Human-Centric AI",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      },
+      "maturity": {
+        "score": 50,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 1,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "AI Promotion Act (soft-law, innovation-first)."
+      }
+    },
+    {
+      "country_code": "KOR",
+      "country_name": "South Korea",
+      "region": "East Asia",
+      "income_level": "high_income",
+      "population_millions": 52,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "AI Basic Act (2024, effective 2026)",
+        "year_published": 2019,
+        "year_updated": 2025,
+        "lead_agency": "Ministry of Science and ICT (MSIT)"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "partial",
+          "adoption_score": 72,
+          "notes": "Comprehensive risk-based AI law; high-impact-AI obligations resemble EU approach",
+          "source": {
+            "primary_instrument": "AI Basic Act (Framework Act on AI Development & Trust)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI; RAM not typically undertaken by high-income states.",
+          "source": {
+            "primary_instrument": "AI Basic Act (Framework Act on AI Development & Trust)",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "high",
+          "adoption_score": 85,
+          "notes": "OECD member and adherent to the OECD AI Principles; GPAI founding member.",
+          "source": {
+            "primary_instrument": "AI Basic Act (Framework Act on AI Development & Trust)",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 60,
+        "has_enforcement_body": true,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": true,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "AI Basic Act in force since Jan 2026: high-impact-AI obligations, transparency/labelling, and MSIT oversight.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI Basic Act in force since Jan 2026: high-impact-AI obligations, transparency/labelling, and MSIT oversight.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "AI Basic Act in force since Jan 2026: high-impact-AI obligations, transparency/labelling, and MSIT oversight.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "AI Basic Act in force since Jan 2026: high-impact-AI obligations, transparency/labelling, and MSIT oversight.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI Basic Act in force since Jan 2026: high-impact-AI obligations, transparency/labelling, and MSIT oversight.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI Basic Act in force since Jan 2026: high-impact-AI obligations, transparency/labelling, and MSIT oversight.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "high-impact AI",
+          "biometrics",
+          "healthcare",
+          "semiconductors"
+        ],
+        "divergence_notes": "'High-impact AI' category broadly parallels EU high-risk"
+      },
+      "key_developments": [
+        {
+          "date": "2024-12",
+          "event": "AI Basic Act passed National Assembly"
+        },
+        {
+          "date": "2025-06",
+          "event": "Subordinate regulations drafted"
+        },
+        {
+          "date": "2026-01",
+          "event": "Act takes effect"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 97.9,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Personal Information Protection Act (PIPA)",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "semiconductors",
+        "high-impact AI",
+        "healthcare",
+        "public services"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-06-04",
+        "confidence_level": "medium",
+        "sources": [
+          "AI Basic Act 2024",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      },
+      "maturity": {
+        "score": 87,
+        "level": "Established",
+        "stages": {
+          "enforcement_body": 3,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 3,
+          "transparency": 3,
+          "audit": 2,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Comprehensive AI Basic Act in force since Jan 2026."
+      }
+    },
+    {
+      "country_code": "CAN",
+      "country_name": "Canada",
+      "region": "North America",
+      "income_level": "high_income",
+      "population_millions": 40,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "Pan-Canadian AI Strategy; AIDA (proposed)",
+        "year_published": 2017,
+        "year_updated": 2024,
+        "lead_agency": "ISED"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "partial",
+          "adoption_score": 58,
+          "notes": "Risk-based bill resembling EU approach; enactment stalled",
+          "source": {
+            "primary_instrument": "Artificial Intelligence and Data Act (AIDA, Bill C-27)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI; RAM not typically undertaken by high-income states.",
+          "source": {
+            "primary_instrument": "Artificial Intelligence and Data Act (AIDA, Bill C-27)",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "high",
+          "adoption_score": 85,
+          "notes": "OECD member and adherent to the OECD AI Principles; GPAI founding member.",
+          "source": {
+            "primary_instrument": "Artificial Intelligence and Data Act (AIDA, Bill C-27)",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 0,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "high-impact systems",
+          "biometrics",
+          "financial services",
+          "healthcare"
+        ],
+        "divergence_notes": "'High-impact' framing in AIDA; voluntary code in interim"
+      },
+      "key_developments": [
+        {
+          "date": "2023-09",
+          "event": "Voluntary code of conduct for generative AI"
+        },
+        {
+          "date": "2024-04",
+          "event": "AIDA committee study"
+        },
+        {
+          "date": "2025-01",
+          "event": "AIDA timeline uncertain after C-27 stalls"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 94.4,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "PIPEDA (federal)",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "natural resources",
+        "healthcare",
+        "financial services",
+        "public services"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": true
+      },
+      "data_quality": {
+        "last_verified": "2026-06-04",
+        "confidence_level": "medium",
+        "sources": [
+          "AIDA (Bill C-27)",
+          "Pan-Canadian AI Strategy",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      },
+      "maturity": {
+        "score": 63,
+        "level": "Advancing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 2,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Risk-based AIDA bill proposed; voluntary code in interim."
+      }
+    },
+    {
+      "country_code": "AUS",
+      "country_name": "Australia",
+      "region": "Oceania",
+      "income_level": "high_income",
+      "population_millions": 26,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "AI Ethics Framework; proposed mandatory guardrails",
+        "year_published": 2019,
+        "year_updated": 2024,
+        "lead_agency": "DISR"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "low",
+          "adoption_score": 42,
+          "notes": "Voluntary standard; mandatory guardrails for high-risk AI proposed",
+          "source": {
+            "primary_instrument": "Voluntary AI Safety Standard; proposed mandatory guardrails",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation on the Ethics of AI; RAM not typically undertaken by high-income states.",
+          "source": {
+            "primary_instrument": "Voluntary AI Safety Standard; proposed mandatory guardrails",
+            "framework_reference_url": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "high",
+          "adoption_score": 85,
+          "notes": "OECD member and adherent to the OECD AI Principles; GPAI founding member.",
+          "source": {
+            "primary_instrument": "Voluntary AI Safety Standard; proposed mandatory guardrails",
+            "framework_reference_url": "https://oecd.ai/en/ai-principles",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          },
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": true,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 0,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": false,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Voluntary AI Safety Standard; mandatory guardrails proposed but not in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Voluntary AI Safety Standard; mandatory guardrails proposed but not in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Voluntary AI Safety Standard; mandatory guardrails proposed but not in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Voluntary AI Safety Standard; mandatory guardrails proposed but not in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Voluntary AI Safety Standard; mandatory guardrails proposed but not in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Voluntary AI Safety Standard; mandatory guardrails proposed but not in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "high-risk AI (proposed)",
+          "biometrics",
+          "automated decision-making",
+          "mining automation"
+        ],
+        "divergence_notes": "Risk-based guardrails proposed but not yet mandatory"
+      },
+      "key_developments": [
+        {
+          "date": "2024-09",
+          "event": "Proposals paper on mandatory guardrails"
+        },
+        {
+          "date": "2024-09",
+          "event": "Voluntary AI Safety Standard released"
+        },
+        {
+          "date": "2025-02",
+          "event": "Consultation on high-risk definitions"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 96.1,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Privacy Act 1988 (reforms underway)",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "mining automation",
+        "healthcare",
+        "financial services",
+        "public services"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": true,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-06-04",
+        "confidence_level": "medium",
+        "sources": [
+          "Voluntary AI Safety Standard",
+          "Mandatory guardrails proposals paper",
+          "World Bank, Individuals using the Internet (% of population), indicator IT.NET.USER.ZS",
+          "OECD / GPAI membership records; national data-protection statutes"
+        ],
+        "verified_fields": [
+          "internet_penetration_pct",
+          "has_data_protection_law",
+          "data_protection_law_name",
+          "oecd_status",
+          "gpai_member"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "framework_alignment.*.adoption_status"
+        ]
+      },
+      "maturity": {
+        "score": 45,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 1,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 1,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
+        "basis": "Voluntary AI Safety Standard; mandatory guardrails proposed."
+      }
+    }
+  ]
+}
