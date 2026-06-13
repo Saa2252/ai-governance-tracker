@@ -198,14 +198,18 @@ prescription — a key finding here is exactly where local priorities (agricultu
 mobile money, climate) justify *diverging* from EU categories. Every country is
 also scored against UNESCO and OECD so no single framework dominates.
 
-**How the gap is measured.**
-- **Adoption Score (0–100):** how closely *written policy* aligns with the EU AI Act — rules on paper.
-- **Implementation Score (0–100):** how much is *actually operational* — enforcement body, sandbox, impact assessments, transparency, audit, and redress mechanisms (weighted).
-- **Adoption–Implementation Gap = Adoption − Implementation.** A large gap = ambitious policy that isn't yet enforceable ("policy ahead of practice"); a small gap = policy and capacity in step.
+**Three lenses on each country:**
+- **Adoption (0–100):** how closely *written policy* aligns with the EU AI Act / UNESCO / OECD — rules on paper.
+- **Governance Maturity (0–100):** how far each of six mechanisms has travelled — *absent → committed → drafted → in force*. This is the headline, discriminating score.
+- **Enforcement (binary):** whether each mechanism is *actually in force today*. Almost nowhere is — so we report it as "in force: yes/no" and a global count, not a near-empty 0–100.
 
-*Factual fields (internet access, data-protection laws, OECD/GPAI membership) are
-sourced (World Bank, OECD). Alignment and implementation **scores are analyst
-estimates** — see METHODOLOGY.md.*
+The six mechanisms are **mapped to UNESCO's Readiness Assessment Methodology
+dimensions and the OECD AI Principles** (see METHODOLOGY.md), so the index sits on
+recognised scaffolding.
+
+*Factual fields (internet access, data-protection laws, OECD/GPAI membership, RAM
+status) are sourced (World Bank, OECD, UNESCO). Adoption scores are analyst
+estimates; maturity/enforcement are evidence-coded with citations — see METHODOLOGY.md.*
             """
         )
 
@@ -229,20 +233,21 @@ estimates** — see METHODOLOGY.md.*
         )
     
     with col3:
-        avg_impl = filtered_df["implementation_score"].mean()
+        avg_mat = filtered_df["maturity_score"].mean()
         st.metric(
-            label="Avg Implementation Score",
-            value=f"{avg_impl:.0f}%",
-            help="Measures actual enforcement mechanisms, not just policy adoption"
+            label="Avg Governance Maturity",
+            value=f"{avg_mat:.0f}/100",
+            help="How far each country has travelled along the governance pipeline "
+                 "(strategy → bill → in force). The discriminating 0–100 measure.",
         )
-    
+
     with col4:
-        gap = avg_adoption - avg_impl
+        in_force = int((filtered_df["implementation_score"] > 0).sum())
         st.metric(
-            label="Adoption-Implementation Gap",
-            value=f"{gap:.0f} pts",
-            delta="Higher = more policy, less action",
-            delta_color="inverse"
+            label="AI rules in force",
+            value=f"{in_force} / {len(filtered_df)}",
+            help="Countries with at least one operational, in-force enforcement "
+                 "mechanism — the rest have only strategies or pending bills.",
         )
     
     # ========================================================================
@@ -261,15 +266,24 @@ estimates** — see METHODOLOGY.md.*
     # Tab 1: Regional Overview Map
     with tab1:
         st.markdown("### Regional AI Governance Landscape")
-        
+
+        map_metric_label = st.radio(
+            "Colour the map by:",
+            ["Governance Maturity", "EU AI Act Adoption"],
+            horizontal=True,
+            help="Maturity (default) avoids an EU-centric framing; switch to EU AI Act adoption to see alignment on paper.",
+        )
+        metric_col = "maturity_score" if map_metric_label == "Governance Maturity" else "eu_ai_act_score"
+
         # Create choropleth map
         fig_map = px.choropleth(
             filtered_df,
             locations="country_code",
-            color="eu_ai_act_score",
+            color=metric_col,
             hover_name="country_name",
             hover_data={
                 "country_code": False,
+                "maturity_score": ":.0f",
                 "eu_ai_act_score": ":.0f",
                 "implementation_score": ":.0f",
                 "region": True
@@ -277,8 +291,9 @@ estimates** — see METHODOLOGY.md.*
             color_continuous_scale="RdYlGn",
             range_color=[0, 100],
             labels={
+                "maturity_score": "Governance Maturity",
                 "eu_ai_act_score": "EU AI Act Adoption (%)",
-                "implementation_score": "Implementation (%)"
+                "implementation_score": "In-force (%)"
             }
         )
         
@@ -535,6 +550,10 @@ estimates** — see METHODOLOGY.md.*
                 st.markdown(f"**National AI Strategy:** {country_data['ai_strategy']['strategy_name']} ({country_data['ai_strategy']['year_published']})")
                 st.markdown(f"**Lead Agency:** {country_data['ai_strategy']['lead_agency']}")
 
+            dq = country_data.get("data_quality", {})
+            st.caption(f"🗓️ Last verified {dq.get('last_verified', '—')} · "
+                       f"confidence: {dq.get('confidence_level', '—')}")
+
         with col2:
             st.markdown("#### Framework Alignment")
 
@@ -564,12 +583,9 @@ estimates** — see METHODOLOGY.md.*
                              ("GPAI member" if ev.get("gpai_member") else "not GPAI")]
                     st.caption("🏛️ " + " · ".join(flags))
 
-        # Implementation breakdown — is governance actually IN FORCE?
-        st.markdown("#### ⚙️ Implementation — is it in force?")
-        impl_score = implementation_score(impl)
+        # Enforcement — a binary "in force?" readout (NOT a 0-100 score, which reads empty)
+        st.markdown("#### ⚙️ Enforcement — what is actually in force?")
         eu_score = country_data["framework_alignment"]["eu_ai_act"]["adoption_score"]
-        st.markdown(f"**Implementation score: {impl_score}/100** &nbsp;·&nbsp; *{badge}*")
-
         indicators = [
             ("has_enforcement_body", "Enforcement body"),
             ("has_regulatory_sandbox", "Regulatory sandbox"),
@@ -578,6 +594,10 @@ estimates** — see METHODOLOGY.md.*
             ("has_audit_mechanisms", "Audit mechanisms"),
             ("has_redress_mechanisms", "Redress mechanisms"),
         ]
+        in_force_n = sum(1 for key, _ in indicators if impl.get(key))
+        chip = "✅ In force" if in_force_n else "⬜ Not yet in force"
+        st.markdown(f"**{chip}** — {in_force_n} of 6 enforcement mechanisms operational "
+                    f"&nbsp;·&nbsp; *{badge}*")
         ic1, ic2 = st.columns(2)
         for i, (key, label) in enumerate(indicators):
             mark = "✅" if impl.get(key) else "⬜"
@@ -613,8 +633,9 @@ estimates** — see METHODOLOGY.md.*
                 bar = "🟩" * stg + "⬜" * (3 - stg)
                 (mc1 if i % 2 == 0 else mc2).markdown(f"{bar} {label} — *{stage_word[stg]}*")
 
-        st.info(f"**Adoption–Implementation gap:** EU AI Act adoption {eu_score} − implementation {impl_score} "
-                f"= **{eu_score - impl_score} points** &nbsp;·&nbsp; Maturity {mat['score'] if mat else '—'}/100")
+        st.info(f"🌱 **Governance Maturity {mat['score'] if mat else '—'}/100** "
+                f"({mat['level'] if mat else '—'}) &nbsp;·&nbsp; ⚙️ In force: **{in_force_n}/6** mechanisms "
+                f"&nbsp;·&nbsp; 📜 EU AI Act adoption {eu_score}/100")
 
         # Key developments timeline
         st.markdown("#### Recent Developments")
@@ -629,9 +650,9 @@ estimates** — see METHODOLOGY.md.*
     st.markdown("""
     <div style="text-align: center; color: #666; padding: 2rem;">
         <p><strong>Global South AI Governance Tracker</strong></p>
-        <p>Built by <a href="https://github.com/YOUR_USERNAME">Sana Asif Ahmad</a> | 
+        <p>Built by <a href="https://github.com/Saa2252">Sana Asif Ahmad</a> | 
         Data from UN Development Coordination Office, national AI strategies, and regulatory filings</p>
-        <p>Last updated: May 2026 | <a href="https://github.com/YOUR_USERNAME/ai-governance-tracker">View on GitHub</a></p>
+        <p>Last updated: May 2026 | <a href="https://github.com/Saa2252/ai-governance-tracker">View on GitHub</a></p>
     </div>
     """, unsafe_allow_html=True)
 

@@ -67,22 +67,31 @@ streamlit run app/dashboard.py
 ```
 ai-governance-tracker/
 ├── README.md                 # You are here
-├── METHODOLOGY.md            # Data collection approach
+├── METHODOLOGY.md            # Methodology, scoring, standards cross-walk
+├── CITATION.cff              # "Cite this repository" metadata
 ├── LICENSE                   # MIT License
 ├── requirements.txt          # Python dependencies
+├── .github/workflows/
+│   └── refresh-data.yml      # Scheduled World Bank data refresh (CI)
 ├── data/
-│   ├── countries.json        # Full profiles (8 countries)
-│   ├── country_roster.json   # Comprehensive in-scope roster (24) + selection logic
-│   ├── frameworks.json       # Framework definitions (EU AI Act, UNESCO, etc.)
-│   └── risk_categories.json  # How countries classify AI risk vs. the EU baseline
+│   ├── countries.json              # 16 Global South profiles (all evidence-coded)
+│   ├── comparators_developed.json  # 8 high-income comparators (optional overlay)
+│   ├── country_roster.json         # 24-country in-scope roster + selection logic
+│   ├── frameworks.json             # EU AI Act / UNESCO / OECD definitions
+│   ├── risk_categories.json        # Risk taxonomy vs. the EU baseline
+│   └── benchmarks.json             # External indices (Oxford GAIRI, GIRAI)
 ├── app/
 │   └── dashboard.py          # Streamlit interactive dashboard
+├── analysis/
+│   └── findings.py           # Reproduces every README statistic from the data
+├── scripts/
+│   └── refresh_world_bank.py # Pulls live World Bank figures (run by the Action)
 └── docs/
-    └── data_dictionary.md    # Plain-English definition of every data field
-
-# Planned (not yet added):
-#   analysis/implementation_gaps.ipynb – Jupyter notebook analysis
-#   docs/CONTRIBUTING.md                – contribution guidelines
+    ├── data_dictionary.md    # Plain-English definition of every field
+    ├── scoring_rubric.md     # Rubric + worked examples
+    ├── coding_worksheet.md   # Per-country evidence-coding protocol
+    ├── data_pipeline.md      # 3-layer freshness model
+    └── CONTRIBUTING.md       # How to contribute / contest a score
 ```
 
 ---
@@ -155,9 +164,9 @@ Contributions welcome! Especially:
 - Corrections to existing data
 - Translations of national AI strategies
 
-Contribution guidelines (`docs/CONTRIBUTING.md`) are coming soon. In the
-meantime, please open an issue or pull request, and see
-[docs/data_dictionary.md](docs/data_dictionary.md) for the data format.
+See **[docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)** for the full guide (evidence
+rules, the standards cross-walk, and the move toward multi-coder reliability), and
+[docs/coding_worksheet.md](docs/coding_worksheet.md) for the per-country protocol.
 
 ---
 

@@ -218,6 +218,27 @@ it would also score `true` on the binary Implementation Score — so
 Maturity answers *"how far along is it?"* (a real spectrum — Brazil 70 *Advancing*
 to Bangladesh 20 *Nascent*).
 
+### Alignment with global standards (UNESCO RAM & OECD)
+
+The six mechanisms are not ad hoc — each maps to a recognised international
+instrument, so the index sits on accepted scaffolding rather than inventing its
+own categories:
+
+| Mechanism (this index) | UNESCO RAM dimension | OECD AI Principle |
+|------------------------|----------------------|-------------------|
+| Enforcement body | Legal & Regulatory | Accountability |
+| Regulatory sandbox | Technological & Infrastructural / Economic | Robustness, security & safety |
+| Impact assessments | Legal & Regulatory + Social & Cultural | Accountability; human-centred values |
+| Transparency requirements | Legal & Regulatory | Transparency & explainability |
+| Audit mechanisms | Legal & Regulatory | Accountability; robustness |
+| Redress mechanisms | Social & Cultural + Legal & Regulatory | Human-centred values & fairness |
+
+UNESCO RAM = the five dimensions of UNESCO's *Readiness Assessment Methodology*
+(Legal & Regulatory, Social & Cultural, Economic, Scientific & Educational,
+Technological & Infrastructural). OECD = the five value-based *OECD AI Principles*.
+This cross-walk lets the tracker be read alongside, and contributed to by, work
+that uses those frameworks.
+
 ### Limitations
 
 1. **Coverage:** 16 countries fully profiled and **all evidence-coded** (v3.0). Expansion to the 24-country roster is future work.
