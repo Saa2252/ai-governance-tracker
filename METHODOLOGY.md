@@ -239,6 +239,56 @@ Technological & Infrastructural). OECD = the five value-based *OECD AI Principle
 This cross-walk lets the tracker be read alongside, and contributed to by, work
 that uses those frameworks.
 
+### Why these six indicators
+
+The six mechanisms are **not invented** — they are the operational obligations the
+EU AI Act itself imposes, generalised so any jurisdiction can be scored on them:
+
+| Mechanism | Anchored in |
+|-----------|-------------|
+| Enforcement body | EU AI Act Art. 70 (national competent authorities) + market surveillance |
+| Regulatory sandbox | EU AI Act Arts. 57–59 (AI regulatory sandboxes) |
+| Impact assessments | EU AI Act Art. 27 (fundamental-rights impact assessment), Art. 9 (risk management) |
+| Transparency | EU AI Act Arts. 13 & 50 (transparency obligations) |
+| Audit | EU AI Act Art. 43 (conformity assessment / third-party) |
+| Redress | EU AI Act Arts. 85–87 (right to complain / explanation); CoE Framework Convention (remedies) |
+
+So the indicator set is grounded in binding law and the OECD/UNESCO instruments
+above, not chosen ad hoc.
+
+### Weighting, aggregation, and imputation
+
+**Weights** (enforcement 25 · sandbox 20 · impact 20 · transparency 15 · audit 10
+· redress 10) are an **expert judgement** with a stated rationale: an operating
+*enforcement body* is the precondition for the other five (highest weight);
+*sandboxes* and *impact assessments* are the primary proactive tools; *audit* and
+*redress* are essential but downstream and rarest. They are **not claimed to be
+optimal** — see the sensitivity result below.
+
+**Aggregation is compensatory** for Maturity (a high stage on one mechanism offsets
+a low one), which suits a *progress* measure. The **in-force count is
+non-compensatory** (each mechanism must independently be in force), giving a strict
+complementary view. Reporting both is deliberate.
+
+**Imputation (explicit):** where a country's UNESCO `ram_status` is
+`not_confirmed`, its UNESCO score is set to 45 ("adopted the 2021 Recommendation
+only") — a *conservative* rule (assume no RAM unless confirmed). This affects
+**only the UNESCO sub-score** (9 of 16 countries); Maturity and the in-force score
+do not use RAM and are unaffected.
+
+### Robustness & validation (reproduce with `analysis/robustness.py`)
+
+- **Multivariate (no redundancy):** Pearson correlations among the six mechanism
+  stages range **0.10–0.79**; no pair approaches 1.0. The highest, *audit ↔ redress
+  = 0.79*, reflects that those two tend to arrive together — related, not redundant.
+- **Weighting sensitivity (rankings are robust):** re-ranking every country under
+  **equal weights** vs the weights above gives a **Spearman rank correlation of
+  0.99**. The conclusions therefore do **not** depend on the specific weights; the
+  most weight-sensitive country shifts by only ~5 points.
+
+These two checks (OECD/JRC steps 4, 6, 7) are what let the Maturity score be read
+as an *index* rather than an arbitrary weighting.
+
 ### Limitations
 
 1. **Coverage:** 16 countries fully profiled and **all evidence-coded** (v3.0). Expansion to the 24-country roster is future work.
