@@ -524,6 +524,39 @@ Spearman ρ = 0.99 vs equal weights (`analysis/robustness.py`).
     # Tab 5: Rankings leaderboard + data export
     with tab5:
         st.markdown("### 🏆 Governance Maturity Leaderboard")
+
+        with st.expander("🧮 How is the Maturity score (and this ranking) calculated?"):
+            st.markdown(
+                """
+The table is ranked by one number — the **Governance Maturity score (0–100)**, highest first. It is built in three steps:
+
+**1. Stage each of six mechanisms on a 0–3 scale:**
+`0` absent · `1` committed (named in a strategy) · `2` drafted (a bill before parliament) · `3` in force (operational today).
+
+**2. Weight the mechanisms** (some matter more):
+enforcement body **25** · regulatory sandbox **20** · impact assessments **20** · transparency **15** · audit **10** · redress **10**.
+
+**3. Add up `weight × (stage ÷ 3)` across all six → a 0–100 score.**
+(A mechanism *in force* earns its whole weight; *drafted* earns two-thirds; *committed* one-third.)
+
+**Worked example — Brazil (score = 70):**
+
+| Mechanism | Stage | weight × stage/3 | Points |
+|---|:--:|---|--:|
+| Enforcement body | 2 (bill PL 2338) | 25 × 2/3 | 16.7 |
+| Regulatory sandbox | 3 (ANPD, in force) | 20 × 3/3 | 20.0 |
+| Impact assessments | 2 (in the bill) | 20 × 2/3 | 13.3 |
+| Transparency | 2 (in the bill) | 15 × 2/3 | 10.0 |
+| Audit | 1 (committed) | 10 × 1/3 | 3.3 |
+| Redress | 2 (in the bill) | 10 × 2/3 | 6.7 |
+| | | **Total** | **70** |
+
+*The **In force** column is separate — Yes/No for whether *any* mechanism is at stage 3.
+The **EU / UNESCO / OECD** columns are policy-on-paper adoption scores shown for context; they do **not** feed the ranking.
+Rankings are robust to the weights: re-running with all weights equal barely changes the order (Spearman ρ = 0.99). See METHODOLOGY.md.*
+                """
+            )
+
         lb = filtered_df.sort_values("maturity_score", ascending=False).reset_index(drop=True)
         lb.insert(0, "Rank", lb.index + 1)
         lb["In force"] = lb["implementation_score"].apply(lambda x: "Yes" if x > 0 else "No")
