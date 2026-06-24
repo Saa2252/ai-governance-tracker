@@ -210,6 +210,9 @@ recognised scaffolding.
 *Factual fields (internet access, data-protection laws, OECD/GPAI membership, RAM
 status) are sourced (World Bank, OECD, UNESCO). Adoption scores are analyst
 estimates; maturity/enforcement are evidence-coded with citations — see METHODOLOGY.md.*
+
+**✓ Validated:** country rankings are robust to the weighting scheme —
+Spearman ρ = 0.99 vs equal weights (`analysis/robustness.py`).
             """
         )
 
@@ -256,11 +259,12 @@ estimates; maturity/enforcement are evidence-coded with citations — see METHOD
     
     st.markdown("---")
     
-    tab1, tab2, tab3, tab4 = st.tabs([
-        "🗺️ Regional Overview", 
-        "📈 Framework Adoption", 
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "🗺️ Regional Overview",
+        "📈 Framework Adoption",
         "🔍 Implementation Gap",
-        "⚠️ Risk Categories"
+        "⚠️ Risk Categories",
+        "🏆 Rankings"
     ])
     
     # Tab 1: Regional Overview Map
@@ -516,7 +520,26 @@ estimates; maturity/enforcement are evidence-coded with citations — see METHOD
             for i, cat in enumerate(unique_cats[:6]):
                 with cols[i % 3]:
                     st.markdown(f"• **{cat}**")
-    
+
+    # Tab 5: Rankings leaderboard + data export
+    with tab5:
+        st.markdown("### 🏆 Governance Maturity Leaderboard")
+        lb = filtered_df.sort_values("maturity_score", ascending=False).reset_index(drop=True)
+        lb.insert(0, "Rank", lb.index + 1)
+        lb["In force"] = lb["implementation_score"].apply(lambda x: "Yes" if x > 0 else "No")
+        display = lb[["Rank", "country_name", "region", "maturity_score", "maturity_level",
+                      "eu_ai_act_score", "unesco_score", "oecd_score", "In force"]].rename(columns={
+            "country_name": "Country", "region": "Region", "maturity_score": "Maturity",
+            "maturity_level": "Level", "eu_ai_act_score": "EU AI Act",
+            "unesco_score": "UNESCO", "oecd_score": "OECD"})
+        st.dataframe(display, use_container_width=True, hide_index=True)
+        st.caption("Ranked by Governance Maturity (0–100). 'In force' = at least one operational "
+                   "enforcement mechanism. Rankings are robust to the weighting scheme "
+                   "(Spearman ρ = 0.99 vs equal weights — see METHODOLOGY.md).")
+        csv = filtered_df.to_csv(index=False).encode("utf-8")
+        st.download_button("⬇️ Download full dataset (CSV)", data=csv,
+                           file_name="ai_governance_tracker.csv", mime="text/csv")
+
     # ========================================================================
     # COUNTRY DEEP DIVE
     # ========================================================================
