@@ -1,0 +1,1158 @@
+{
+  "metadata": {
+    "version": "0.1-branch",
+    "last_updated": "2026-06",
+    "author": "Sana Asif Ahmad",
+    "description": "MIDDLE EAST & NORTH AFRICA comparators — optional overlay (same v3.2 schema: coverage + maturity + evidence-coded implementation). Lives on a feature branch; not part of the core Global South dataset.",
+    "data_sources": [
+      "National AI strategies",
+      "World Bank",
+      "OECD / data-protection statutes"
+    ]
+  },
+  "countries": [
+    {
+      "country_code": "SAU",
+      "country_name": "Saudi Arabia",
+      "region": "Middle East & North Africa",
+      "income_level": "high_income",
+      "population_millions": 37,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "National Strategy for Data & AI (2020); AI Ethics Principles (2023)",
+        "year_published": 2020,
+        "year_updated": null,
+        "lead_agency": "SDAIA"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Reference-aligned; no EU-style horizontal law in force.",
+          "source": {
+            "primary_instrument": "National Strategy for Data & AI (2020); AI Ethics Principles (2023)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation; RAM not confirmed.",
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Per membership/adherence.",
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 35,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": true,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "SDAIA oversees data & AI; AI Ethics Principles non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "SDAIA oversees data & AI; AI Ethics Principles non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "SDAIA oversees data & AI; AI Ethics Principles non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "SDAIA oversees data & AI; AI Ethics Principles non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "SDAIA oversees data & AI; AI Ethics Principles non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "SDAIA oversees data & AI; AI Ethics Principles non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "maturity": {
+        "score": 48,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed · 2 drafted · 3 in force",
+        "basis": "SDAIA oversees data & AI; AI Ethics Principles non-binding; no AI law in force."
+      },
+      "coverage": {
+        "score": 60,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": false
+        },
+        "basis": "AI Ethics Principles (fairness, oversight) + PDPL data-subject rights; no binding AI prohibitions.",
+        "as_of": "2026-06",
+        "confidence": "low",
+        "note": "Substantive coverage in written policy/law; single-coder, contestable."
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "surveillance",
+          "smart cities",
+          "government services",
+          "healthcare"
+        ],
+        "divergence_notes": "SDAIA-led data+AI oversight; Vision-2030 sectors prioritised."
+      },
+      "key_developments": [
+        {
+          "date": "2020-08",
+          "event": "NSDAI launched"
+        },
+        {
+          "date": "2023-09",
+          "event": "AI Ethics Principles issued"
+        },
+        {
+          "date": "2025-01",
+          "event": "Draft AI regulations consulted"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 100.0,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Personal Data Protection Law (2021)",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "smart cities",
+        "government services",
+        "healthcare",
+        "energy"
+      ],
+      "international_engagement": {
+        "oecd_status": "non_member",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": false,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-06",
+        "confidence_level": "low",
+        "sources": [
+          "NSDAI",
+          "SDAIA AI Ethics Principles"
+        ],
+        "verified_fields": [
+          "oecd_status",
+          "has_data_protection_law"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "coverage.score",
+          "maturity.score"
+        ]
+      }
+    },
+    {
+      "country_code": "ARE",
+      "country_name": "United Arab Emirates",
+      "region": "Middle East & North Africa",
+      "income_level": "high_income",
+      "population_millions": 10,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "National AI Strategy 2031; UAE AI Charter (2024)",
+        "year_published": 2017,
+        "year_updated": null,
+        "lead_agency": "Minister of State for AI"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Reference-aligned; no EU-style horizontal law in force.",
+          "source": {
+            "primary_instrument": "National AI Strategy 2031; UAE AI Charter (2024)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation; RAM not confirmed.",
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "partial",
+          "adoption_score": 50,
+          "notes": "Per membership/adherence.",
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 35,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": true,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI-first government with live sandboxes; AI Charter non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "AI-first government with live sandboxes; AI Charter non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI-first government with live sandboxes; AI Charter non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "AI-first government with live sandboxes; AI Charter non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI-first government with live sandboxes; AI Charter non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "AI-first government with live sandboxes; AI Charter non-binding; no AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "maturity": {
+        "score": 55,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 3,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed · 2 drafted · 3 in force",
+        "basis": "AI-first government with live sandboxes; AI Charter non-binding; no AI law in force."
+      },
+      "coverage": {
+        "score": 60,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": false
+        },
+        "basis": "AI Charter (rights, fairness, oversight) + PDPL; no binding AI prohibitions in force.",
+        "as_of": "2026-06",
+        "confidence": "low",
+        "note": "Substantive coverage in written policy/law; single-coder, contestable."
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "government services",
+          "smart mobility",
+          "generative AI",
+          "healthcare"
+        ],
+        "divergence_notes": "AI-first government; Dubai/ADGM sandboxes; light-touch."
+      },
+      "key_developments": [
+        {
+          "date": "2017-10",
+          "event": "Ministry of State for AI created"
+        },
+        {
+          "date": "2024-07",
+          "event": "UAE AI Charter published"
+        },
+        {
+          "date": "2025-02",
+          "event": "Generative-AI guidelines"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 100.0,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Federal Personal Data Protection Law (2021)",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "government services",
+        "smart mobility",
+        "finance",
+        "healthcare"
+      ],
+      "international_engagement": {
+        "oecd_status": "non_member",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": false,
+        "gender_or_inclusion_provisions": true
+      },
+      "data_quality": {
+        "last_verified": "2026-06",
+        "confidence_level": "low",
+        "sources": [
+          "National AI Strategy 2031",
+          "UAE AI Charter"
+        ],
+        "verified_fields": [
+          "oecd_status",
+          "has_data_protection_law"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "coverage.score",
+          "maturity.score"
+        ]
+      }
+    },
+    {
+      "country_code": "ISR",
+      "country_name": "Israel",
+      "region": "Middle East & North Africa",
+      "income_level": "high_income",
+      "population_millions": 10,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "Policy on AI Regulation and Ethics (2023)",
+        "year_published": 2023,
+        "year_updated": null,
+        "lead_agency": "Ministry of Innovation, Science and Technology"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "partial",
+          "adoption_score": 50,
+          "notes": "Reference-aligned; no EU-style horizontal law in force.",
+          "source": {
+            "primary_instrument": "Policy on AI Regulation and Ethics (2023)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation; RAM not confirmed.",
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "partial",
+          "adoption_score": 75,
+          "notes": "Per membership/adherence.",
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 45,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": true,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": true,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Principles-based sector-regulator model; no binding horizontal AI law.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "Principles-based sector-regulator model; no binding horizontal AI law.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Principles-based sector-regulator model; no binding horizontal AI law.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "Principles-based sector-regulator model; no binding horizontal AI law.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Principles-based sector-regulator model; no binding horizontal AI law.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "Principles-based sector-regulator model; no binding horizontal AI law.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "maturity": {
+        "score": 48,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 1,
+          "regulatory_sandbox": 2,
+          "impact_assessments": 1,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 2
+        },
+        "scale": "0 absent · 1 committed · 2 drafted · 3 in force",
+        "basis": "Principles-based sector-regulator model; no binding horizontal AI law."
+      },
+      "coverage": {
+        "score": 80,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "Sectoral principles (fairness, oversight) + privacy law; no horizontal prohibitions.",
+        "as_of": "2026-06",
+        "confidence": "low",
+        "note": "Substantive coverage in written policy/law; single-coder, contestable."
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "defence",
+          "cybersecurity",
+          "health",
+          "autonomous systems"
+        ],
+        "divergence_notes": "Sectoral, principles-based; defers to existing regulators."
+      },
+      "key_developments": [
+        {
+          "date": "2023-12",
+          "event": "National AI policy published"
+        },
+        {
+          "date": "2024-09",
+          "event": "Signed CoE AI Convention"
+        },
+        {
+          "date": "2025-03",
+          "event": "Sectoral regulator guidance"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 93.0,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Protection of Privacy Law",
+        "ai_talent_availability": "high"
+      },
+      "priority_sectors": [
+        "defence",
+        "cybersecurity",
+        "health",
+        "fintech"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": true
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-06",
+        "confidence_level": "low",
+        "sources": [
+          "Israel AI Policy 2023"
+        ],
+        "verified_fields": [
+          "oecd_status",
+          "has_data_protection_law"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "coverage.score",
+          "maturity.score"
+        ]
+      }
+    },
+    {
+      "country_code": "TUR",
+      "country_name": "Turkey",
+      "region": "Middle East & North Africa",
+      "income_level": "upper_middle",
+      "population_millions": 85,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "National AI Strategy 2021–2025",
+        "year_published": 2021,
+        "year_updated": null,
+        "lead_agency": "Digital Transformation Office"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "low",
+          "adoption_score": 40,
+          "notes": "Reference-aligned; no EU-style horizontal law in force.",
+          "source": {
+            "primary_instrument": "National AI Strategy 2021–2025",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation; RAM not confirmed.",
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "partial",
+          "adoption_score": 70,
+          "notes": "Per membership/adherence.",
+          "evidence": {
+            "oecd_member": true,
+            "ai_principles_adherent": true,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 15,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National AI Strategy + draft law; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National AI Strategy + draft law; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National AI Strategy + draft law; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "National AI Strategy + draft law; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National AI Strategy + draft law; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National AI Strategy + draft law; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "maturity": {
+        "score": 38,
+        "level": "Emerging",
+        "stages": {
+          "enforcement_body": 1,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 1,
+          "transparency": 2,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed · 2 drafted · 3 in force",
+        "basis": "National AI Strategy + draft law; no binding AI law in force."
+      },
+      "coverage": {
+        "score": 60,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": false
+        },
+        "basis": "Strategy fairness commitments + KVKK automated-processing rights; AI prohibitions not yet in law.",
+        "as_of": "2026-06",
+        "confidence": "low",
+        "note": "Substantive coverage in written policy/law; single-coder, contestable."
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "public services",
+          "manufacturing",
+          "defence",
+          "agriculture"
+        ],
+        "divergence_notes": "Strategy-led; KVKK data law; draft AI law discussed."
+      },
+      "key_developments": [
+        {
+          "date": "2021-08",
+          "event": "National AI Strategy adopted"
+        },
+        {
+          "date": "2024-06",
+          "event": "Draft AI law debated"
+        },
+        {
+          "date": "2025-02",
+          "event": "Public-sector AI pilots"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 86.0,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "KVKK (Law No. 6698)",
+        "ai_talent_availability": "medium"
+      },
+      "priority_sectors": [
+        "manufacturing",
+        "public services",
+        "defence",
+        "agriculture"
+      ],
+      "international_engagement": {
+        "oecd_status": "member",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-06",
+        "confidence_level": "low",
+        "sources": [
+          "Turkey National AI Strategy"
+        ],
+        "verified_fields": [
+          "oecd_status",
+          "has_data_protection_law"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "coverage.score",
+          "maturity.score"
+        ]
+      }
+    },
+    {
+      "country_code": "QAT",
+      "country_name": "Qatar",
+      "region": "Middle East & North Africa",
+      "income_level": "high_income",
+      "population_millions": 3,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "National AI Strategy (2019)",
+        "year_published": 2019,
+        "year_updated": null,
+        "lead_agency": "Ministry of Communications and IT"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "low",
+          "adoption_score": 40,
+          "notes": "Reference-aligned; no EU-style horizontal law in force.",
+          "source": {
+            "primary_instrument": "National AI Strategy (2019)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation; RAM not confirmed.",
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Per membership/adherence.",
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": false,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 15,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": false,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Strategy-stage; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Strategy-stage; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Strategy-stage; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "Strategy-stage; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Strategy-stage; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "Strategy-stage; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "maturity": {
+        "score": 30,
+        "level": "Emerging",
+        "stages": {
+          "enforcement_body": 1,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 0,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed · 2 drafted · 3 in force",
+        "basis": "Strategy-stage; no binding AI law in force."
+      },
+      "coverage": {
+        "score": 40,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": false,
+          "contestability": false
+        },
+        "basis": "Strategy + data-protection law; limited substantive AI rights.",
+        "as_of": "2026-06",
+        "confidence": "low",
+        "note": "Substantive coverage in written policy/law; single-coder, contestable."
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "government services",
+          "sports & events",
+          "energy",
+          "education"
+        ],
+        "divergence_notes": "Strategy-led; data-protection law in force."
+      },
+      "key_developments": [
+        {
+          "date": "2019-10",
+          "event": "National AI Strategy launched"
+        },
+        {
+          "date": "2024-03",
+          "event": "AI guidelines for government"
+        },
+        {
+          "date": "2025-01",
+          "event": "AI committee scoped"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 100.0,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Personal Data Privacy Protection Law (2016)",
+        "ai_talent_availability": "medium"
+      },
+      "priority_sectors": [
+        "government services",
+        "energy",
+        "education",
+        "logistics"
+      ],
+      "international_engagement": {
+        "oecd_status": "non_member",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": false,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-06",
+        "confidence_level": "low",
+        "sources": [
+          "Qatar National AI Strategy"
+        ],
+        "verified_fields": [
+          "oecd_status",
+          "has_data_protection_law"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "coverage.score",
+          "maturity.score"
+        ]
+      }
+    },
+    {
+      "country_code": "EGY",
+      "country_name": "Egypt",
+      "region": "Middle East & North Africa",
+      "income_level": "lower_middle",
+      "population_millions": 112,
+      "ai_strategy": {
+        "has_national_strategy": true,
+        "strategy_name": "National AI Strategy (2021)",
+        "year_published": 2021,
+        "year_updated": null,
+        "lead_agency": "National Council for AI"
+      },
+      "framework_alignment": {
+        "eu_ai_act": {
+          "adoption_status": "low",
+          "adoption_score": 40,
+          "notes": "Reference-aligned; no EU-style horizontal law in force.",
+          "source": {
+            "primary_instrument": "National AI Strategy (2021)",
+            "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+            "verify_via": "https://oecd.ai/en/dashboards/national"
+          }
+        },
+        "unesco_ai_ethics": {
+          "adoption_status": "low",
+          "adoption_score": 45,
+          "notes": "Adopted the 2021 UNESCO Recommendation; RAM not confirmed.",
+          "evidence": {
+            "adopted_2021_recommendation": true,
+            "ram_status": "not_confirmed",
+            "as_of": "2026-06",
+            "source": "https://www.unesco.org/ethics-ai/en/ram"
+          }
+        },
+        "oecd_ai_principles": {
+          "adoption_status": "partial",
+          "adoption_score": 55,
+          "notes": "Per membership/adherence.",
+          "evidence": {
+            "oecd_member": false,
+            "ai_principles_adherent": true,
+            "gpai_member": false,
+            "as_of": "2026-06",
+            "source": "https://oecd.ai/en/ai-principles"
+          }
+        }
+      },
+      "implementation_status": {
+        "overall_score": 35,
+        "has_enforcement_body": false,
+        "has_regulatory_sandbox": true,
+        "has_impact_assessments": false,
+        "has_transparency_requirements": true,
+        "has_audit_mechanisms": false,
+        "has_redress_mechanisms": false,
+        "coding_status": "evidence_coded",
+        "evidence": {
+          "has_enforcement_body": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National Council for AI coordinates; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_regulatory_sandbox": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "National Council for AI coordinates; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_impact_assessments": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National Council for AI coordinates; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_transparency_requirements": {
+            "value": true,
+            "as_of": "2026-06",
+            "evidence": "National Council for AI coordinates; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_audit_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National Council for AI coordinates; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          },
+          "has_redress_mechanisms": {
+            "value": false,
+            "as_of": "2026-06",
+            "evidence": "National Council for AI coordinates; no binding AI law in force.",
+            "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
+          }
+        }
+      },
+      "maturity": {
+        "score": 42,
+        "level": "Developing",
+        "stages": {
+          "enforcement_body": 2,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 1,
+          "redress": 1
+        },
+        "scale": "0 absent · 1 committed · 2 drafted · 3 in force",
+        "basis": "National Council for AI coordinates; no binding AI law in force."
+      },
+      "coverage": {
+        "score": 60,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": false
+        },
+        "basis": "Strategy fairness + Data Protection Law 2020; no binding AI prohibitions.",
+        "as_of": "2026-06",
+        "confidence": "low",
+        "note": "Substantive coverage in written policy/law; single-coder, contestable."
+      },
+      "risk_classification": {
+        "uses_eu_categories": false,
+        "custom_high_risk": [
+          "public services",
+          "agriculture",
+          "Arabic NLP",
+          "healthcare"
+        ],
+        "divergence_notes": "National Council for AI; AU AI Strategy aligned."
+      },
+      "key_developments": [
+        {
+          "date": "2021-07",
+          "event": "National AI Strategy launched"
+        },
+        {
+          "date": "2024-05",
+          "event": "Second-phase strategy"
+        },
+        {
+          "date": "2025-02",
+          "event": "Arabic-LLM initiatives"
+        }
+      ],
+      "digital_context": {
+        "internet_penetration_pct": 72.0,
+        "internet_penetration_year": 2024,
+        "internet_penetration_source": "World Bank, IT.NET.USER.ZS",
+        "has_data_protection_law": true,
+        "data_protection_law_name": "Personal Data Protection Law (2020)",
+        "ai_talent_availability": "medium"
+      },
+      "priority_sectors": [
+        "agriculture",
+        "public services",
+        "Arabic NLP",
+        "healthcare"
+      ],
+      "international_engagement": {
+        "oecd_status": "non_member",
+        "gpai_member": false,
+        "signatory_coe_ai_convention": false
+      },
+      "inclusion": {
+        "public_consultation_held": true,
+        "civil_society_involved": true,
+        "gender_or_inclusion_provisions": false
+      },
+      "data_quality": {
+        "last_verified": "2026-06",
+        "confidence_level": "low",
+        "sources": [
+          "Egypt National AI Strategy",
+          "AU Continental AI Strategy"
+        ],
+        "verified_fields": [
+          "oecd_status",
+          "has_data_protection_law"
+        ],
+        "illustrative_fields": [
+          "adoption_score",
+          "overall_score",
+          "coverage.score",
+          "maturity.score"
+        ]
+      }
+    }
+  ]
+}
