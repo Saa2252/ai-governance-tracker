@@ -200,7 +200,7 @@ def main():
     # KEY METRICS ROW
     # ========================================================================
     
-    with st.expander("ℹ️ How to read this dashboard — why the EU AI Act is the baseline & how the 'gap' is measured"):
+    with st.expander("ℹ️ How to read this dashboard — the three lenses & how scores are built"):
         st.markdown(
             """
 **Why the EU AI Act is the baseline.** It is the only *comprehensive, binding* AI
@@ -213,17 +213,19 @@ mobile money, climate) justify *diverging* from EU categories. Every country is
 also scored against UNESCO and OECD so no single framework dominates.
 
 **Three lenses on each country:**
-- **Adoption (0–100):** how closely *written policy* aligns with the EU AI Act / UNESCO / OECD — rules on paper.
-- **Governance Maturity (0–100):** how far each of six mechanisms has travelled — *absent → committed → drafted → in force*. This is the headline, discriminating score.
+- **Risk Coverage (0–100):** *what* AI harms/rights the policy substantively protects — 5 cited Y/N items (prohibited uses, high-stakes domains, human oversight, non-discrimination, contestability). Evidence-coded; a bill counts.
+- **Governance Maturity (0–100):** *how far* each of six enforcement mechanisms has travelled — *absent → committed → drafted → in force*. The headline, discriminating score.
 - **Enforcement (binary):** whether each mechanism is *actually in force today*. Almost nowhere is — so we report it as "in force: yes/no" and a global count, not a near-empty 0–100.
+
+Coverage and Maturity measure different things (validated: they correlate only 0.65). The EU/UNESCO/OECD "adoption" scores remain as a fourth, framework-alignment view.
 
 The six mechanisms are **mapped to UNESCO's Readiness Assessment Methodology
 dimensions and the OECD AI Principles** (see METHODOLOGY.md), so the index sits on
 recognised scaffolding.
 
 *Factual fields (internet access, data-protection laws, OECD/GPAI membership, RAM
-status) are sourced (World Bank, OECD, UNESCO). Adoption scores are analyst
-estimates; maturity/enforcement are evidence-coded with citations — see METHODOLOGY.md.*
+status) are sourced (World Bank, OECD, UNESCO). Coverage, maturity and enforcement
+are evidence-coded with citations; UNESCO/OECD are fact-derived — see METHODOLOGY.md.*
 
 **✓ Validated:** country rankings are robust to the weighting scheme —
 Spearman ρ = 0.99 vs equal weights (`analysis/robustness.py`).
