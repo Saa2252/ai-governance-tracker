@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "3.3",
-    "last_updated": "2026-06-12",
+    "version": "3.4",
+    "last_updated": "2026-06",
     "author": "Sana Asif Ahmad",
     "description": "AI governance adoption data for Global South countries",
     "data_sources": [
@@ -2630,8 +2630,8 @@
       "framework_alignment": {
         "eu_ai_act": {
           "adoption_status": "partial",
-          "adoption_score": 55,
-          "notes": "Action plan plus draft Royal Decree on AI; risk-based elements",
+          "adoption_score": 65,
+          "notes": "Risk-based AI Act in force (tiered like the EU); high-risk specifics pending.",
           "source": {
             "primary_instrument": "National AI Strategy & Action Plan 2022–2027; draft AI Royal Decree",
             "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
@@ -2673,11 +2673,11 @@
         }
       },
       "implementation_status": {
-        "overall_score": 0,
-        "has_enforcement_body": false,
+        "overall_score": 40,
+        "has_enforcement_body": true,
         "has_regulatory_sandbox": false,
         "has_impact_assessments": false,
-        "has_transparency_requirements": false,
+        "has_transparency_requirements": true,
         "has_audit_mechanisms": false,
         "has_redress_mechanisms": false,
         "coding_status": "evidence_coded",
@@ -2685,37 +2685,37 @@
           "has_enforcement_body": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "Draft Royal Decree on AI under review; not in force.",
+            "evidence": "Thailand's AI Act entered into force in 2026 (risk-based; prohibited unacceptable-risk uses; high-risk AI registration with the regulator). Detailed high-risk obligations via a Royal Decree are still being finalised.",
             "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
           },
           "has_regulatory_sandbox": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "No operational AI-specific regulatory sandbox.",
+            "evidence": "Thailand's AI Act entered into force in 2026 (risk-based; prohibited unacceptable-risk uses; high-risk AI registration with the regulator). Detailed high-risk obligations via a Royal Decree are still being finalised.",
             "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
           },
           "has_impact_assessments": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "No mandatory AI impact assessment in force.",
+            "evidence": "Thailand's AI Act entered into force in 2026 (risk-based; prohibited unacceptable-risk uses; high-risk AI registration with the regulator). Detailed high-risk obligations via a Royal Decree are still being finalised.",
             "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
           },
           "has_transparency_requirements": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "No binding AI transparency requirement in force.",
+            "evidence": "Thailand's AI Act entered into force in 2026 (risk-based; prohibited unacceptable-risk uses; high-risk AI registration with the regulator). Detailed high-risk obligations via a Royal Decree are still being finalised.",
             "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
           },
           "has_audit_mechanisms": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "No in-force third-party AI audit requirement.",
+            "evidence": "Thailand's AI Act entered into force in 2026 (risk-based; prohibited unacceptable-risk uses; high-risk AI registration with the regulator). Detailed high-risk obligations via a Royal Decree are still being finalised.",
             "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
           },
           "has_redress_mechanisms": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "No AI-specific statutory redress channel in force.",
+            "evidence": "Thailand's AI Act entered into force in 2026 (risk-based; prohibited unacceptable-risk uses; high-risk AI registration with the regulator). Detailed high-risk obligations via a Royal Decree are still being finalised.",
             "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0fec663b/thailands-draft-ai-law-a-new-era-for-governance-and-innovation"
           }
         }
@@ -2732,16 +2732,16 @@
       },
       "key_developments": [
         {
-          "date": "2024-06",
-          "event": "OECD accession discussions opened"
-        },
-        {
           "date": "2024-09",
-          "event": "Draft Royal Decree on AI business operations published"
+          "event": "Draft AI legislation consulted"
         },
         {
-          "date": "2025-03",
-          "event": "AI Governance Center expanded"
+          "date": "2026-01",
+          "event": "AI Act enters into force (risk-based)"
+        },
+        {
+          "date": "2026-03",
+          "event": "High-risk registration / Royal Decree finalisation"
         }
       ],
       "digital_context": {
@@ -2791,18 +2791,18 @@
         ]
       },
       "maturity": {
-        "score": 53,
-        "level": "Developing",
+        "score": 67,
+        "level": "Advancing",
         "stages": {
-          "enforcement_body": 2,
+          "enforcement_body": 3,
           "regulatory_sandbox": 1,
           "impact_assessments": 2,
-          "transparency": 2,
+          "transparency": 3,
           "audit": 1,
           "redress": 1
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
-        "basis": "Draft Royal Decree on AI (risk-based, high-risk registration) under review."
+        "basis": "Thailand's AI Act entered into force in 2026 (risk-based; prohibited unacceptable-risk uses; high-risk AI registration with the regulator). Detailed high-risk obligations via a Royal Decree are still being finalised."
       },
       "coverage": {
         "score": 80,

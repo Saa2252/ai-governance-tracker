@@ -1329,9 +1329,9 @@
       },
       "framework_alignment": {
         "eu_ai_act": {
-          "adoption_status": "partial",
-          "adoption_score": 58,
-          "notes": "Risk-based bill resembling EU approach; enactment stalled",
+          "adoption_status": "low",
+          "adoption_score": 35,
+          "notes": "AIDA (risk-based) died Jan 2025; only a voluntary code remains.",
           "source": {
             "primary_instrument": "Artificial Intelligence and Data Act (AIDA, Bill C-27)",
             "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
@@ -1385,37 +1385,37 @@
           "has_enforcement_body": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "evidence": "AIDA (Bill C-27) died on the Order Paper at prorogation (Jan 2025) and was not re-tabled; Canada relies on a voluntary code of conduct + PIPEDA — no binding AI law in force or in progress.",
             "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
           },
           "has_regulatory_sandbox": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "evidence": "AIDA (Bill C-27) died on the Order Paper at prorogation (Jan 2025) and was not re-tabled; Canada relies on a voluntary code of conduct + PIPEDA — no binding AI law in force or in progress.",
             "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
           },
           "has_impact_assessments": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "evidence": "AIDA (Bill C-27) died on the Order Paper at prorogation (Jan 2025) and was not re-tabled; Canada relies on a voluntary code of conduct + PIPEDA — no binding AI law in force or in progress.",
             "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
           },
           "has_transparency_requirements": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "evidence": "AIDA (Bill C-27) died on the Order Paper at prorogation (Jan 2025) and was not re-tabled; Canada relies on a voluntary code of conduct + PIPEDA — no binding AI law in force or in progress.",
             "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
           },
           "has_audit_mechanisms": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "evidence": "AIDA (Bill C-27) died on the Order Paper at prorogation (Jan 2025) and was not re-tabled; Canada relies on a voluntary code of conduct + PIPEDA — no binding AI law in force or in progress.",
             "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
           },
           "has_redress_mechanisms": {
             "value": false,
             "as_of": "2026-06",
-            "evidence": "AIDA (Bill C-27) stalled; a voluntary code of conduct applies in the interim.",
+            "evidence": "AIDA (Bill C-27) died on the Order Paper at prorogation (Jan 2025) and was not re-tabled; Canada relies on a voluntary code of conduct + PIPEDA — no binding AI law in force or in progress.",
             "source": "https://iapp.org/resources/article/global-ai-legislation-tracker"
           }
         }
@@ -1436,12 +1436,12 @@
           "event": "Voluntary code of conduct for generative AI"
         },
         {
-          "date": "2024-04",
-          "event": "AIDA committee study"
+          "date": "2025-01",
+          "event": "Bill C-27 (incl. AIDA) died at prorogation"
         },
         {
-          "date": "2025-01",
-          "event": "AIDA timeline uncertain after C-27 stalls"
+          "date": "2025-04",
+          "event": "Federal election; AIDA not re-tabled"
         }
       ],
       "digital_context": {
@@ -1491,29 +1491,29 @@
         ]
       },
       "maturity": {
-        "score": 63,
-        "level": "Advancing",
+        "score": 30,
+        "level": "Emerging",
         "stages": {
-          "enforcement_body": 2,
-          "regulatory_sandbox": 2,
-          "impact_assessments": 2,
-          "transparency": 2,
-          "audit": 1,
-          "redress": 2
+          "enforcement_body": 1,
+          "regulatory_sandbox": 1,
+          "impact_assessments": 1,
+          "transparency": 1,
+          "audit": 0,
+          "redress": 1
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
-        "basis": "Risk-based AIDA bill proposed; voluntary code in interim."
+        "basis": "AIDA (Bill C-27) died on the Order Paper at prorogation (Jan 2025) and was not re-tabled; Canada relies on a voluntary code of conduct + PIPEDA — no binding AI law in force or in progress."
       },
       "coverage": {
-        "score": 80,
+        "score": 60,
         "items": {
           "prohibits_unacceptable_uses": false,
-          "covers_high_stakes_domains": true,
+          "covers_high_stakes_domains": false,
           "human_oversight_right": true,
           "non_discrimination": true,
           "contestability": true
         },
-        "basis": "AIDA bill (high-impact) + PIPEDA + human-rights framework; no in-force prohibitions.",
+        "basis": "PIPEDA + human-rights law (oversight, non-discrimination, redress); no risk-based AI law since AIDA lapsed.",
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy/law. Single-coder; contestable per item."
@@ -1547,8 +1547,8 @@
       "framework_alignment": {
         "eu_ai_act": {
           "adoption_status": "low",
-          "adoption_score": 42,
-          "notes": "Voluntary standard; mandatory guardrails for high-risk AI proposed",
+          "adoption_score": 30,
+          "notes": "Mandatory guardrails abandoned; voluntary standard only.",
           "source": {
             "primary_instrument": "Voluntary AI Safety Standard; proposed mandatory guardrails",
             "framework_reference_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
@@ -1653,12 +1653,12 @@
           "event": "Proposals paper on mandatory guardrails"
         },
         {
-          "date": "2024-09",
-          "event": "Voluntary AI Safety Standard released"
+          "date": "2025-12",
+          "event": "Mandatory guardrails dropped; National AI Plan"
         },
         {
-          "date": "2025-02",
-          "event": "Consultation on high-risk definitions"
+          "date": "2026-01",
+          "event": "AI Safety Institute operational"
         }
       ],
       "digital_context": {
@@ -1708,29 +1708,29 @@
         ]
       },
       "maturity": {
-        "score": 45,
-        "level": "Developing",
+        "score": 33,
+        "level": "Emerging",
         "stages": {
           "enforcement_body": 1,
-          "regulatory_sandbox": 2,
+          "regulatory_sandbox": 1,
           "impact_assessments": 1,
-          "transparency": 2,
+          "transparency": 1,
           "audit": 1,
           "redress": 1
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
-        "basis": "Voluntary AI Safety Standard; mandatory guardrails proposed."
+        "basis": "Australia decided NOT to proceed with mandatory AI guardrails (2025); relies on a voluntary AI Safety Standard + the National AI Plan (Dec 2025) + AI Safety Institute. No binding AI law."
       },
       "coverage": {
-        "score": 80,
+        "score": 60,
         "items": {
           "prohibits_unacceptable_uses": false,
-          "covers_high_stakes_domains": true,
+          "covers_high_stakes_domains": false,
           "human_oversight_right": true,
           "non_discrimination": true,
           "contestability": true
         },
-        "basis": "Privacy Act + anti-discrimination law; voluntary AI standard; proposed (not in-force) guardrails.",
+        "basis": "Privacy Act + anti-discrimination law (oversight, non-discrimination, redress); no risk-based AI law after guardrails were dropped.",
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy/law. Single-coder; contestable per item."

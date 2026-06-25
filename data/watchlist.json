@@ -4,16 +4,82 @@
     "last_updated": "2026-06"
   },
   "events": [
-    {"country_code": "BRA", "event": "AI Bill PL 2338 enacted / enters into force", "expected": "2026", "trigger": "enforcement_body, impact_assessments, transparency, redress: stage 2 -> 3", "status": "pending"},
-    {"country_code": "MEX", "event": "Federal AI Law enacted (creates CONAIA)", "expected": "2026", "trigger": "enforcement_body, impact_assessments: stage 2 -> 3", "status": "pending"},
-    {"country_code": "NGA", "event": "NITDA risk-based framework enacted", "expected": "2026", "trigger": "enforcement_body, impact_assessments -> in force", "status": "pending"},
-    {"country_code": "THA", "event": "Royal Decree on AI in force", "expected": "2026", "trigger": "enforcement_body, impact_assessments, transparency -> in force", "status": "pending"},
-    {"country_code": "IDN", "event": "Presidential Regulation on AI adopted", "expected": "2026", "trigger": "enforcement_body, transparency -> in force", "status": "pending"},
-    {"country_code": "COL", "event": "AI bill passes Congress", "expected": "2026-2027", "trigger": "enforcement_body, impact_assessments -> in force", "status": "pending"},
-    {"country_code": "VNM", "event": "AI-law regulatory authorities appointed", "expected": "2026", "trigger": "enforcement_body: stage 2 -> 3", "status": "pending"},
-    {"country_code": "KEN", "event": "Artificial Intelligence Bill 2026 outcome", "expected": "2026", "trigger": "enforcement_body, transparency -> reassess", "status": "pending"},
-    {"country_code": "IND", "event": "Digital India Act / AI (Ethics & Accountability) Bill progress", "expected": "2026-2027", "trigger": "enforcement_body, transparency, audit, redress -> reassess", "status": "pending"},
-    {"country_code": "DEU", "event": "EU AI Act high-risk obligations apply", "expected": "2026-08", "trigger": "impact_assessments, audit, redress: stage 2 -> 3", "status": "pending"},
-    {"country_code": "FRA", "event": "EU AI Act high-risk obligations apply", "expected": "2026-08", "trigger": "impact_assessments, audit, redress: stage 2 -> 3", "status": "pending"}
+    {
+      "country_code": "BRA",
+      "event": "AI Bill PL 2338 enacted / enters into force",
+      "expected": "2026",
+      "trigger": "enforcement_body, impact_assessments, transparency, redress: stage 2 -> 3",
+      "status": "pending"
+    },
+    {
+      "country_code": "MEX",
+      "event": "Federal AI Law enacted (creates CONAIA)",
+      "expected": "2026",
+      "trigger": "enforcement_body, impact_assessments: stage 2 -> 3",
+      "status": "pending"
+    },
+    {
+      "country_code": "NGA",
+      "event": "NITDA risk-based framework enacted",
+      "expected": "2026",
+      "trigger": "enforcement_body, impact_assessments -> in force",
+      "status": "pending"
+    },
+    {
+      "country_code": "THA",
+      "event": "AI Act in force (2026) — re-scored; high-risk Royal Decree still being finalised",
+      "expected": "2026",
+      "trigger": "enforcement_body, transparency -> in force (DONE); impact_assessments pending Royal Decree",
+      "status": "occurred"
+    },
+    {
+      "country_code": "IDN",
+      "event": "Presidential Regulation on AI adopted",
+      "expected": "2026",
+      "trigger": "enforcement_body, transparency -> in force",
+      "status": "pending"
+    },
+    {
+      "country_code": "COL",
+      "event": "AI bill passes Congress",
+      "expected": "2026-2027",
+      "trigger": "enforcement_body, impact_assessments -> in force",
+      "status": "pending"
+    },
+    {
+      "country_code": "VNM",
+      "event": "AI-law regulatory authorities appointed",
+      "expected": "2026",
+      "trigger": "enforcement_body: stage 2 -> 3",
+      "status": "pending"
+    },
+    {
+      "country_code": "KEN",
+      "event": "Artificial Intelligence Bill 2026 outcome",
+      "expected": "2026",
+      "trigger": "enforcement_body, transparency -> reassess",
+      "status": "pending"
+    },
+    {
+      "country_code": "IND",
+      "event": "Digital India Act / AI (Ethics & Accountability) Bill progress",
+      "expected": "2026-2027",
+      "trigger": "enforcement_body, transparency, audit, redress -> reassess",
+      "status": "pending"
+    },
+    {
+      "country_code": "DEU",
+      "event": "EU AI Act high-risk obligations apply (deferred to Dec 2027 by Digital Omnibus)",
+      "expected": "2027-12",
+      "trigger": "impact_assessments, audit, redress: stage 2 -> 3",
+      "status": "pending"
+    },
+    {
+      "country_code": "FRA",
+      "event": "EU AI Act high-risk obligations apply (deferred to Dec 2027 by Digital Omnibus)",
+      "expected": "2027-12",
+      "trigger": "impact_assessments, audit, redress: stage 2 -> 3",
+      "status": "pending"
+    }
   ]
 }
