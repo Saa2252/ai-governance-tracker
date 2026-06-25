@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "version": "1.0-branch",
+    "version": "1.0",
     "last_updated": "2026-06-04",
     "author": "Sana Asif Ahmad",
     "description": "DEVELOPED-ECONOMY COMPARATORS — an optional overlay to benchmark the Global South dataset against high-income jurisdictions. NOT part of the core Global South tracker; lives on a feature branch. Same schema as countries.json.",
@@ -202,6 +202,32 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "EU AI Act in force and phasing in (prohibited practices + GPAI now; high-risk from Aug 2026)."
+      },
+      "coverage": {
+        "score": 100,
+        "items": {
+          "prohibits_unacceptable_uses": true,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "EU AI Act (in force): prohibited practices, high-risk regime, human oversight; GDPR Art. 22 + EU anti-discrimination law.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy/law. Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 98,
+        "components": {
+          "digital_infrastructure": 94,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -393,6 +419,32 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "EU AI Act in force and phasing in; CNIL active on biometrics."
+      },
+      "coverage": {
+        "score": 100,
+        "items": {
+          "prohibits_unacceptable_uses": true,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "EU AI Act (in force) + GDPR Art. 22 + French anti-discrimination law.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy/law. Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 96,
+        "components": {
+          "digital_infrastructure": 89,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -584,6 +636,32 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Pro-innovation principles + AI Safety Institute; no binding AI law."
+      },
+      "coverage": {
+        "score": 80,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "Sector-regulator model; UK GDPR Art. 22; Equality Act; no statutory AI prohibitions.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy/law. Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 98,
+        "components": {
+          "digital_infrastructure": 96,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -775,6 +853,32 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "No federal AI law; NIST framework + executive actions + emerging state laws (fragmented)."
+      },
+      "coverage": {
+        "score": 80,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "No federal prohibitions; sectoral/state high-risk coverage; ADM rights in some states; civil-rights non-discrimination + redress.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy/law. Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 98,
+        "components": {
+          "digital_infrastructure": 95,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -966,6 +1070,32 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "AI Promotion Act (soft-law, innovation-first)."
+      },
+      "coverage": {
+        "score": 40,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": false,
+          "contestability": false
+        },
+        "basis": "AI Promotion Act (soft) + APPI; limited individual AI-specific rights.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy/law. Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 95,
+        "components": {
+          "digital_infrastructure": 86,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -1156,6 +1286,32 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Comprehensive AI Basic Act in force since Jan 2026."
+      },
+      "coverage": {
+        "score": 100,
+        "items": {
+          "prohibits_unacceptable_uses": true,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "AI Basic Act (high-impact obligations) + PIPA automated-decision rights + anti-discrimination law.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy/law. Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 99,
+        "components": {
+          "digital_infrastructure": 98,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -1347,6 +1503,32 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Risk-based AIDA bill proposed; voluntary code in interim."
+      },
+      "coverage": {
+        "score": 80,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "AIDA bill (high-impact) + PIPEDA + human-rights framework; no in-force prohibitions.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy/law. Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 98,
+        "components": {
+          "digital_infrastructure": 94,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -1538,6 +1720,32 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Voluntary AI Safety Standard; mandatory guardrails proposed."
+      },
+      "coverage": {
+        "score": 80,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "Privacy Act + anti-discrimination law; voluntary AI standard; proposed (not in-force) guardrails.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy/law. Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 99,
+        "components": {
+          "digital_infrastructure": 96,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     }
   ]

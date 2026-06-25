@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "version": "0.1-branch",
+    "version": "0.1",
     "last_updated": "2026-06",
     "author": "Sana Asif Ahmad",
     "description": "MIDDLE EAST & NORTH AFRICA comparators — optional overlay (same v3.2 schema: coverage + maturity + evidence-coded implementation). Lives on a feature branch; not part of the core Global South dataset.",
@@ -200,6 +200,18 @@
           "coverage.score",
           "maturity.score"
         ]
+      },
+      "foundations": {
+        "score": 90,
+        "components": {
+          "digital_infrastructure": 100,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -391,6 +403,18 @@
           "coverage.score",
           "maturity.score"
         ]
+      },
+      "foundations": {
+        "score": 100,
+        "components": {
+          "digital_infrastructure": 100,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -581,6 +605,18 @@
           "coverage.score",
           "maturity.score"
         ]
+      },
+      "foundations": {
+        "score": 98,
+        "components": {
+          "digital_infrastructure": 93,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -771,6 +807,18 @@
           "coverage.score",
           "maturity.score"
         ]
+      },
+      "foundations": {
+        "score": 77,
+        "components": {
+          "digital_infrastructure": 86,
+          "data_governance": 100,
+          "human_capital": 60,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -961,6 +1009,18 @@
           "coverage.score",
           "maturity.score"
         ]
+      },
+      "foundations": {
+        "score": 82,
+        "components": {
+          "digital_infrastructure": 100,
+          "data_governance": 100,
+          "human_capital": 60,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -1152,6 +1212,18 @@
           "coverage.score",
           "maturity.score"
         ]
+      },
+      "foundations": {
+        "score": 72,
+        "components": {
+          "digital_infrastructure": 72,
+          "data_governance": 100,
+          "human_capital": 60,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     }
   ]
