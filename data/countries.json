@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "version": "3.1",
+    "version": "3.2",
     "last_updated": "2026-06-12",
     "author": "Sana Asif Ahmad",
     "description": "AI governance adoption data for Global South countries",
@@ -9,7 +9,7 @@
       "National AI strategy documents",
       "Regulatory filings and draft legislation"
     ],
-    "schema_note": "v3.1: add a Governance Maturity score (0-100) per country from a staged 0-3 scale across the six mechanisms (absent->committed->drafted->in force). Complements the binary in-force Implementation Score: maturity discriminates the trajectory while implementation reports operational reality."
+    "schema_note": "v3.2: add 'coverage' — substantive risk/rights coverage (5 cited Y/N items -> 0-100): prohibits unacceptable uses, covers high-stakes domains, human-oversight right, non-discrimination, contestability. Replaces the holistic EU-adoption estimate with an evidence-coded measure of WHAT is protected (distinct from Maturity's enforcement-tool lifecycle). See METHODOLOGY.md."
   },
   "countries": [
     {
@@ -201,6 +201,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Voluntary governance guidelines + AI (Ethics & Accountability) Bill introduced; sectoral oversight."
+      },
+      "coverage": {
+        "score": 40,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": false,
+          "non_discrimination": true,
+          "contestability": false
+        },
+        "basis": "Digital India Act (draft, risk-based) + Nov-2025 governance guidelines (fairness); DPDP Act lacks an automated-decision right.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -392,6 +406,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Senate-passed AI bill (PL 2338) in the Chamber of Deputies; ANPD sandbox operational."
+      },
+      "coverage": {
+        "score": 100,
+        "items": {
+          "prohibits_unacceptable_uses": true,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "AI Bill PL 2338 (risk-based, prohibited practices, oversight) + LGPD Art. 20 (review of automated decisions).",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -583,6 +611,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "National AI Strategy with implementation secretariat and planned data sandboxes; AI Bill 2026 debated."
+      },
+      "coverage": {
+        "score": 40,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": false,
+          "human_oversight_right": true,
+          "non_discrimination": false,
+          "contestability": true
+        },
+        "basis": "Data Protection Act 2019 (automated-decision provisions + complaints); AI strategy non-binding.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -774,6 +816,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "National AI strategy + draft Presidential Regulation on AI under discussion; AI ethics guidance."
+      },
+      "coverage": {
+        "score": 20,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": false,
+          "human_oversight_right": true,
+          "non_discrimination": false,
+          "contestability": false
+        },
+        "basis": "Personal Data Protection Law includes automated-processing provisions; AI rules still draft.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -965,6 +1021,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "NITDA risk-based bill (licensing + annual impact assessments) expected ~2026."
+      },
+      "coverage": {
+        "score": 100,
+        "items": {
+          "prohibits_unacceptable_uses": true,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "NITDA risk-based framework (licensing, high-risk domains, oversight) + Nigeria Data Protection Act 2023.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -1156,6 +1226,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Federal AI Law (creating CONAIA + algorithmic impact assessments) pending in the Senate."
+      },
+      "coverage": {
+        "score": 100,
+        "items": {
+          "prohibits_unacceptable_uses": true,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "Federal AI Law bill (risk-based, prohibitions, oversight) + federal data-protection rights.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -1347,6 +1431,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "National AI strategy adopted; no AI regulation yet proposed."
+      },
+      "coverage": {
+        "score": 60,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": false,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "POPIA s.71 (automated decision-making) + national AI strategy fairness commitments.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -1538,6 +1636,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "National AI Strategy; very early stage; limited mechanisms named."
+      },
+      "coverage": {
+        "score": 0,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": false,
+          "human_oversight_right": false,
+          "non_discrimination": false,
+          "contestability": false
+        },
+        "basis": "National AI Strategy; protections not yet substantively addressed.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -1728,6 +1840,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Draft National AI Policy; early-stage commitments only."
+      },
+      "coverage": {
+        "score": 0,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": false,
+          "human_oversight_right": false,
+          "non_discrimination": false,
+          "contestability": false
+        },
+        "basis": "Draft National AI Policy; protections not yet substantively addressed.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -1918,6 +2044,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "National AI Strategy; early-stage commitments only."
+      },
+      "coverage": {
+        "score": 0,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": false,
+          "human_oversight_right": false,
+          "non_discrimination": false,
+          "contestability": false
+        },
+        "basis": "National AI Strategy; protections not yet substantively addressed.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -2109,6 +2249,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Comprehensive Law on AI in force since 1 Mar 2026 (content-labelling, bans); regulators being appointed."
+      },
+      "coverage": {
+        "score": 40,
+        "items": {
+          "prohibits_unacceptable_uses": true,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": false,
+          "non_discrimination": false,
+          "contestability": false
+        },
+        "basis": "Law on AI (in force) bans certain high-risk uses and is risk-based; weaker on individual rights.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -2300,6 +2454,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "National AI roadmap; no binding AI bill yet."
+      },
+      "coverage": {
+        "score": 0,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": false,
+          "human_oversight_right": false,
+          "non_discrimination": false,
+          "contestability": false
+        },
+        "basis": "AI roadmap; Data Privacy Act is not AI-specific on these protections.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -2491,6 +2659,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Draft Royal Decree on AI (risk-based, high-risk registration) under review."
+      },
+      "coverage": {
+        "score": 80,
+        "items": {
+          "prohibits_unacceptable_uses": true,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": false,
+          "contestability": true
+        },
+        "basis": "Draft Royal Decree on AI (risk tiers, high-risk registration) + PDPA (automated-processing rights).",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -2682,6 +2864,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "National AI Office established; voluntary governance guidelines; AI sandbox programme."
+      },
+      "coverage": {
+        "score": 20,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": false,
+          "human_oversight_right": false,
+          "non_discrimination": true,
+          "contestability": false
+        },
+        "basis": "National Guidelines on AI Governance & Ethics (fairness); no automated-decision right in PDPA 2010.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -2873,6 +3069,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "Non-binding recommendations for trustworthy AI; active court scrutiny of facial recognition."
+      },
+      "coverage": {
+        "score": 0,
+        "items": {
+          "prohibits_unacceptable_uses": false,
+          "covers_high_stakes_domains": false,
+          "human_oversight_right": false,
+          "non_discrimination": false,
+          "contestability": false
+        },
+        "basis": "Non-binding recommendations; data-protection law predates automated-decision rights.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     },
     {
@@ -3064,6 +3274,20 @@
         },
         "scale": "0 absent · 1 committed (strategy) · 2 proposed/drafted · 3 operational/in force",
         "basis": "CONPES policy + an AI bill before Congress; ethical framework issued."
+      },
+      "coverage": {
+        "score": 100,
+        "items": {
+          "prohibits_unacceptable_uses": true,
+          "covers_high_stakes_domains": true,
+          "human_oversight_right": true,
+          "non_discrimination": true,
+          "contestability": true
+        },
+        "basis": "AI bill + CONPES ethical framework (fairness, oversight) + Law 1581 data-subject rights.",
+        "as_of": "2026-06",
+        "confidence": "medium",
+        "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
       }
     }
   ]

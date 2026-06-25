@@ -33,6 +33,24 @@ This tracker fills that gap with **implementation data from the ground level**.
 
 ---
 
+## Scope & coverage
+
+**This is a transparent _sample_, not a global census.** It covers **16 Global South
+countries** (fully evidence-coded) plus **8 high-income comparators**, chosen by
+explicit, reproducible criteria — not an arbitrary pick:
+
+- The **in-scope rule** (income + UN region + governance-to-track) and the full
+  **24-country roster** (with borderline exclusions and reasons) live in
+  [`data/country_roster.json`](data/country_roster.json) and `METHODOLOGY.md`.
+- **Expansion path:** the roster marks which in-scope countries are profiled vs.
+  pending; coverage grows by evidence-coding the rest via
+  [`docs/coding_worksheet.md`](docs/coding_worksheet.md).
+
+It does **not** claim full UN-membership coverage. Read it as a *Global South
+governance sample with high-income benchmarks*, expanding by a documented protocol.
+
+---
+
 ## Data Sources
 
 This tracker is built on primary research from:
@@ -188,6 +206,30 @@ If you use this data in research:
 
 ---
 
+## Responsible use & governance
+
+**What the scores are — and are not.** A score describes the **alignment and
+in-force status** of a country's AI-governance *mechanisms* at a point in time. A
+low or early-stage score means rules are *not yet enacted or operational* — it is
+**not** a verdict on a government's competence, intentions, or sovereignty. Read
+"low" as *"early in the pipeline,"* not *"bad."*
+
+**Independent, contestable, versioned.** This is an **independent research project**
+(currently a single-coder pilot — see [CONTRIBUTING](docs/CONTRIBUTING.md)), not an
+official assessment by any government or international body. Every score is
+**evidence-cited and falsifiable**: to contest one, cite a specific in-force
+instrument and open an issue. The index audits its own decisions via a public
+[CHANGELOG](CHANGELOG.md) and a defined [Update Policy](docs/UPDATE_POLICY.md)
+(scheduled + event-triggered re-scoring).
+
+**Toward institutional legitimacy.** Normative scoring of sovereign policy carries
+weight once cited. This project therefore actively seeks **peer review, an advisory
+board, and partnership** with the bodies it already builds on (UNESCO, OECD). Until
+then, cite it as an *independent, methodologically-transparent sample* — not an
+authoritative ranking.
+
+---
+
 ## License
 
 MIT License — see [LICENSE](LICENSE) for details.
@@ -200,10 +242,12 @@ MIT License — see [LICENSE](LICENSE) for details.
 - [x] Streamlit dashboard v1
 - [x] All 16 countries evidence-coded (every indicator cited)
 - [x] Automated World Bank data refresh (scheduled GitHub Action — see [docs/data_pipeline.md](docs/data_pipeline.md))
+- [x] Governance Maturity index + robustness/sensitivity validation (ρ = 0.99)
+- [x] Public [CHANGELOG](CHANGELOG.md), [Update Policy](docs/UPDATE_POLICY.md) + [watchlist](data/watchlist.json), and a quarterly review-reminder Action
 - [ ] Zenodo DOI + tagged release (formal citability)
 - [ ] External-validation correlation vs. Oxford Insights & GIRAI (fuller scores)
+- [ ] Advisory board / peer review / institutional partnership
 - [ ] Auto-pull OECD adherence + UNESCO RAM status
-- [ ] Policy-tracker watchlist (flag changes for re-verification)
 - [ ] Integration with EU AI Act compliance tools
 
 ---

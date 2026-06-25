@@ -75,14 +75,17 @@ def load_data():
     with open(data_dir / "frameworks.json", "r") as f:
         frameworks_data = json.load(f)
 
-    # Optional developed-economy comparators (present only on the comparators branch)
-    comparators_data = None
-    comp_path = data_dir / "comparators_developed.json"
-    if comp_path.exists():
-        with open(comp_path, "r") as f:
-            comparators_data = json.load(f)
+    # Optional comparator overlays (present only on their feature branches)
+    def _optional(name):
+        p = data_dir / name
+        if p.exists():
+            with open(p, "r") as f:
+                return json.load(f)
+        return None
 
-    return countries_data, frameworks_data, comparators_data
+    comparators_data = _optional("comparators_developed.json")
+    middle_east_data = _optional("comparators_middle_east.json")
+    return countries_data, frameworks_data, comparators_data, middle_east_data
 
 # Implementation indicator weights (must match METHODOLOGY.md). The score is
 # DERIVED from these booleans so it can never drift out of sync with the data.
@@ -120,6 +123,8 @@ def process_countries_df(countries_data):
             "implementation_score": implementation_score(country["implementation_status"]),
             "maturity_score": country.get("maturity", {}).get("score", 0),
             "maturity_level": country.get("maturity", {}).get("level", "—"),
+            "coverage_score": country.get("coverage", {}).get(
+                "score", country["framework_alignment"]["eu_ai_act"]["adoption_score"]),
             "has_enforcement": country["implementation_status"]["has_enforcement_body"],
             "has_sandbox": country["implementation_status"]["has_regulatory_sandbox"],
             "has_impact_assessment": country["implementation_status"]["has_impact_assessments"],
@@ -137,24 +142,33 @@ def process_countries_df(countries_data):
 def main():
     # Load data
     try:
-        countries_data, frameworks_data, comparators_data = load_data()
+        countries_data, frameworks_data, comparators_data, middle_east_data = load_data()
     except FileNotFoundError:
         st.error("Data files not found. Please ensure countries.json and frameworks.json are in the data/ directory.")
         st.stop()
 
-    # Optional overlay: developed-economy comparators (shown only if the file exists)
+    # Optional overlays (each shown only if its file exists)
     include_dev = False
     if comparators_data:
         include_dev = st.sidebar.checkbox(
             "🌍 Include developed comparators",
-            value=False,
-            help="Overlay 8 high-income economies (Germany, France, UK, US, Japan, "
-                 "South Korea, Canada, Australia) to see the full global gradient. "
-                 "Off = Global South only.",
+            value=True,
+            help="High-income comparators: Germany, France, UK, US, Japan, South Korea, "
+                 "Canada, Australia. Uncheck to narrow the view.",
         )
+    include_me = False
+    if middle_east_data:
+        include_me = st.sidebar.checkbox(
+            "🕌 Include Middle East",
+            value=True,
+            help="Middle East & North Africa: Saudi Arabia, UAE, Israel, Turkey, Qatar, Egypt.",
+        )
+
     all_countries = list(countries_data["countries"])
     if include_dev and comparators_data:
-        all_countries = all_countries + comparators_data["countries"]
+        all_countries += comparators_data["countries"]
+    if include_me and middle_east_data:
+        all_countries += middle_east_data["countries"]
     df = process_countries_df({"countries": all_countries})
     
     # Header
@@ -228,11 +242,12 @@ Spearman ρ = 0.99 vs equal weights (`analysis/robustness.py`).
         )
     
     with col2:
-        avg_adoption = filtered_df["eu_ai_act_score"].mean()
+        avg_cov = filtered_df["coverage_score"].mean()
         st.metric(
-            label="Avg EU AI Act Adoption",
-            value=f"{avg_adoption:.0f}%",
-            delta=f"{avg_adoption - df['eu_ai_act_score'].mean():+.0f}% vs all" if selected_region != "All" else None
+            label="Avg Risk Coverage",
+            value=f"{avg_cov:.0f}/100",
+            help="Substantive coverage of AI harms/rights (5 cited Y/N items): prohibited "
+                 "uses, high-stakes domains, human oversight, non-discrimination, contestability.",
         )
     
     with col3:
@@ -560,10 +575,10 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
         lb = filtered_df.sort_values("maturity_score", ascending=False).reset_index(drop=True)
         lb.insert(0, "Rank", lb.index + 1)
         lb["In force"] = lb["implementation_score"].apply(lambda x: "Yes" if x > 0 else "No")
-        display = lb[["Rank", "country_name", "region", "maturity_score", "maturity_level",
-                      "eu_ai_act_score", "unesco_score", "oecd_score", "In force"]].rename(columns={
-            "country_name": "Country", "region": "Region", "maturity_score": "Maturity",
-            "maturity_level": "Level", "eu_ai_act_score": "EU AI Act",
+        display = lb[["Rank", "country_name", "region", "coverage_score", "maturity_score",
+                      "maturity_level", "unesco_score", "oecd_score", "In force"]].rename(columns={
+            "country_name": "Country", "region": "Region", "coverage_score": "Coverage",
+            "maturity_score": "Maturity", "maturity_level": "Level",
             "unesco_score": "UNESCO", "oecd_score": "OECD"})
         st.dataframe(display, use_container_width=True, hide_index=True)
         st.caption("Ranked by Governance Maturity (0–100). 'In force' = at least one operational "
@@ -639,6 +654,23 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
                              ("GPAI member" if ev.get("gpai_member") else "not GPAI")]
                     st.caption("🏛️ " + " · ".join(flags))
 
+        # Coverage — what the governance substantively protects (evidence-coded, 5 cited items)
+        cov = country_data.get("coverage")
+        if cov:
+            st.markdown(f"#### 🛡️ Risk Coverage: {cov['score']}/100")
+            st.caption(cov.get("basis", ""))
+            cov_labels = {
+                "prohibits_unacceptable_uses": "Prohibits unacceptable uses",
+                "covers_high_stakes_domains": "Covers high-stakes domains",
+                "human_oversight_right": "Human-oversight right",
+                "non_discrimination": "Non-discrimination",
+                "contestability": "Contestability (challenge a decision)",
+            }
+            vc1, vc2 = st.columns(2)
+            for i, (k, label) in enumerate(cov_labels.items()):
+                mark = "✅" if cov["items"].get(k) else "⬜"
+                (vc1 if i % 2 == 0 else vc2).markdown(f"{mark} {label}")
+
         # Enforcement — a binary "in force?" readout (NOT a 0-100 score, which reads empty)
         st.markdown("#### ⚙️ Enforcement — what is actually in force?")
         eu_score = country_data["framework_alignment"]["eu_ai_act"]["adoption_score"]
@@ -689,9 +721,9 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
                 bar = "🟩" * stg + "⬜" * (3 - stg)
                 (mc1 if i % 2 == 0 else mc2).markdown(f"{bar} {label} — *{stage_word[stg]}*")
 
-        st.info(f"🌱 **Governance Maturity {mat['score'] if mat else '—'}/100** "
-                f"({mat['level'] if mat else '—'}) &nbsp;·&nbsp; ⚙️ In force: **{in_force_n}/6** mechanisms "
-                f"&nbsp;·&nbsp; 📜 EU AI Act adoption {eu_score}/100")
+        st.info(f"🛡️ **Coverage {cov['score'] if cov else eu_score}/100** &nbsp;·&nbsp; "
+                f"🌱 **Maturity {mat['score'] if mat else '—'}/100** ({mat['level'] if mat else '—'}) "
+                f"&nbsp;·&nbsp; ⚙️ In force: **{in_force_n}/6** mechanisms")
 
         # Key developments timeline
         st.markdown("#### Recent Developments")

@@ -98,6 +98,19 @@ def main():
         a = maturity(c["maturity"]["stages"], WEIGHTS); b = maturity(c["maturity"]["stages"], equal)
         print(f"    {c['country_name']:<14} current {a:>3}  equal {b:>3}  (Δ{abs(a-b)})")
 
+    # ---- Step 4b: are Coverage and Maturity redundant? ----
+    have_cov = [c for c in rows if "coverage" in c]
+    if have_cov:
+        cov = [c["coverage"]["score"] for c in have_cov]
+        mat2 = [c["maturity"]["score"] for c in have_cov]
+        r_cov = pearson(cov, mat2)
+        rho_cov = spearman(cov, mat2)
+        print(f"\nStep 4b — Coverage vs Maturity (are the two dimensions redundant?):")
+        print(f"  Pearson = {r_cov:.2f} · Spearman = {rho_cov:.2f}  (n={len(have_cov)})")
+        print("  -> " + ("DISTINCT dimensions (|r| < 0.8) — Coverage adds independent signal."
+                         if abs(r_cov) < 0.8 else
+                         "HIGH overlap — consider consolidating Coverage and Maturity."))
+
     # ---- Step 3: imputation transparency ----
     imp = [c["country_name"] for c in rows
            if c["framework_alignment"]["unesco_ai_ethics"].get("evidence", {}).get("ram_status") == "not_confirmed"]

@@ -110,7 +110,31 @@ Measures how closely a country's policies align with a given framework:
 The **EU AI Act** adoption score is expert-coded against this rubric (and
 source-cited). The **UNESCO** and **OECD** scores are *fact-derived* (see below).
 
-#### Fact-derived UNESCO & OECD scores (v2.1)
+#### Coverage — what the governance substantively protects (v3.2)
+
+The EU AI Act adoption score used to be a holistic 0–100 *estimate*. It is replaced
+by **Coverage**: an evidence-coded measure of *which AI harms/rights a country's
+policy substantively addresses* — not whether it copies the EU's legal architecture
+(form), and not whether enforcement tools are operational (that's Maturity). Five
+cited Y/N items, summed to 0–100:
+
+1. **Prohibits unacceptable uses** (e.g. social scoring, indiscriminate biometric surveillance)
+2. **Covers high-stakes domains** via a risk-based framework (employment, credit, justice, health)
+3. **Human-oversight right** (not subject to solely automated decisions)
+4. **Non-discrimination / bias** protection
+5. **Contestability** (an individual can challenge an AI decision)
+
+**Threshold:** Coverage is *policy-on-paper* — a provision in a **bill or strategy
+counts** (it measures what is protected, independent of operational status). Each
+item is cited to an instrument (an AI bill/strategy or a data-protection law, e.g.
+LGPD Art. 20, POPIA s.71). Single-coder and **contestable per item**.
+
+**Not redundant with Maturity (validated).** Coverage answers *"what is protected?"*;
+Maturity answers *"how operational are the enforcement tools?"* Empirically they
+diverge — Coverage↔Maturity correlate only **0.65** (`analysis/robustness.py`), so
+Coverage is a genuinely independent dimension, not a second copy of Maturity.
+
+### Fact-derived UNESCO & OECD scores (v2.1)
 
 Unlike the EU score, the UNESCO and OECD scores are computed from **verifiable
 membership/participation data**, each with an `evidence` record:
@@ -299,4 +323,20 @@ as an *index* rather than an arbitrary weighting.
 
 ---
 
-*Last updated: May 2026*
+## Governance of the index
+
+The index holds itself to the standard it asks of countries:
+
+- **Scope** is a transparent *sample*, not a census — 16 Global South profiles + 8
+  comparators, selected by the documented in-scope rule (see Country Selection) with
+  an expansion path via the roster.
+- **Updates** follow a defined cadence + event triggers, not an ad-hoc timestamp —
+  see [`docs/UPDATE_POLICY.md`](docs/UPDATE_POLICY.md) and the machine-readable
+  [`data/watchlist.json`](data/watchlist.json); a scheduled Action flags entries due.
+- **Audit trail:** every score change is logged in [`CHANGELOG.md`](CHANGELOG.md)
+  (old → new, when, why) and the data version is bumped.
+- **Reliability & legitimacy:** currently a **single-coder pilot**; scores are
+  descriptive and contestable, not a normative verdict on a government (see the
+  README "Responsible use" section). The project seeks peer review / advisory input.
+
+*Last updated: 2026-06*
