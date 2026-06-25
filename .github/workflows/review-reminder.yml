@@ -1,0 +1,33 @@
+name: Quarterly score-review reminder
+
+on:
+  schedule:
+    - cron: "0 7 1 1,4,7,10 *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check which countries are due for review
+        id: check
+        run: python scripts/check_staleness.py
+      - name: Open a review issue if anything is due
+        if: steps.check.outputs.stale_count != '0' && steps.check.outputs.stale_count != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          EXISTING=$(gh issue list --state open --search "Score review due in:title" --json number --jq 'length')
+          if [ "$EXISTING" = "0" ]; then
+            gh issue create --title "Score review due — $(date +%Y-%m-%d)" --body-file review_report.md
+          else
+            echo "An open review issue already exists — skipping."
+          fi
