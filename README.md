@@ -1,11 +1,19 @@
 # 🌍 Global South AI Governance Tracker
 
-**Interactive dashboard mapping AI governance adoption across developing economies**
+**An evidence-coded index of AI governance across the Global South — foundations, coverage, maturity, and in-force enforcement — benchmarked against developed and Middle East economies.**
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-governance-tracker.streamlit.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
+
+> **Built on the World Bank's framing.** This project takes as its starting point the
+> World Bank's *[Global Trends in AI Governance: Evolving Country Approaches](https://www.worldbank.org/en/topic/digital/publication/global-trends-in-ai-governance)* (2024).
+> That report maps the **enabling conditions** for AI governance but — by its reviewers'
+> account — *sidesteps enforcement capacity and on-the-ground implementation*. This tracker
+> **operationalises the report's enabling-conditions framing (the Foundations lens) and
+> extends it to the enforcement dimension the report leaves open** (Coverage → Maturity →
+> in-force Enforcement), as a living, evidence-coded, reproducible index.
 
 ## The Problem
 
@@ -35,19 +43,31 @@ This tracker fills that gap with **implementation data from the ground level**.
 
 ## Scope & coverage
 
-**This is a transparent _sample_, not a global census.** It covers **16 Global South
-countries** (fully evidence-coded) plus **8 high-income comparators**, chosen by
-explicit, reproducible criteria — not an arbitrary pick:
+**This is a transparent _sample_, not a global census.** It has one **core sample**
+plus two optional **comparator overlays**, all chosen by explicit, reproducible
+criteria — not an arbitrary pick:
 
-- The **in-scope rule** (income + UN region + governance-to-track) and the full
-  **24-country roster** (with borderline exclusions and reasons) live in
+| Set | Countries | Role |
+|-----|-----------|------|
+| **Core — Global South** | 16 (fully evidence-coded) | The sample. Selected by the in-scope rule below. |
+| **Overlay A — Developed economies** | 8 (Germany, France, UK, US, Japan, S. Korea, Canada, Australia) | High-income benchmarks. |
+| **Overlay B — Middle East & North Africa** | 6 (Saudi Arabia, UAE, Israel, Turkey, Qatar, Egypt) | A regional cohort that **spans income levels** — Egypt is Global-South-eligible; the Gulf states and Israel are high-income comparators. |
+
+- The **in-scope rule** for the core sample is unchanged: **income** (low /
+  lower-middle / upper-middle, i.e. *not* high-income) **+ UN region** (a Global
+  South region, incl. North Africa & MENA) **+ governance-to-track**. The full
+  **24-country roster** with borderline exclusions lives in
   [`data/country_roster.json`](data/country_roster.json) and `METHODOLOGY.md`.
+- The **overlays are deliberately *not* part of the core sample** — they include
+  high-income peers (which fail the income rule) precisely to *benchmark* the
+  Global South against them. Each is an opt-in toggle in the dashboard.
 - **Expansion path:** the roster marks which in-scope countries are profiled vs.
   pending; coverage grows by evidence-coding the rest via
   [`docs/coding_worksheet.md`](docs/coding_worksheet.md).
 
 It does **not** claim full UN-membership coverage. Read it as a *Global South
-governance sample with high-income benchmarks*, expanding by a documented protocol.
+governance sample with high-income and regional (MENA) benchmarks*, expanding by a
+documented protocol.
 
 ---
 

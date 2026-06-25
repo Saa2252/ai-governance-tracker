@@ -134,6 +134,31 @@ Maturity answers *"how operational are the enforcement tools?"* Empirically they
 diverge — Coverage↔Maturity correlate only **0.65** (`analysis/robustness.py`), so
 Coverage is a genuinely independent dimension, not a second copy of Maturity.
 
+### Foundations — enabling conditions (v3.3)
+
+The conceptual starting point for this project is the **World Bank's *Global Trends
+in AI Governance: Evolving Country Approaches* (2024)**, which argues that AI
+governance must rest on **enabling conditions** (infrastructure, human capital,
+local ecosystems) — and which, by its reviewers' own account, *sidesteps enforcement
+capacity*. The **Foundations** lens operationalises the report's framing; the rest
+of this index (Coverage, Maturity, in-force Enforcement) **extends it into the
+enforcement dimension the report leaves open**.
+
+Foundations (0–100) is a weighted composite of four enabling conditions:
+
+| Component | Weight | Source |
+|-----------|-------:|--------|
+| Digital infrastructure | 35% | internet penetration (World Bank) |
+| Data governance | 20% | in-force data-protection law (100) vs none/draft (30) |
+| Human capital | 20% | AI-talent availability (high/medium/low → 100/60/30) |
+| Innovation ecosystem | 25% | research / startups / compute / funding (high/medium/low) |
+
+**Distinct from governance progress (validated).** Foundations and Maturity
+correlate **0.74** — related but not the same. The *divergences* are the insight:
+the UAE (Foundations 100 / Maturity 55) and Australia (99 / 45) have strong capacity
+but light governance, while Vietnam (76 / 62) and Nigeria (61 / 48) build governance
+*ahead* of their foundations. Capacity does not determine governance progress.
+
 ### Fact-derived UNESCO & OECD scores (v2.1)
 
 Unlike the EU score, the UNESCO and OECD scores are computed from **verifiable

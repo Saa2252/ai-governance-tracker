@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "version": "3.2",
+    "version": "3.3",
     "last_updated": "2026-06-12",
     "author": "Sana Asif Ahmad",
     "description": "AI governance adoption data for Global South countries",
@@ -9,7 +9,7 @@
       "National AI strategy documents",
       "Regulatory filings and draft legislation"
     ],
-    "schema_note": "v3.2: add 'coverage' — substantive risk/rights coverage (5 cited Y/N items -> 0-100): prohibits unacceptable uses, covers high-stakes domains, human-oversight right, non-discrimination, contestability. Replaces the holistic EU-adoption estimate with an evidence-coded measure of WHAT is protected (distinct from Maturity's enforcement-tool lifecycle). See METHODOLOGY.md."
+    "schema_note": "v3.3: add 'foundations' — enabling-conditions lens (infrastructure, data governance, human capital, innovation ecosystem) operationalising the World Bank's 'Global Trends in AI Governance' (2024)."
   },
   "countries": [
     {
@@ -215,6 +215,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 90,
+        "components": {
+          "digital_infrastructure": 70,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -420,6 +432,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 95,
+        "components": {
+          "digital_infrastructure": 84,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 100
+        },
+        "innovation_ecosystem_rating": "high",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -625,6 +649,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 59,
+        "components": {
+          "digital_infrastructure": 35,
+          "data_governance": 100,
+          "human_capital": 60,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -830,6 +866,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 72,
+        "components": {
+          "digital_infrastructure": 73,
+          "data_governance": 100,
+          "human_capital": 60,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -1035,6 +1083,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 61,
+        "components": {
+          "digital_infrastructure": 41,
+          "data_governance": 100,
+          "human_capital": 60,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -1240,6 +1300,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 84,
+        "components": {
+          "digital_infrastructure": 83,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -1445,6 +1517,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 82,
+        "components": {
+          "digital_infrastructure": 78,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -1650,6 +1734,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 44,
+        "components": {
+          "digital_infrastructure": 53,
+          "data_governance": 30,
+          "human_capital": 60,
+          "innovation_ecosystem": 30
+        },
+        "innovation_ecosystem_rating": "low",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -1854,6 +1950,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 46,
+        "components": {
+          "digital_infrastructure": 57,
+          "data_governance": 30,
+          "human_capital": 60,
+          "innovation_ecosystem": 30
+        },
+        "innovation_ecosystem_rating": "low",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -2058,6 +2166,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 59,
+        "components": {
+          "digital_infrastructure": 55,
+          "data_governance": 100,
+          "human_capital": 60,
+          "innovation_ecosystem": 30
+        },
+        "innovation_ecosystem_rating": "low",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -2263,6 +2383,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 76,
+        "components": {
+          "digital_infrastructure": 84,
+          "data_governance": 100,
+          "human_capital": 60,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -2468,6 +2600,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 71,
+        "components": {
+          "digital_infrastructure": 67,
+          "data_governance": 100,
+          "human_capital": 60,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -2673,6 +2817,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 79,
+        "components": {
+          "digital_infrastructure": 91,
+          "data_governance": 100,
+          "human_capital": 60,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -2878,6 +3034,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 89,
+        "components": {
+          "digital_infrastructure": 98,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -3083,6 +3251,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 86,
+        "components": {
+          "digital_infrastructure": 90,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     },
     {
@@ -3288,6 +3468,18 @@
         "as_of": "2026-06",
         "confidence": "medium",
         "note": "Substantive risk/rights coverage in written policy (bills count). Single-coder; contestable per item."
+      },
+      "foundations": {
+        "score": 83,
+        "components": {
+          "digital_infrastructure": 79,
+          "data_governance": 100,
+          "human_capital": 100,
+          "innovation_ecosystem": 60
+        },
+        "innovation_ecosystem_rating": "medium",
+        "basis": "Enabling conditions per the World Bank's 'Global Trends in AI Governance' (2024): infrastructure (internet), data governance (DP law), human capital (AI talent), and local innovation ecosystem.",
+        "note": "Weighted: 35% infrastructure · 20% data governance · 20% human capital · 25% ecosystem."
       }
     }
   ]

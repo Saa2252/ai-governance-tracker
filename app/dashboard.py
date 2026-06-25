@@ -15,7 +15,7 @@ from pathlib import Path
 # Page configuration
 st.set_page_config(
     page_title="Global South AI Governance Tracker",
-    page_icon="🌍",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -125,6 +125,7 @@ def process_countries_df(countries_data):
             "maturity_level": country.get("maturity", {}).get("level", "—"),
             "coverage_score": country.get("coverage", {}).get(
                 "score", country["framework_alignment"]["eu_ai_act"]["adoption_score"]),
+            "foundations_score": country.get("foundations", {}).get("score", 0),
             "has_enforcement": country["implementation_status"]["has_enforcement_body"],
             "has_sandbox": country["implementation_status"]["has_regulatory_sandbox"],
             "has_impact_assessment": country["implementation_status"]["has_impact_assessments"],
@@ -151,7 +152,7 @@ def main():
     include_dev = False
     if comparators_data:
         include_dev = st.sidebar.checkbox(
-            "🌍 Include developed comparators",
+            "Include developed comparators",
             value=True,
             help="High-income comparators: Germany, France, UK, US, Japan, South Korea, "
                  "Canada, Australia. Uncheck to narrow the view.",
@@ -159,7 +160,7 @@ def main():
     include_me = False
     if middle_east_data:
         include_me = st.sidebar.checkbox(
-            "🕌 Include Middle East",
+            "Include Middle East & North Africa",
             value=True,
             help="Middle East & North Africa: Saudi Arabia, UAE, Israel, Turkey, Qatar, Egypt.",
         )
@@ -172,11 +173,11 @@ def main():
     df = process_countries_df({"countries": all_countries})
     
     # Header
-    st.markdown('<p class="main-header">🌍 Global South AI Governance Tracker</p>', unsafe_allow_html=True)
+    st.markdown('<p class="main-header">Global South AI Governance Tracker</p>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Interactive dashboard mapping AI governance adoption across developing economies</p>', unsafe_allow_html=True)
     
     # Sidebar filters
-    st.sidebar.header("🔍 Filters")
+    st.sidebar.header("Filters")
     
     regions = ["All"] + sorted(df["region"].unique().tolist())
     selected_region = st.sidebar.selectbox("Region", regions)
@@ -200,7 +201,7 @@ def main():
     # KEY METRICS ROW
     # ========================================================================
     
-    with st.expander("ℹ️ How to read this dashboard — the three lenses & how scores are built"):
+    with st.expander("How to read this dashboard — the three lenses & how scores are built"):
         st.markdown(
             """
 **Why the EU AI Act is the baseline.** It is the only *comprehensive, binding* AI
@@ -212,7 +213,8 @@ prescription — a key finding here is exactly where local priorities (agricultu
 mobile money, climate) justify *diverging* from EU categories. Every country is
 also scored against UNESCO and OECD so no single framework dominates.
 
-**Three lenses on each country:**
+**Four lenses on each country:**
+- **Foundations (0–100):** the *enabling conditions* for governance — digital infrastructure, data governance, human capital, innovation ecosystem. Operationalises the **World Bank's "Global Trends in AI Governance" (2024)** framing.
 - **Risk Coverage (0–100):** *what* AI harms/rights the policy substantively protects — 5 cited Y/N items (prohibited uses, high-stakes domains, human oversight, non-discrimination, contestability). Evidence-coded; a bill counts.
 - **Governance Maturity (0–100):** *how far* each of six enforcement mechanisms has travelled — *absent → committed → drafted → in force*. The headline, discriminating score.
 - **Enforcement (binary):** whether each mechanism is *actually in force today*. Almost nowhere is — so we report it as "in force: yes/no" and a global count, not a near-empty 0–100.
@@ -232,7 +234,7 @@ Spearman ρ = 0.99 vs equal weights (`analysis/robustness.py`).
             """
         )
 
-    st.markdown("### 📊 Key Metrics")
+    st.markdown("### Key Metrics")
     
     col1, col2, col3, col4 = st.columns(4)
     
@@ -277,11 +279,11 @@ Spearman ρ = 0.99 vs equal weights (`analysis/robustness.py`).
     st.markdown("---")
     
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
-        "🗺️ Regional Overview",
-        "📈 Framework Adoption",
-        "🔍 Implementation Gap",
-        "⚠️ Risk Categories",
-        "🏆 Rankings"
+        "Regional Overview",
+        "Framework Adoption",
+        "Implementation Gap",
+        "Risk Categories",
+        "Rankings"
     ])
     
     # Tab 1: Regional Overview Map
@@ -290,11 +292,17 @@ Spearman ρ = 0.99 vs equal weights (`analysis/robustness.py`).
 
         map_metric_label = st.radio(
             "Colour the map by:",
-            ["Governance Maturity", "EU AI Act Adoption"],
+            ["Governance Maturity", "Risk Coverage", "Foundations", "EU AI Act Adoption"],
             horizontal=True,
-            help="Maturity (default) avoids an EU-centric framing; switch to EU AI Act adoption to see alignment on paper.",
+            help="Maturity (default) avoids an EU-centric framing; Coverage = what's protected; "
+                 "Foundations = enabling conditions; EU AI Act = alignment on paper.",
         )
-        metric_col = "maturity_score" if map_metric_label == "Governance Maturity" else "eu_ai_act_score"
+        metric_col = {
+            "Governance Maturity": "maturity_score",
+            "Risk Coverage": "coverage_score",
+            "Foundations": "foundations_score",
+            "EU AI Act Adoption": "eu_ai_act_score",
+        }[map_metric_label]
 
         # Create choropleth map
         fig_map = px.choropleth(
@@ -540,9 +548,9 @@ Spearman ρ = 0.99 vs equal weights (`analysis/robustness.py`).
 
     # Tab 5: Rankings leaderboard + data export
     with tab5:
-        st.markdown("### 🏆 Governance Maturity Leaderboard")
+        st.markdown("### Governance Maturity Leaderboard")
 
-        with st.expander("🧮 How is the Maturity score (and this ranking) calculated?"):
+        with st.expander("How is the Maturity score (and this ranking) calculated?"):
             st.markdown(
                 """
 The table is ranked by one number — the **Governance Maturity score (0–100)**, highest first. It is built in three steps:
@@ -577,17 +585,16 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
         lb = filtered_df.sort_values("maturity_score", ascending=False).reset_index(drop=True)
         lb.insert(0, "Rank", lb.index + 1)
         lb["In force"] = lb["implementation_score"].apply(lambda x: "Yes" if x > 0 else "No")
-        display = lb[["Rank", "country_name", "region", "coverage_score", "maturity_score",
-                      "maturity_level", "unesco_score", "oecd_score", "In force"]].rename(columns={
-            "country_name": "Country", "region": "Region", "coverage_score": "Coverage",
-            "maturity_score": "Maturity", "maturity_level": "Level",
-            "unesco_score": "UNESCO", "oecd_score": "OECD"})
+        display = lb[["Rank", "country_name", "region", "foundations_score", "coverage_score",
+                      "maturity_score", "maturity_level", "In force"]].rename(columns={
+            "country_name": "Country", "region": "Region", "foundations_score": "Foundations",
+            "coverage_score": "Coverage", "maturity_score": "Maturity", "maturity_level": "Level"})
         st.dataframe(display, use_container_width=True, hide_index=True)
         st.caption("Ranked by Governance Maturity (0–100). 'In force' = at least one operational "
                    "enforcement mechanism. Rankings are robust to the weighting scheme "
                    "(Spearman ρ = 0.99 vs equal weights — see METHODOLOGY.md).")
         csv = filtered_df.to_csv(index=False).encode("utf-8")
-        st.download_button("⬇️ Download full dataset (CSV)", data=csv,
+        st.download_button("Download full dataset (CSV)", data=csv,
                            file_name="ai_governance_tracker.csv", mime="text/csv")
 
     # ========================================================================
@@ -595,11 +602,13 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
     # ========================================================================
     
     st.markdown("---")
-    st.markdown("### 🔎 Country Deep Dive")
+    st.markdown("### Country Deep Dive")
     
     selected_country = st.selectbox(
         "Select a country for detailed analysis",
-        filtered_df["country_name"].tolist()
+        sorted(filtered_df["country_name"].tolist()),
+        index=None,
+        placeholder="Choose a country…",
     )
     
     if selected_country:
@@ -624,7 +633,7 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
                 st.markdown(f"**Lead Agency:** {country_data['ai_strategy']['lead_agency']}")
 
             dq = country_data.get("data_quality", {})
-            st.caption(f"🗓️ Last verified {dq.get('last_verified', '—')} · "
+            st.caption(f"Last verified {dq.get('last_verified', '—')} · "
                        f"confidence: {dq.get('confidence_level', '—')}")
 
         with col2:
@@ -648,18 +657,29 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
                 # Evidence basis for the fact-derived frameworks
                 ev = fw_data.get("evidence")
                 if ev and fw_name == "unesco_ai_ethics":
-                    st.caption(f"📋 UNESCO RAM: **{ev.get('ram_status', '—')}** · adopted 2021 Recommendation: "
+                    st.caption(f"UNESCO RAM: **{ev.get('ram_status', '—')}** · adopted 2021 Recommendation: "
                                f"{'yes' if ev.get('adopted_2021_recommendation') else 'no'}")
                 elif ev and fw_name == "oecd_ai_principles":
                     flags = [("OECD member" if ev.get("oecd_member") else "not OECD member"),
                              ("AI-Principles adherent" if ev.get("ai_principles_adherent") else "not an adherent"),
                              ("GPAI member" if ev.get("gpai_member") else "not GPAI")]
-                    st.caption("🏛️ " + " · ".join(flags))
+                    st.caption("" + " · ".join(flags))
+
+        # Foundations — enabling conditions (World Bank 'Global Trends in AI Governance', 2024)
+        fnd = country_data.get("foundations")
+        if fnd:
+            st.markdown(f"#### Foundations (enabling conditions): {fnd['score']}/100")
+            st.caption(fnd.get("basis", ""))
+            fl = {"digital_infrastructure": "Digital infrastructure", "data_governance": "Data governance",
+                  "human_capital": "Human capital", "innovation_ecosystem": "Innovation ecosystem"}
+            fc1, fc2 = st.columns(2)
+            for i, (k, label) in enumerate(fl.items()):
+                (fc1 if i % 2 == 0 else fc2).markdown(f"**{label}:** {fnd['components'].get(k, 0)}/100")
 
         # Coverage — what the governance substantively protects (evidence-coded, 5 cited items)
         cov = country_data.get("coverage")
         if cov:
-            st.markdown(f"#### 🛡️ Risk Coverage: {cov['score']}/100")
+            st.markdown(f"#### Risk Coverage: {cov['score']}/100")
             st.caption(cov.get("basis", ""))
             cov_labels = {
                 "prohibits_unacceptable_uses": "Prohibits unacceptable uses",
@@ -674,7 +694,7 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
                 (vc1 if i % 2 == 0 else vc2).markdown(f"{mark} {label}")
 
         # Enforcement — a binary "in force?" readout (NOT a 0-100 score, which reads empty)
-        st.markdown("#### ⚙️ Enforcement — what is actually in force?")
+        st.markdown("#### Enforcement — what is actually in force?")
         eu_score = country_data["framework_alignment"]["eu_ai_act"]["adoption_score"]
         indicators = [
             ("has_enforcement_body", "Enforcement body"),
@@ -695,7 +715,7 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
 
         evidence = impl.get("evidence")
         if evidence:
-            with st.expander("📑 Evidence & sources (per indicator)"):
+            with st.expander("Evidence & sources (per indicator)"):
                 for key, label in indicators:
                     e = evidence.get(key)
                     if e:
@@ -709,7 +729,7 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
         # Governance Maturity — how far along the journey (vs. binary "in force")
         mat = country_data.get("maturity")
         if mat:
-            st.markdown(f"#### 🌱 Governance Maturity: {mat['score']}/100 &nbsp;·&nbsp; *{mat['level']}*")
+            st.markdown(f"#### Governance Maturity: {mat['score']}/100 &nbsp;·&nbsp; *{mat['level']}*")
             st.caption(mat.get("basis", ""))
             stage_word = {0: "absent", 1: "committed", 2: "drafted/proposed", 3: "in force"}
             mech_labels = {
@@ -723,9 +743,10 @@ Rankings are robust to the weights: re-running with all weights equal barely cha
                 bar = "🟩" * stg + "⬜" * (3 - stg)
                 (mc1 if i % 2 == 0 else mc2).markdown(f"{bar} {label} — *{stage_word[stg]}*")
 
-        st.info(f"🛡️ **Coverage {cov['score'] if cov else eu_score}/100** &nbsp;·&nbsp; "
-                f"🌱 **Maturity {mat['score'] if mat else '—'}/100** ({mat['level'] if mat else '—'}) "
-                f"&nbsp;·&nbsp; ⚙️ In force: **{in_force_n}/6** mechanisms")
+        st.info(f"**Foundations {fnd['score'] if fnd else '—'}/100** &nbsp;·&nbsp; "
+                f"**Coverage {cov['score'] if cov else eu_score}/100** &nbsp;·&nbsp; "
+                f"**Maturity {mat['score'] if mat else '—'}/100** &nbsp;·&nbsp; "
+                f"**In force {in_force_n}/6**")
 
         # Key developments timeline
         st.markdown("#### Recent Developments")

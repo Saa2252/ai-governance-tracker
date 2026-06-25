@@ -111,6 +111,17 @@ def main():
                          if abs(r_cov) < 0.8 else
                          "HIGH overlap — consider consolidating Coverage and Maturity."))
 
+    # ---- Step 4c: are Foundations and Maturity redundant? ----
+    have_f = [c for c in rows if "foundations" in c and "maturity" in c]
+    if have_f:
+        f = [c["foundations"]["score"] for c in have_f]
+        m3 = [c["maturity"]["score"] for c in have_f]
+        rf = pearson(f, m3)
+        print(f"\nStep 4c — Foundations vs Maturity (enabling conditions vs governance progress):")
+        print(f"  Pearson = {rf:.2f}  (n={len(have_f)})")
+        print("  -> " + ("DISTINCT — capacity does not determine governance progress (the WB-report point)."
+                         if abs(rf) < 0.8 else "HIGH overlap — reconsider."))
+
     # ---- Step 3: imputation transparency ----
     imp = [c["country_name"] for c in rows
            if c["framework_alignment"]["unesco_ai_ethics"].get("evidence", {}).get("ram_status") == "not_confirmed"]
